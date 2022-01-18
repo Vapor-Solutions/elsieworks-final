@@ -1,132 +1,1210 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
 
-        <title>Laravel</title>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ config('app.name') }} || Welcome</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <!-- CSS
+    ============================================ -->
+    <link rel="stylesheet" href="{{ asset('front/assets/css/vendor/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/css/vendor/slick.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/css/vendor/slick-theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/css/vendor/aos.css') }}">
+    <link rel="stylesheet" href="{{ asset('front/assets/css/plugins/feature.css') }}">
+    <!-- Style css -->
+    <link rel="stylesheet" href="{{ asset('front/assets/css/style.css') }}">
+</head>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- home-classic -->
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--bg-opacity:1;background-color:#fff;background-color:rgba(255,255,255,var(--bg-opacity))}.bg-gray-100{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}.border-gray-200{--border-opacity:1;border-color:#edf2f7;border-color:rgba(237,242,247,var(--border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{box-shadow:0 1px 3px 0 rgba(0,0,0,.1),0 1px 2px 0 rgba(0,0,0,.06)}.text-center{text-align:center}.text-gray-200{--text-opacity:1;color:#edf2f7;color:rgba(237,242,247,var(--text-opacity))}.text-gray-300{--text-opacity:1;color:#e2e8f0;color:rgba(226,232,240,var(--text-opacity))}.text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.text-gray-500{--text-opacity:1;color:#a0aec0;color:rgba(160,174,192,var(--text-opacity))}.text-gray-600{--text-opacity:1;color:#718096;color:rgba(113,128,150,var(--text-opacity))}.text-gray-700{--text-opacity:1;color:#4a5568;color:rgba(74,85,104,var(--text-opacity))}.text-gray-900{--text-opacity:1;color:#1a202c;color:rgba(26,32,44,var(--text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}.dark\:bg-gray-900{--bg-opacity:1;background-color:#1a202c;background-color:rgba(26,32,44,var(--bg-opacity))}.dark\:border-gray-700{--border-opacity:1;border-color:#4a5568;border-color:rgba(74,85,104,var(--border-opacity))}.dark\:text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}.dark\:text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}.dark\:text-gray-500{--tw-text-opacity:1;color:#6b7280;color:rgba(107,114,128,var(--tw-text-opacity))}}
-        </style>
+<body class="template-color-1 home-classic spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
 
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+    <!-- Start Main Page Wrapper -->
+    <main class="main-page-wrapper spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
+        <!-- Start Header -->
+        <header class="rn-header haeder-default black-logo-version header--fixed header--sticky">
+            <div class="header-wrapper m--0 rn-popup-mobile-menu row align-items-center">
+                <!-- Start Header Left -->
+                <div class="col-lg-2 col-6">
+                    <div class="header-left">
+                        <div class="logo">
+                            <a href="index.html">
+                                <img src="assets/images/logo/logo.png" alt="logo">
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            @endif
-
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
-                    </svg>
+                <!-- End Header Left -->
+                <!-- Start Header Center -->
+                <div class="col-lg-10 col-6">
+                    <div class="header-center">
+                        <nav id="sideNav" class="mainmenu-nav navbar-example2">
+                            <!-- Start Mainmanu Nav -->
+                            <ul class="primary-menu nav nav-pills">
+                                <li class="nav-item"><a class="nav-link smoth-animation active" href="#home">Home</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link smoth-animation" href="#about">About</a></li>
+                                <li class="nav-item"><a class="nav-link smoth-animation" href="#skill">Skill</a></li>
+                                <li class="nav-item"><a class="nav-link smoth-animation" href="#service">Service</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Portfolio</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link smoth-animation" href="#client">Client</a></li>
+                                <li class="nav-item"><a class="nav-link smoth-animation" href="#pricing">Pricing</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">blog</a></li>
+                                <li class="nav-item"><a class="nav-link smoth-animation" href="#contacts">Contact</a>
+                                </li>
+                            </ul>
+                            <!-- End Mainmanu Nav -->
+                        </nav>
+                        <!-- Start Header Right  -->
+                        <div class="header-right">
+                            <a class="rn-btn no-shadow btn-theme" target="_blank" href="https://themeforest.net/checkout/from_item/33188244?license=regular"><span>BUY NOW</span></a>
+                            <i id="menuBtn" class="feather-menu humberger-menu d-block d-xl-none"></i>
+                            <div class="close-menu d-block">
+                                <span class="closeTrigger">
+                                    <i data-feather="x"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- End Header Right  -->
+                    </div>
                 </div>
+                <!-- End Header Center -->
+            </div>
+        </header>
+        <!-- End Header Area -->
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
+        <!-- Start Popup Mobile Menu  -->
+        <div class="popup-mobile-menu">
+            <div class="inner">
+                <div class="menu-top">
+                    <div class="menu-header">
+                        <a class="logo" href="index.html">
+                            <img src="assets/images/logo/logo.png" alt="Personal Portfolio">
+                        </a>
+                        <div class="close-button">
+                            <button class="close-menu-activation close"><i data-feather="x"></i></button>
                         </div>
+                    </div>
+                    <p class="discription">Lorem ipsum dolor sit amet consect adipisicing elit repellendus.</p>
+                </div>
+                <div class="content">
+                    <ul class="primary-menu nav nav-pills">
+                        <li class="nav-item"><a class="nav-link smoth-animation active" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link smoth-animation" href="#about">About</a></li>
 
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
+                        <li class="nav-item"><a class="nav-link smoth-animation" href="#skill">Skill</a></li>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
+                        <li class="nav-item"><a class="nav-link smoth-animation" href="#service">Service</a></li>
+
+                        <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">portfolio</a></li>
+
+                        <li class="nav-item"><a class="nav-link smoth-animation" href="#client">client</a></li>
+
+                        <li class="nav-item"><a class="nav-link smoth-animation" href="#pricing">pricing</a></li>
+
+                        <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">blog</a></li>
+
+                        <li class="nav-item"><a class="nav-link smoth-animation" href="#contacts">contact</a></li>
+                    </ul>
+                    <!-- social sharea area -->
+                    <div class="social-share-style-1 mt--40">
+                        <span class="title">find with me</span>
+                        <ul class="social-share d-flex liststyle">
+                            <li class="facebook"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
+                                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z">
+                                        </path>
+                                    </svg></a>
+                            </li>
+                            <li class="instagram"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                    </svg></a>
+                            </li>
+                            <li class="linkedin"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                        </path>
+                                        <rect x="2" y="9" width="4" height="12"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end -->
+                </div>
+            </div>
+        </div>
+        <!-- End Popup Mobile Menu  -->
+
+        <!-- Start Slider Area -->
+        <div id="home" class="rn-slider-area">
+            <!-- Start Single Slide -->
+            <div class="slide slider-style-4 bg_image bg_image--1">
+                <div class="container">
+                    <div class="row">
+                        <div class="order-2 order-lg-1 col-lg-9 col-xl-7">
+                            <div class="content">
+                                <div class="inner mb_sm--80">
+                                    <h1 class="title">Hi, I’m <span>Zarin Nes</span><br> <span
+                                            class="span">Photographer</span></h1>
+                                    <div>
+                                        <p class="description">I design and code beautifully simple things, and I love
+                                            what
+                                            I do. I use animation as a third dimension by which Lorem ipsum dolor sit
+                                            amet
+                                            consectetur adipisicing. </p>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="w-8 h-8 text-gray-500"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
+                                <div class="row ">
+                                    <div class="col-lg-12 col-xl-6 col-md-12 col-sm-12 col-12">
+                                        <div class="social-share-inner-left">
+                                            <span class="title">find with me</span>
+                                            <ul class="social-share d-flex liststyle">
+                                                <li class="facebook"><a href="#"><i data-feather="facebook"></i></a>
+                                                </li>
+                                                <li class="instagram"><a href="#"><i data-feather="instagram"></i></a>
+                                                </li>
+                                                <li class="linkedin"><a href="#"><i data-feather="linkedin"></i></a>
+                                                </li>
+                                                <li class="linkedin"><a href="#"><i data-feather="twitter"></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <!-- End Single Slide -->
+        </div>
+        <!-- End Slider Area -->
 
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                            </svg>
-
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
+        <!-- Start about Area -->
+        <div id="about" class="rn-about-area rn-section-gap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true" class="image-area">
+                            <div class="thumbnail">
+                                <img src="assets/images/about/about-2.png" alt="Personal Portfolio Image">
+                            </div>
                         </div>
                     </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true" class="col-lg-7 mt_sm--30">
+                        <div class="contant">
+                            <div class="section-title text-left">
+                                <span class="subtitle">Visit my portfolio & Hire me</span>
+                                <h2 class="title">About Me</h2>
+                            </div>
+                            <p class="discription">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum in eos saepe ipsa
+                                cupiditate accusantium voluptatibus quidem nam, reprehenderit, et necessitatibus
+                                adipisci labore sit veritatis vero tempore sequi at sed facere dolore. Quae obcaecati
+                                eius quasi doloribus illum minus fugit.
+                            </p>
+                            <p class="discription">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum in eos saepe ipsa
+                                cupiditate accusantium voluptatibus quidem nam, reprehenderit,
+                            </p>
+                            <a class="rn-btn" href="#contacts"><span>DOWNLOAD MY CV</span></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
+        <!-- End about Area -->
+
+        <!-- skill area Start -->
+        <div id="skill" class="rn-skill-area rn-section-gap section-separator">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true">
+                            <span class="subtitle">Visit my skill & Hire me</span>
+                            <h2 class="title">My Skill</h2>
+                        </div>
+                        <div class="mt_md--40 mt_sm--40">
+                            <ul class="skill-style-1">
+                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" title="ReactJs">
+                                    <img src="assets/images/icons/react.png" alt="skill">
+                                </li>
+                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true" title="Figma">
+                                    <img src="assets/images/icons/figma.png" alt="skill">
+                                </li>
+                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true" title="XD">
+                                    <img src="assets/images/icons/xd.png" alt="skill">
+                                </li>
+                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="400" data-aos-once="true" title="PS">
+                                    <img src="assets/images/icons/photoshop.png" alt="skill">
+                                </li>
+                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" title="vueJS">
+                                    <img src="assets/images/icons/vuejs.png" alt="skill">
+                                </li>
+                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true" title="js">
+                                    <img src="assets/images/icons/js.png" alt="skill">
+                                </li>
+                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true" title="angularJS">
+                                    <img src="assets/images/icons/angularjs.png" alt="skill">
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- skill area End -->
+
+        <!-- Start Service Area -->
+        <div id="service" class="rn-service-area rn-section-gap section-separator">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="section-title text-left">
+                            <span class="subtitle">Features</span>
+                            <h2 class="title">What I Do</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row--25 mt_md--10 mt_sm--10">
+
+                    <!-- Start Single Service -->
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
+                        <div class="rn-service">
+                            <div class="inner">
+                                <div class="icon">
+                                    <i data-feather="menu"></i>
+                                </div>
+                                <div class="content">
+                                    <h4 class="title"><a href="#">Business Stratagy</a></h4>
+                                    <p class="description">I throw myself down among the tall grass by the stream as I
+                                        lie close to the earth.</p>
+                                    <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <a class="over-link" href="#"></a>
+                        </div>
+                    </div>
+                    <!-- End SIngle Service -->
+                    <!-- Start Single Service -->
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
+                        <div class="rn-service">
+                            <div class="inner">
+                                <div class="icon">
+                                    <i data-feather="book-open"></i>
+                                </div>
+                                <div class="content">
+                                    <h4 class="title"><a href="#">Business Development</a></h4>
+                                    <p class="description">I throw myself down among the tall grass by the stream as I
+                                        lie close to the earth.</p>
+                                    <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <a class="over-link" href="#"></a>
+                        </div>
+                    </div>
+                    <!-- End SIngle Service -->
+                    <!-- Start Single Service -->
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
+                        <div class="rn-service">
+                            <div class="inner">
+                                <div class="icon">
+                                    <i data-feather="tv"></i>
+                                </div>
+                                <div class="content">
+                                    <h4 class="title"><a href="#">App Development</a></h4>
+                                    <p class="description">I throw myself down among the tall grass by the stream as I
+                                        lie close to the earth.</p>
+                                    <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
+                                </div>
+                            </div>
+                            <a class="over-link" href="#"></a>
+                        </div>
+                    </div>
+                    <!-- End SIngle Service -->
+
+                </div>
+            </div>
+        </div>
+        <!-- End Service Area  -->
+
+        <!-- Start portfolio Area -->
+        <div id="portfolio" class="rn-project-area portfolio-style-two rn-section-gap section-separator">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12">
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="section-title text-left mb_md--25 mb_sm--25">
+                            <span class="subtitle">Look My project & JUDGE</span>
+                            <h2 class="title">My Best Work</h2>
+                        </div>
+                    </div>
+
+                </div>
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true" id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+
+                        <!-- Start Single Item  -->
+                        <div class="carousel-item active">
+                            <div class="portfolio-single">
+                                <div class="row direction">
+                                    <div class="col-lg-5">
+                                        <div class="inner">
+                                            <h5 class="title">
+                                                The services provice for Design
+                                            </h5>
+                                            <p class="discription">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quidem
+                                                dignissimos.
+                                                Perspiciatis fuga soluta officiis eligendi labore, omnis ut velit vitae
+                                                suscipit
+                                                alias cumque temporibus.
+                                            </p>
+                                            <div class="ft-area">
+                                                <div class="feature-wrapper">
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Responsive design</p>
+                                                    </div>
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Quiz builder</p>
+                                                    </div>
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Certification</p>
+                                                    </div>
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Stats & reports</p>
+                                                    </div>
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Retina ready</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7 col-xl-7">
+                                        <div class="thumbnail">
+                                            <img src="assets/images/portfolio/portfolio-04.jpg" alt="Personal Portfolio Image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item  -->
+
+                        <!-- Start Single Item  -->
+                        <div class="carousel-item">
+                            <div class="portfolio-single">
+                                <div class="row direction">
+                                    <div class="col-lg-5">
+                                        <div class="inner">
+                                            <h5 class="title">
+                                                The services provice for Development
+                                            </h5>
+                                            <p class="discription">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quidem
+                                                dignissimos.
+                                                Perspiciatis fuga soluta officiis eligendi labore, omnis ut velit vitae
+                                                suscipit
+                                                alias cumque temporibus.
+                                            </p>
+                                            <div class="ft-area">
+                                                <div class="feature-wrapper">
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Divice maintain</p>
+                                                    </div>
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Theme builder</p>
+                                                    </div>
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Certification</p>
+                                                    </div>
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Stats & reports</p>
+                                                    </div>
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Retina ready</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7 col-xl-7">
+                                        <div class="thumbnail">
+                                            <img src="assets/images/portfolio/portfolio-01.jpg" alt="Personal Portfolio Image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item  -->
+
+                        <!-- Start Single Item  -->
+                        <div class="carousel-item">
+                            <div class="portfolio-single">
+                                <div class="row direction">
+                                    <div class="col-lg-5">
+                                        <div class="inner">
+                                            <h5 class="title">
+                                                The services provice for Android user
+                                            </h5>
+                                            <p class="discription">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quidem
+                                                dignissimos.
+                                                Perspiciatis fuga soluta officiis eligendi labore, omnis ut velit vitae
+                                                suscipit
+                                                alias cumque temporibus.
+                                            </p>
+                                            <div class="ft-area">
+                                                <div class="feature-wrapper">
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Customer satisfaction</p>
+                                                    </div>
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Quiz builder</p>
+                                                    </div>
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Certification</p>
+                                                    </div>
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Stats & reports</p>
+                                                    </div>
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Football & reports</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7 col-xl-7">
+                                        <div class="thumbnail">
+                                            <img src="assets/images/portfolio/portfolio-05.jpg" alt="Personal Portfolio Image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Item  -->
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <i data-feather="chevron-left"></i>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <i data-feather="chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End portfolio Area -->
+
+        <!-- Start Cient Area -->
+        <div id="client" class="rn-client-area rn-client-style-2 rn-section-gap section-separator">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="section-title text-center">
+                            <span class="subtitle">Visit my Client</span>
+                            <h2 class="title">Our Trusted Client</h2>
+                        </div>
+                        <div class="skill-style-1">
+                            <div class="client-card">
+
+                                <!-- Start Single Brand  -->
+                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="main-content">
+                                    <div class="inner text-center">
+                                        <div class="thumbnail">
+                                            <a href="#"><img src="assets/images/client/png/client1.png" alt="Client-image"></a>
+                                        </div>
+                                        <div class="seperator"></div>
+                                        <div class="client-name"><span><a href="#">Marth Smiths</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Brand  -->
+
+                                <!-- Start Single Brand  -->
+                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true" class="main-content">
+                                    <div class="inner text-center">
+                                        <div class="thumbnail">
+                                            <a href="#"><img src="assets/images/client/png/client2.png" alt="Client-image"></a>
+                                        </div>
+                                        <div class="seperator"></div>
+                                        <div class="client-name"><span><a href="#">Sumith Saha</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Brand  -->
+
+                                <!-- Start Single Brand  -->
+                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true" class="main-content">
+                                    <div class="inner text-center">
+                                        <div class="thumbnail">
+                                            <a href="#"><img src="assets/images/client/png/client3.png" alt="Client-image"></a>
+                                        </div>
+                                        <div class="seperator"></div>
+                                        <div class="client-name"><span><a href="#">John Due</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Brand  -->
+
+                                <!-- Start Single Brand  -->
+                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="main-content">
+                                    <div class="inner text-center">
+                                        <div class="thumbnail">
+                                            <a href="#"><img src="assets/images/client/png/client4.png" alt="Client-image"></a>
+                                        </div>
+                                        <div class="seperator"></div>
+                                        <div class="client-name"><span><a href="#">Janen Jara</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Brand  -->
+
+                                <!-- Start Single Brand  -->
+                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true" class="main-content">
+                                    <div class="inner text-center">
+                                        <div class="thumbnail">
+                                            <a href="#"><img src="assets/images/client/png/client1.png" alt="Client-image"></a>
+                                        </div>
+                                        <div class="seperator"></div>
+                                        <div class="client-name"><span><a href="#">Jara Sultana</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Brand  -->
+
+                                <!-- Start Single Brand  -->
+                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true" class="main-content">
+                                    <div class="inner text-center">
+                                        <div class="thumbnail">
+                                            <a href="#"><img src="assets/images/client/png/client5.png" alt="Client-image"></a>
+                                        </div>
+                                        <div class="seperator"></div>
+                                        <div class="client-name"><span><a href="#">Sr Deirector</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Single Brand  -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end Cient Area -->
+
+        <!-- Start Testimonia Area  -->
+        <div class="rn-testimonial-area testimonial-style-2 testimonial-with-carousel rn-section-gapTop pb--80 pb_md--50 section-separator" id="testimonial">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="section-title text-center mb--20 mb_md--20 mb_sm--20">
+                            <span class="subtitle">What Clients Say</span>
+                            <h2 class="title">Testimonial</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-activation-item-3 slick-arrow-style-one mb--60" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">
+
+                    <!-- Start single Testimonial -->
+                    <div class="rn-testimonial">
+                        <div class="testimonial-inner">
+                            <div class="testimonial-header">
+                                <div class="thumbnail">
+                                    <img src="assets/images/client/testimonial-2.jpg" alt="client-image">
+                                </div>
+                                <h5 class="ts-header">
+                                    <span class="text-color-primary">@alamin</span> Engineer
+                                </h5>
+                            </div>
+                            <div class="testimonial-body">
+                                <p class="discription">@mr_rasel Ypur plaser well for your template
+                                    from
+                                    <span>@mr_faruk </span> There is no is best issueusing it too. It'll really
+                                    speed up the design and
+                                    development process :).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End single Testimonial -->
+
+                    <!-- Start single Testimonial -->
+                    <div class="rn-testimonial">
+                        <div class="testimonial-inner">
+                            <div class="testimonial-header">
+                                <div class="thumbnail">
+                                    <img src="assets/images/client/testimonial-2.jpg" alt="client-image">
+                                </div>
+                                <h5 class="ts-header">
+                                    <span class="text-color-primary">@mr_rasel</span> Engineer
+                                </h5>
+                            </div>
+                            <div class="testimonial-body">
+                                <p class="discription">@Covis_jackson Much plaser well for your template
+                                    from
+                                    <span>@tabriz </span>! The team is best using it too. It'll really
+                                    speed up the design and
+                                    development process ==);.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End single Testimonial -->
+
+                    <!-- Start single Testimonial -->
+                    <div class="rn-testimonial">
+                        <div class="testimonial-inner">
+                            <div class="testimonial-header">
+                                <div class="thumbnail">
+                                    <img src="assets/images/client/testimonial-2.jpg" alt="client-image">
+                                </div>
+                                <h5 class="ts-header">
+                                    <span class="text-color-primary">@Kabir</span> Engineer
+                                </h5>
+                            </div>
+                            <div class="testimonial-body">
+                                <p class="discription">@jack_danials thank you as well for your template
+                                    from
+                                    <span>@Alamin_Orko </span>! The team is using it too. It'll really
+                                    speed up the design and
+                                    development process 💨.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End single Testimonial -->
+
+                    <!-- Start single Testimonial -->
+                    <div class="rn-testimonial">
+                        <div class="testimonial-inner">
+                            <div class="testimonial-header">
+                                <div class="thumbnail">
+                                    <img src="assets/images/client/testimonial-2.jpg" alt="client-image">
+                                </div>
+                                <h5 class="ts-header">
+                                    <span class="text-color-primary">@Tuhin</span> Engineer
+                                </h5>
+                            </div>
+                            <div class="testimonial-body">
+                                <p class="discription">@jack_danials thank you as well for your template
+                                    from
+                                    <span>@Alamin_Orko </span>! The team is using it too. It'll really
+                                    speed up the design and
+                                    development process 🏃.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End single Testimonial -->
+                </div>
+            </div>
+        </div>
+        <!-- End Testimonia Area  -->
+
+        <!-- Start Pricing area -->
+        <div id="pricing" class="rn-pricing-area pricing-style-2 rn-section-gap section-separator">
+            <div class="container">
+                <div class="row">
+
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true" class="col-lg-4 col-sm-12">
+                        <div class="title-area-wrapper mb_md--20 mb_sm--20">
+                            <div class="section-title text-left">
+                                <span class="subtitle">Pricing</span>
+                                <h2 class="title">Our Pricing</h2>
+                            </div>
+                            <p class="title-disc">
+                                Use the free templates with your whole team or choose a premium. ith your whole team or
+                                choose a premium.
+                            </p>
+                            <p class="title-disc-2">
+                                Get the bundle and get lifetime support and one year updates.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true" class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="pricing-wrapper">
+                            <div class="ts-header">
+                                <h6>STARTER</h6>
+                                <span>Try and decide.</span>
+                            </div>
+                            <h3 class="price">$0</h3>
+                            <div class="pricing-body">
+                                <div class="feature">
+                                    <i data-feather="check"></i>
+                                    <span class="name">2 demo templates.</span>
+                                </div>
+                                <div class="feature">
+                                    <i data-feather="check"></i>
+                                    <span class="name">Fully responsive.</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="off" data-feather="x"></i>
+                                    <span class="name off">Figma</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="off" data-feather="x"></i>
+                                    <span class="name off">Spacial offer</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="off" data-feather="x"></i>
+                                    <span class="name off">All Demoes</span>
+                                </div>
+                            </div>
+                            <div class="pricing-footer">
+                                <a class="rn-btn" href="#contacts"><span>BUY NOW</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="pricing-wrapper-pro">
+                            <div class="ts-header">
+                                <h6>BUNDLE</h6>
+                                <span>Try and decide.</span>
+                            </div>
+                            <h3 class="price">$60</h3>
+                            <div class="pricing-body">
+                                <div class="feature">
+                                    <i data-feather="check"></i>
+                                    <span class="name">2 demo templates.</span>
+                                </div>
+                                <div class="feature">
+                                    <i data-feather="check"></i>
+                                    <span class="name">Fully responsive.</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="" data-feather="check"></i>
+                                    <span class="name">Figma</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="of" data-feather="check"></i>
+                                    <span class="name">Spacial offer</span>
+                                </div>
+                                <div class="feature">
+                                    <i class="" data-feather="check"></i>
+                                    <span class="name">All Demoes</span>
+                                </div>
+                            </div>
+                            <div class="pricing-footer">
+                                <a class="rn-btn" href="#contacts"><span>BUY NOW</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Pricing Area -->
+
+        <!-- Start News Area -->
+        <div class="rn-blog-area rn-section-gap section-separator" id="blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true" class="section-title text-center">
+                            <span class="subtitle">Visit my blog and keep your feedback</span>
+                            <h2 class="title">My Blog</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row--25 mt--30 mt_md--10 mt_sm--10">
+
+                    <!-- Start Single blog -->
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="400" data-aos-once="true" class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
+                        <div class="rn-blog" data-toggle="modal" data-target="#exampleModalCenters">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a href="javascript:void(0)">
+                                        <img src="assets/images/blog/blog-01.jpg" alt="Personal Portfolio Images">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="category-info">
+                                        <div class="category-list">
+                                            <a href="javascript:void(0)">Canada</a>
+                                        </div>
+                                        <div class="meta">
+                                            <span><i class="feather-clock"></i> 2 min read</span>
+                                        </div>
+                                    </div>
+                                    <h4 class="title"><a href="javascript:void(0)">T-shirt design is the part of design
+                                            <i class="feather-arrow-up-right"></i></a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single blog -->
+
+                    <!-- Start Single blog -->
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="600" data-aos-once="true" class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
+                        <div class="rn-blog" data-toggle="modal" data-target="#exampleModalCenters">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a href="javascript:void(0)">
+                                        <img src="assets/images/blog/blog-02.jpg" alt="Personal Portfolio Images">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="category-info">
+                                        <div class="category-list">
+                                            <a href="javascript:void(0)">Development</a>
+                                        </div>
+                                        <div class="meta">
+                                            <span><i class="feather-clock"></i> 2 hour read</span>
+                                        </div>
+                                    </div>
+                                    <h4 class="title"><a href="javascript:void(0)">The services provide for design <i
+                                        class="feather-arrow-up-right"></i></a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single blog -->
+
+                    <!-- Start Single blog -->
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="800" data-aos-once="true" class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
+                        <div class="rn-blog" data-toggle="modal" data-target="#exampleModalCenters">
+                            <div class="inner">
+                                <div class="thumbnail">
+                                    <a href="javascript:void(0)">
+                                        <img src="assets/images/blog/blog-03.jpg" alt="Personal Portfolio Images">
+                                    </a>
+                                </div>
+                                <div class="content">
+                                    <div class="category-info">
+                                        <div class="category-list">
+                                            <a href="javascript:void(0)">Application</a>
+                                        </div>
+                                        <div class="meta">
+                                            <span><i class="feather-clock"></i> 5 min read</span>
+                                        </div>
+                                    </div>
+                                    <h4 class="title"><a href="javascript:void(0)">Mobile app landing design & app
+                                            maintain<i class="feather-arrow-up-right"></i></a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single blog -->
+
+                </div>
+            </div>
+        </div>
+        <!-- ENd Mews Area -->
+        <!-- Start Contact section -->
+        <div class="rn-contact-area rn-section-gap section-separator" id="contacts">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title text-center">
+                            <span class="subtitle">Contact</span>
+                            <h2 class="title">Contact With Me</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt--50 mt_md--40 mt_sm--40 mt-contact-sm">
+                    <div class="col-lg-5">
+                        <div class="contact-about-area">
+                            <div class="thumbnail">
+                                <img src="assets/images/contact/contact1.png" alt="contact-img">
+                            </div>
+                            <div class="title-area">
+                                <h4 class="title">Nevine Acotanza</h4>
+                                <span>Chief Operating Officer</span>
+                            </div>
+                            <div class="description">
+                                <p>I am available for freelance work. Connect with me via and call in to my account.
+                                </p>
+                                <span class="phone">Phone: <a href="tel:01941043264">+01234567890</a></span>
+                                <span class="mail">Email: <a href="mailto:admin@example.com">admin@example.com</a></span>
+                            </div>
+                            <div class="social-area">
+                                <div class="name">FIND WITH ME</div>
+                                <div class="social-icone">
+                                    <a href="#"><i data-feather="facebook"></i></a>
+                                    <a href="#"><i data-feather="linkedin"></i></a>
+                                    <a href="#"><i data-feather="instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos-delay="600" class="col-lg-7 contact-input">
+                        <div class="contact-form-wrapper">
+                            <div class="introduce">
+
+                                <form class="rnt-contact-form rwt-dynamic-form row" id="contact-form" method="POST" action="mail.php">
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="contact-name">Your Name</label>
+                                            <input class="form-control form-control-lg" name="contact-name" id="contact-name" type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="contact-phone">Phone Number</label>
+                                            <input class="form-control" name="contact-phone" id="contact-phone" type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="contact-email">Email</label>
+                                            <input class="form-control form-control-sm" id="contact-email" name="contact-email" type="email">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="subject">subject</label>
+                                            <input class="form-control form-control-sm" id="subject" name="subject" type="text">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <label for="contact-message">Your Message</label>
+                                            <textarea name="contact-message" id="contact-message" cols="30" rows="10"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <button name="submit" type="submit" id="submit" class="rn-btn">
+                                            <span>SEND MESSAGE</span>
+                                            <i data-feather="arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Contuct section -->
+        <!-- Modal Blog Body area Start -->
+        <div class="modal fade" id="exampleModalCenters" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-news" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true"><i data-feather="x"></i></span>
+                        </button>
+                    </div>
+
+                    <!-- End of .modal-header -->
+
+                    <div class="modal-body">
+                        <img src="assets/images/blog/blog-big-01.jpg" alt="news modal" class="img-fluid modal-feat-img">
+                        <div class="news-details">
+                            <span class="date">2 May, 2021</span>
+                            <h2 class="title">Digital Marketo to Their New Office.</h2>
+                            <p>Nobis eleifend option congue nihil imperdiet doming id quod mazim placerat
+                                facer
+                                possim assum.
+                                Typi non
+                                habent claritatem insitam; est usus legentis in iis qui facit eorum
+                                claritatem.
+                                Investigationes
+                                demonstraverunt
+                                lectores legere me lius quod ii legunt saepius. Claritas est etiam processus
+                                dynamicus, qui
+                                sequitur
+                                mutationem consuetudium lectorum.</p>
+                            <h4>Nobis eleifend option conguenes.</h4>
+                            <p>Mauris tempor, orci id pellentesque convallis, massa mi congue eros, sed
+                                posuere
+                                massa nunc quis
+                                dui.
+                                Integer ornare varius mi, in vehicula orci scelerisque sed. Fusce a massa
+                                nisi.
+                                Curabitur sit
+                                amet
+                                suscipit nisl. Sed eget nisl laoreet, suscipit enim nec, viverra eros. Nunc
+                                imperdiet risus
+                                leo,
+                                in rutrum erat dignissim id.</p>
+                            <p>Ut rhoncus vestibulum facilisis. Duis et lorem vitae ligula cursus venenatis.
+                                Class aptent
+                                taciti sociosqu
+                                ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc vitae
+                                nisi
+                                tortor. Morbi
+                                leo
+                                nulla, posuere vel lectus a, egestas posuere lacus. Fusce eleifend hendrerit
+                                bibendum. Morbi
+                                nec
+                                efficitur ex.</p>
+                            <h4>Mauris tempor, orci id pellentesque.</h4>
+                            <p>Nulla non ligula vel nisi blandit egestas vel eget leo. Praesent fringilla
+                                dapibus dignissim.
+                                Pellentesque
+                                quis quam enim. Vestibulum ultrices, leo id suscipit efficitur, odio lorem
+                                rhoncus dolor, a
+                                facilisis
+                                neque mi ut ex. Quisque tempor urna a nisi pretium, a pretium massa
+                                tristique.
+                                Nullam in
+                                aliquam
+                                diam. Maecenas at nibh gravida, ornare eros non, commodo ligula. Sed
+                                efficitur
+                                sollicitudin
+                                auctor.
+                                Quisque nec imperdiet purus, in ornare odio. Quisque odio felis, vestibulum
+                                et.</p>
+                        </div>
+
+                        <!-- Comment Section Area Start -->
+                        <div class="comment-inner">
+                            <h3 class="title mb--40 mt--50">Leave a Reply</h3>
+                            <form action="#">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12 col-12">
+                                        <div class="rnform-group"><input type="text" placeholder="Name">
+                                        </div>
+                                        <div class="rnform-group"><input type="email" placeholder="Email">
+                                        </div>
+                                        <div class="rnform-group"><input type="text" placeholder="Website">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 col-12">
+                                        <div class="rnform-group">
+                                            <textarea placeholder="Comment"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <a class="rn-btn" href="#"><span>SUBMIT NOW</span></a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Comment Section End -->
+                    </div>
+                    <!-- End of .modal-body -->
+                </div>
+            </div>
+        </div>
+        <!-- End Modal Blog area -->
+        <!-- Back to  top Start -->
+        <div class="backto-top">
+            <div>
+                <i data-feather="arrow-up"></i>
+            </div>
+        </div>
+        <!-- Back to top end -->
+
+    </main>
+
+    <!-- Rn footer area Start -->
+    <div id="footer" class="rn-footer-area footer-style-2 rn-section-gapTop section-separator">
+        <div class="container pb--80 pb_sm--40 plr_sm--20">
+            <div class="row">
+                <div class="col-xl-3 col-12 col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="logo-thumbnail">
+                        <a href="#"><img src="assets/images/logo/logo.png" alt="logo-image"></a>
+                    </div>
+                    <div class="social-icone-wrapper">
+                        <ul class="social-share d-flex liststyle">
+                            <li class="facebook"><a href="#"><i data-feather="linkedin"></i></a>
+                            </li>
+                            <li class="instagram"><a href="#"><i data-feather="instagram"></i></a>
+                            </li>
+                            <li class="linkedin"><a href="#"><i data-feather="twitter"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sl-3 col-12 mt_sm--20 col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="menu-wrapper">
+                        <div class="menu-title">
+                            <h6>product</h6>
+                        </div>
+                        <ul class="menu-footer">
+                            <li><a href="#">Database</a></li>
+                            <li><a href="#">Authentication</a></li>
+                            <li><a href="#">Storage</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Pricing</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sl-3 col-12 mt_sm--20 col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="menu-wrapper">
+                        <div class="menu-title">
+                            <h6>Resources</h6>
+                        </div>
+                        <ul class="menu-footer">
+                            <li><a href="#">Authentication</a></li>
+                            <li><a href="#">System Status</a></li>
+                            <li><a href="#">Terms of service</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">over right</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sl-3 col-12 mt_sm--20 col-lg-3 col-md-6 col-sm-6 col-12">
+                    <div class="menu-wrapper">
+                        <div class="menu-title">
+                            <h6>Developers</h6>
+                        </div>
+                        <ul class="menu-footer">
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Authentication</a></li>
+                            <li><a href="#">API Reference</a></li>
+                            <li><a href="#">Support</a></li>
+                            <li><a href="#">Open Source</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright text-center ptb--40 section-separator">
+            <p class="description">© 2021. All rights reserved by <a target="_blank" href="https://themeforest.net/user/rainbow-themes/portfolio">Rainbow-Themes.</a></p>
+        </div>
+    </div>
+    <!-- Rn footer area end -->
+    <!-- JS ============================================ -->
+    <script src="{{ asset('front/assets/js/vendor/jquery.js') }}"></script>
+    <script src="{{ asset('front/assets/js/vendor/modernizer.min.js') }}"></script>
+    <script src="{{ asset('front/assets/js/vendor/feather.min.js') }}"></script>
+    <script src="{{ asset('front/assets/js/vendor/slick.min.js') }}"></script>
+    <script src="{{ asset('front/assets/js/vendor/bootstrap.js') }}"></script>
+    <script src="{{ asset('front/assets/js/vendor/text-type.js') }}"></script>
+    <script src="{{ asset('front/assets/js/vendor/wow.js') }}"></script>
+    <script src="{{ asset('front/assets/js/vendor/aos.js') }}"></script>
+    <script src="{{ asset('front/assets/js/vendor/particles.j') }}s"></script>
+    <!-- main JS -->
+    <script src="{{ asset('front/assets/js/main.js') }}"></script>
+</body>
+
 </html>
