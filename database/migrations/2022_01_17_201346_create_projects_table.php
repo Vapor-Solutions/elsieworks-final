@@ -17,6 +17,7 @@ class CreateProjectsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('client_id');
             $table->string('title');
+            $table->longText('description');
             $table->timestamps();
         });
     }
