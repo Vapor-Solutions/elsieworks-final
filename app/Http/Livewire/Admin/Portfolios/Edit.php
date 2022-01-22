@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Admin\Porfolios;
+namespace App\Http\Livewire\Admin\Portfolios;
 
 use Livewire\Component;
 
