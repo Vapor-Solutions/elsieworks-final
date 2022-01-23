@@ -4,27 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ config('app.name') }} || Welcome</title>
+    <title>Home Default || Inbio - Personal Portfolio Bootstrap Template</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
-    <!-- CSS
-    ============================================ -->
-    <link rel="stylesheet" href="{{ asset('front/assets/css/vendor/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('front/assets/css/vendor/slick.css') }}">
-    <link rel="stylesheet" href="{{ asset('front/assets/css/vendor/slick-theme.css') }}">
-    <link rel="stylesheet" href="{{ asset('front/assets/css/vendor/aos.css') }}">
-    <link rel="stylesheet" href="{{ asset('front/assets/css/plugins/feature.css') }}">
-    <!-- Style css -->
-    <link rel="stylesheet" href="{{ asset('front/assets/css/style.css') }}">
+    @include('layouts.partial.css')
+
 </head>
 
-<!-- home-classic -->
-
-<body class="template-color-1 home-classic spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
-
+<body class="template-color-1 home-classic spybody white-version" data-spy="scroll" data-target=".navbar-example2"
+    data-offset="150">
     <!-- Start Main Page Wrapper -->
     <main class="main-page-wrapper spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
 
@@ -36,7 +27,7 @@
                     <div class="header-left">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="assets/images/logo/logo.png" alt="logo">
+                                <img src="assets/images/logo/logos-circle.png" alt="logo">
                             </a>
                         </div>
                     </div>
@@ -48,26 +39,37 @@
                         <nav id="sideNav" class="mainmenu-nav navbar-example2">
                             <!-- Start Mainmanu Nav -->
                             <ul class="primary-menu nav nav-pills">
-                                <li class="nav-item"><a class="nav-link smoth-animation active" href="#home">Home</a>
+                                <li class="nav-item"><a class="nav-link smoth-animation active"
+                                        href="#home">Home</a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link smoth-animation" href="#about">About</a></li>
-                                <li class="nav-item"><a class="nav-link smoth-animation" href="#skill">Skill</a></li>
-                                <li class="nav-item"><a class="nav-link smoth-animation" href="#service">Service</a>
+                                <li class="nav-item"><a class="nav-link smoth-animation" href="#about">About</a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Portfolio</a>
+                                <li class="nav-item"><a class="nav-link smoth-animation" href="#skill">Skill</a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link smoth-animation" href="#client">Client</a></li>
-                                <li class="nav-item"><a class="nav-link smoth-animation" href="#pricing">Pricing</a>
+                                <li class="nav-item"><a class="nav-link smoth-animation"
+                                        href="#service">Service</a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">blog</a></li>
-                                <li class="nav-item"><a class="nav-link smoth-animation" href="#contacts">Contact</a>
+                                <li class="nav-item"><a class="nav-link smoth-animation"
+                                        href="#portfolio">Portfolio</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link smoth-animation" href="#client">Client</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link smoth-animation"
+                                        href="#pricing">Pricing</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">blog</a>
+                                </li>
+                                <li class="nav-item"><a class="nav-link smoth-animation"
+                                        href="#contacts">Contact</a>
                                 </li>
                             </ul>
                             <!-- End Mainmanu Nav -->
                         </nav>
                         <!-- Start Header Right  -->
                         <div class="header-right">
-                            <a class="rn-btn no-shadow btn-theme" target="_blank" href="https://themeforest.net/checkout/from_item/33188244?license=regular"><span>BUY NOW</span></a>
+                            <a class="rn-btn no-shadow btn-theme" target="_blank"
+                                href="https://themeforest.net/checkout/from_item/33188244?license=regular"><span>BUY
+                                    NOW</span></a>
                             <i id="menuBtn" class="feather-menu humberger-menu d-block d-xl-none"></i>
                             <div class="close-menu d-block">
                                 <span class="closeTrigger">
@@ -89,13 +91,13 @@
                 <div class="menu-top">
                     <div class="menu-header">
                         <a class="logo" href="index.html">
-                            <img src="assets/images/logo/logo.png" alt="Personal Portfolio">
+                            <img src="assets/images/logo/logos-circle.png" alt="Personal Portfolio">
                         </a>
                         <div class="close-button">
                             <button class="close-menu-activation close"><i data-feather="x"></i></button>
                         </div>
                     </div>
-                    <p class="discription">Lorem ipsum dolor sit amet consect adipisicing elit repellendus.</p>
+                    <p class="discription">Inbio is a personal portfolio template. You can customize all.</p>
                 </div>
                 <div class="content">
                     <ul class="primary-menu nav nav-pills">
@@ -106,7 +108,8 @@
 
                         <li class="nav-item"><a class="nav-link smoth-animation" href="#service">Service</a></li>
 
-                        <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">portfolio</a>
+                        </li>
 
                         <li class="nav-item"><a class="nav-link smoth-animation" href="#client">client</a></li>
 
@@ -120,19 +123,29 @@
                     <div class="social-share-style-1 mt--40">
                         <span class="title">find with me</span>
                         <ul class="social-share d-flex liststyle">
-                            <li class="facebook"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
+                            <li class="facebook"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-facebook">
                                         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z">
                                         </path>
                                     </svg></a>
                             </li>
-                            <li class="instagram"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram">
+                            <li class="instagram"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-instagram">
                                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                                     </svg></a>
                             </li>
-                            <li class="linkedin"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
-                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            <li class="linkedin"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-linkedin">
+                                        <path
+                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
                                         </path>
                                         <rect x="2" y="9" width="4" height="12"></rect>
                                         <circle cx="4" cy="4" r="2"></circle>
@@ -148,21 +161,15 @@
 
         <!-- Start Slider Area -->
         <div id="home" class="rn-slider-area">
-            <!-- Start Single Slide -->
             <div class="slide slider-style-4 bg_image bg_image--1">
                 <div class="container">
                     <div class="row">
                         <div class="order-2 order-lg-1 col-lg-9 col-xl-7">
                             <div class="content">
                                 <div class="inner mb_sm--80">
-                                    <h1 class="title">Hi, I’m <span>Zarin Nes</span><br> <span
-                                            class="span">Photographer</span></h1>
+                                    <h1 class="title">Hi, Welcome to <span>ElsieWorks</span><br> </h1>
                                     <div>
-                                        <p class="description">I design and code beautifully simple things, and I love
-                                            what
-                                            I do. I use animation as a third dimension by which Lorem ipsum dolor sit
-                                            amet
-                                            consectetur adipisicing. </p>
+                                        <p class="description">For All your Photography and Videography needs, <br> We  don't just capture media, we <br> <span class="text-dark">FREEZE TIME!</span> </p>
                                     </div>
                                 </div>
                                 <div class="row ">
@@ -170,13 +177,14 @@
                                         <div class="social-share-inner-left">
                                             <span class="title">find with me</span>
                                             <ul class="social-share d-flex liststyle">
-                                                <li class="facebook"><a href="#"><i data-feather="facebook"></i></a>
+                                                <li class="instagram"><a href="#"><i
+                                                            data-feather="instagram"></i></a>
                                                 </li>
-                                                <li class="instagram"><a href="#"><i data-feather="instagram"></i></a>
+                                                <li class="linkedin"><a href="#"><i
+                                                            data-feather="linkedin"></i></a>
                                                 </li>
-                                                <li class="linkedin"><a href="#"><i data-feather="linkedin"></i></a>
-                                                </li>
-                                                <li class="linkedin"><a href="#"><i data-feather="twitter"></i></a>
+                                                <li class="linkedin"><a href="#"><i
+                                                            data-feather="twitter"></i></a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -187,7 +195,6 @@
                     </div>
                 </div>
             </div>
-            <!-- End Single Slide -->
         </div>
         <!-- End Slider Area -->
 
@@ -196,17 +203,19 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5">
-                        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true" class="image-area">
+                        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true"
+                            class="image-area">
                             <div class="thumbnail">
-                                <img src="assets/images/about/about-2.png" alt="Personal Portfolio Image">
+                                <img src="assets/images/about/about-1.jpg" alt="Personal Portfolio Image">
                             </div>
                         </div>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true" class="col-lg-7 mt_sm--30">
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true"
+                        class="col-lg-7 mt_sm--30">
                         <div class="contant">
                             <div class="section-title text-left">
                                 <span class="subtitle">Visit my portfolio & Hire me</span>
-                                <h2 class="title">About Me</h2>
+                                <h2 class="title">About Us</h2>
                             </div>
                             <p class="discription">
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum in eos saepe ipsa
@@ -231,31 +240,39 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="section-title text-center" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true">
+                        <div class="section-title text-center" data-aos="fade-up" data-aos-duration="500"
+                            data-aos-delay="100" data-aos-once="true">
                             <span class="subtitle">Visit my skill & Hire me</span>
                             <h2 class="title">My Skill</h2>
                         </div>
                         <div class="mt_md--40 mt_sm--40">
                             <ul class="skill-style-1">
-                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" title="ReactJs">
+                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                                    title="ReactJs">
                                     <img src="assets/images/icons/react.png" alt="skill">
                                 </li>
-                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true" title="Figma">
+                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true"
+                                    title="Figma">
                                     <img src="assets/images/icons/figma.png" alt="skill">
                                 </li>
-                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true" title="XD">
+                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true"
+                                    title="XD">
                                     <img src="assets/images/icons/xd.png" alt="skill">
                                 </li>
-                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="400" data-aos-once="true" title="PS">
+                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="400" data-aos-once="true"
+                                    title="PS">
                                     <img src="assets/images/icons/photoshop.png" alt="skill">
                                 </li>
-                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" title="vueJS">
+                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                                    title="vueJS">
                                     <img src="assets/images/icons/vuejs.png" alt="skill">
                                 </li>
-                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true" title="js">
+                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true"
+                                    title="js">
                                     <img src="assets/images/icons/js.png" alt="skill">
                                 </li>
-                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true" title="angularJS">
+                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true"
+                                    title="angularJS">
                                     <img src="assets/images/icons/angularjs.png" alt="skill">
                                 </li>
                             </ul>
@@ -271,16 +288,18 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="section-title text-left">
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                            class="section-title text-left">
                             <span class="subtitle">Features</span>
-                            <h2 class="title">What I Do</h2>
+                            <h2 class="title">What We Do</h2>
                         </div>
                     </div>
                 </div>
                 <div class="row row--25 mt_md--10 mt_sm--10">
 
                     <!-- Start Single Service -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                        class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
                         <div class="rn-service">
                             <div class="inner">
                                 <div class="icon">
@@ -288,7 +307,8 @@
                                 </div>
                                 <div class="content">
                                     <h4 class="title"><a href="#">Business Stratagy</a></h4>
-                                    <p class="description">I throw myself down among the tall grass by the stream as I
+                                    <p class="description">I throw myself down among the tall grass by the stream as
+                                        I
                                         lie close to the earth.</p>
                                     <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
                                 </div>
@@ -298,7 +318,8 @@
                     </div>
                     <!-- End SIngle Service -->
                     <!-- Start Single Service -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true"
+                        class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
                         <div class="rn-service">
                             <div class="inner">
                                 <div class="icon">
@@ -306,7 +327,8 @@
                                 </div>
                                 <div class="content">
                                     <h4 class="title"><a href="#">Business Development</a></h4>
-                                    <p class="description">I throw myself down among the tall grass by the stream as I
+                                    <p class="description">I throw myself down among the tall grass by the stream as
+                                        I
                                         lie close to the earth.</p>
                                     <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
                                 </div>
@@ -316,7 +338,8 @@
                     </div>
                     <!-- End SIngle Service -->
                     <!-- Start Single Service -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true"
+                        class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
                         <div class="rn-service">
                             <div class="inner">
                                 <div class="icon">
@@ -324,7 +347,8 @@
                                 </div>
                                 <div class="content">
                                     <h4 class="title"><a href="#">App Development</a></h4>
-                                    <p class="description">I throw myself down among the tall grass by the stream as I
+                                    <p class="description">I throw myself down among the tall grass by the stream as
+                                        I
                                         lie close to the earth.</p>
                                     <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
                                 </div>
@@ -345,14 +369,16 @@
                 <div class="row">
 
                     <div class="col-lg-12">
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="section-title text-left mb_md--25 mb_sm--25">
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                            class="section-title text-left mb_md--25 mb_sm--25">
                             <span class="subtitle">Look My project & JUDGE</span>
                             <h2 class="title">My Best Work</h2>
                         </div>
                     </div>
 
                 </div>
-                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true" id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true"
+                    id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
 
                         <!-- Start Single Item  -->
@@ -399,7 +425,8 @@
                                     </div>
                                     <div class="col-lg-7 col-xl-7">
                                         <div class="thumbnail">
-                                            <img src="assets/images/portfolio/portfolio-04.jpg" alt="Personal Portfolio Image">
+                                            <img src="assets/images/portfolio/portfolio-04.jpg"
+                                                alt="Personal Portfolio Image">
                                         </div>
                                     </div>
                                 </div>
@@ -451,7 +478,8 @@
                                     </div>
                                     <div class="col-lg-7 col-xl-7">
                                         <div class="thumbnail">
-                                            <img src="assets/images/portfolio/portfolio-01.jpg" alt="Personal Portfolio Image">
+                                            <img src="assets/images/portfolio/portfolio-01.jpg"
+                                                alt="Personal Portfolio Image">
                                         </div>
                                     </div>
                                 </div>
@@ -503,7 +531,8 @@
                                     </div>
                                     <div class="col-lg-7 col-xl-7">
                                         <div class="thumbnail">
-                                            <img src="assets/images/portfolio/portfolio-05.jpg" alt="Personal Portfolio Image">
+                                            <img src="assets/images/portfolio/portfolio-05.jpg"
+                                                alt="Personal Portfolio Image">
                                         </div>
                                     </div>
                                 </div>
@@ -527,7 +556,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="section-title text-center">
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                            class="section-title text-center">
                             <span class="subtitle">Visit my Client</span>
                             <h2 class="title">Our Trusted Client</h2>
                         </div>
@@ -535,10 +565,12 @@
                             <div class="client-card">
 
                                 <!-- Start Single Brand  -->
-                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="main-content">
+                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"
+                                    data-aos-once="true" class="main-content">
                                     <div class="inner text-center">
                                         <div class="thumbnail">
-                                            <a href="#"><img src="assets/images/client/png/client1.png" alt="Client-image"></a>
+                                            <a href="#"><img src="assets/images/client/png/brand-01.png"
+                                                    alt="Client-image"></a>
                                         </div>
                                         <div class="seperator"></div>
                                         <div class="client-name"><span><a href="#">Marth Smiths</a></span>
@@ -548,65 +580,75 @@
                                 <!-- End Single Brand  -->
 
                                 <!-- Start Single Brand  -->
-                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true" class="main-content">
+                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"
+                                    data-aos-once="true" class="main-content">
                                     <div class="inner text-center">
                                         <div class="thumbnail">
-                                            <a href="#"><img src="assets/images/client/png/client2.png" alt="Client-image"></a>
+                                            <a href="#"><img src="assets/images/client/png/brand-02.png"
+                                                    alt="Client-image"></a>
                                         </div>
                                         <div class="seperator"></div>
-                                        <div class="client-name"><span><a href="#">Sumith Saha</a></span>
+                                        <div class="client-name"><span><a href="#">Marth Smiths</a></span>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- End Single Brand  -->
 
                                 <!-- Start Single Brand  -->
-                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true" class="main-content">
+                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500"
+                                    data-aos-once="true" class="main-content">
                                     <div class="inner text-center">
                                         <div class="thumbnail">
-                                            <a href="#"><img src="assets/images/client/png/client3.png" alt="Client-image"></a>
+                                            <a href="#"><img src="assets/images/client/png/brand-03.png"
+                                                    alt="Client-image"></a>
                                         </div>
                                         <div class="seperator"></div>
-                                        <div class="client-name"><span><a href="#">John Due</a></span>
+                                        <div class="client-name"><span><a href="#">Marth Smiths</a></span>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- End Single Brand  -->
 
                                 <!-- Start Single Brand  -->
-                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="main-content">
+                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"
+                                    data-aos-once="true" class="main-content">
                                     <div class="inner text-center">
                                         <div class="thumbnail">
-                                            <a href="#"><img src="assets/images/client/png/client4.png" alt="Client-image"></a>
+                                            <a href="#"><img src="assets/images/client/png/brand-04.png"
+                                                    alt="Client-image"></a>
                                         </div>
                                         <div class="seperator"></div>
-                                        <div class="client-name"><span><a href="#">Janen Jara</a></span>
+                                        <div class="client-name"><span><a href="#">Marth Smiths</a></span>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- End Single Brand  -->
 
                                 <!-- Start Single Brand  -->
-                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true" class="main-content">
+                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"
+                                    data-aos-once="true" class="main-content">
                                     <div class="inner text-center">
                                         <div class="thumbnail">
-                                            <a href="#"><img src="assets/images/client/png/client1.png" alt="Client-image"></a>
+                                            <a href="#"><img src="assets/images/client/png/brand-01.png"
+                                                    alt="Client-image"></a>
                                         </div>
                                         <div class="seperator"></div>
-                                        <div class="client-name"><span><a href="#">Jara Sultana</a></span>
+                                        <div class="client-name"><span><a href="#">Marth Smiths</a></span>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- End Single Brand  -->
 
                                 <!-- Start Single Brand  -->
-                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true" class="main-content">
+                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500"
+                                    data-aos-once="true" class="main-content">
                                     <div class="inner text-center">
                                         <div class="thumbnail">
-                                            <a href="#"><img src="assets/images/client/png/client5.png" alt="Client-image"></a>
+                                            <a href="#"><img src="assets/images/client/png/brand-05.png"
+                                                    alt="Client-image"></a>
                                         </div>
                                         <div class="seperator"></div>
-                                        <div class="client-name"><span><a href="#">Sr Deirector</a></span>
+                                        <div class="client-name"><span><a href="#">Marth Smiths</a></span>
                                         </div>
                                     </div>
                                 </div>
@@ -620,18 +662,21 @@
         <!-- end Cient Area -->
 
         <!-- Start Testimonia Area  -->
-        <div class="rn-testimonial-area testimonial-style-2 testimonial-with-carousel rn-section-gapTop pb--80 pb_md--50 section-separator" id="testimonial">
+        <div class="rn-testimonial-area testimonial-style-2 testimonial-with-carousel rn-section-gapTop pb--80 pb_md--50 section-separator"
+            id="testimonial">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="section-title text-center mb--20 mb_md--20 mb_sm--20">
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                            class="section-title text-center mb--20 mb_md--20 mb_sm--20">
                             <span class="subtitle">What Clients Say</span>
                             <h2 class="title">Testimonial</h2>
                         </div>
                     </div>
                 </div>
 
-                <div class="testimonial-activation-item-3 slick-arrow-style-one mb--60" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">
+                <div class="testimonial-activation-item-3 slick-arrow-style-one mb--60" data-aos="fade-up"
+                    data-aos-duration="500" data-aos-delay="300" data-aos-once="true">
 
                     <!-- Start single Testimonial -->
                     <div class="rn-testimonial">
@@ -734,7 +779,8 @@
             <div class="container">
                 <div class="row">
 
-                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true" class="col-lg-4 col-sm-12">
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true"
+                        class="col-lg-4 col-sm-12">
                         <div class="title-area-wrapper mb_md--20 mb_sm--20">
                             <div class="section-title text-left">
                                 <span class="subtitle">Pricing</span>
@@ -750,7 +796,8 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true" class="col-lg-4 col-md-6 col-sm-12">
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true"
+                        class="col-lg-4 col-md-6 col-sm-12">
                         <div class="pricing-wrapper">
                             <div class="ts-header">
                                 <h6>STARTER</h6>
@@ -785,7 +832,8 @@
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true" class="col-lg-4 col-md-6 col-sm-12">
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true"
+                        class="col-lg-4 col-md-6 col-sm-12">
                         <div class="pricing-wrapper-pro">
                             <div class="ts-header">
                                 <h6>BUNDLE</h6>
@@ -829,7 +877,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true" class="section-title text-center">
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true"
+                            class="section-title text-center">
                             <span class="subtitle">Visit my blog and keep your feedback</span>
                             <h2 class="title">My Blog</h2>
                         </div>
@@ -838,7 +887,8 @@
                 <div class="row row--25 mt--30 mt_md--10 mt_sm--10">
 
                     <!-- Start Single blog -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="400" data-aos-once="true" class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="400" data-aos-once="true"
+                        class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
                         <div class="rn-blog" data-toggle="modal" data-target="#exampleModalCenters">
                             <div class="inner">
                                 <div class="thumbnail">
@@ -855,7 +905,8 @@
                                             <span><i class="feather-clock"></i> 2 min read</span>
                                         </div>
                                     </div>
-                                    <h4 class="title"><a href="javascript:void(0)">T-shirt design is the part of design
+                                    <h4 class="title"><a href="javascript:void(0)">T-shirt design is the part
+                                            of design
                                             <i class="feather-arrow-up-right"></i></a></h4>
                                 </div>
                             </div>
@@ -864,7 +915,8 @@
                     <!-- End Single blog -->
 
                     <!-- Start Single blog -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="600" data-aos-once="true" class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="600" data-aos-once="true"
+                        class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
                         <div class="rn-blog" data-toggle="modal" data-target="#exampleModalCenters">
                             <div class="inner">
                                 <div class="thumbnail">
@@ -881,8 +933,8 @@
                                             <span><i class="feather-clock"></i> 2 hour read</span>
                                         </div>
                                     </div>
-                                    <h4 class="title"><a href="javascript:void(0)">The services provide for design <i
-                                        class="feather-arrow-up-right"></i></a></h4>
+                                    <h4 class="title"><a href="javascript:void(0)">The services provide for
+                                            design <i class="feather-arrow-up-right"></i></a></h4>
                                 </div>
                             </div>
                         </div>
@@ -890,7 +942,8 @@
                     <!-- End Single blog -->
 
                     <!-- Start Single blog -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="800" data-aos-once="true" class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
+                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="800" data-aos-once="true"
+                        class="col-lg-6 col-xl-4 mt--30 col-md-6 col-sm-12 col-12 mt--30">
                         <div class="rn-blog" data-toggle="modal" data-target="#exampleModalCenters">
                             <div class="inner">
                                 <div class="thumbnail">
@@ -907,7 +960,8 @@
                                             <span><i class="feather-clock"></i> 5 min read</span>
                                         </div>
                                     </div>
-                                    <h4 class="title"><a href="javascript:void(0)">Mobile app landing design & app
+                                    <h4 class="title"><a href="javascript:void(0)">Mobile app landing design &
+                                            app
                                             maintain<i class="feather-arrow-up-right"></i></a></h4>
                                 </div>
                             </div>
@@ -944,7 +998,8 @@
                                 <p>I am available for freelance work. Connect with me via and call in to my account.
                                 </p>
                                 <span class="phone">Phone: <a href="tel:01941043264">+01234567890</a></span>
-                                <span class="mail">Email: <a href="mailto:admin@example.com">admin@example.com</a></span>
+                                <span class="mail">Email: <a
+                                        href="mailto:admin@example.com">admin@example.com</a></span>
                             </div>
                             <div class="social-area">
                                 <div class="name">FIND WITH ME</div>
@@ -960,40 +1015,46 @@
                         <div class="contact-form-wrapper">
                             <div class="introduce">
 
-                                <form class="rnt-contact-form rwt-dynamic-form row" id="contact-form" method="POST" action="mail.php">
+                                <form class="rnt-contact-form rwt-dynamic-form row" id="contact-form" method="POST"
+                                    action="mail.php">
 
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for="contact-name">Your Name</label>
-                                            <input class="form-control form-control-lg" name="contact-name" id="contact-name" type="text">
+                                            <input class="form-control form-control-lg" name="contact-name"
+                                                id="contact-name" type="text">
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for="contact-phone">Phone Number</label>
-                                            <input class="form-control" name="contact-phone" id="contact-phone" type="text">
+                                            <input class="form-control" name="contact-phone" id="contact-phone"
+                                                type="text">
                                         </div>
                                     </div>
 
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="contact-email">Email</label>
-                                            <input class="form-control form-control-sm" id="contact-email" name="contact-email" type="email">
+                                            <input class="form-control form-control-sm" id="contact-email"
+                                                name="contact-email" type="email">
                                         </div>
                                     </div>
 
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="subject">subject</label>
-                                            <input class="form-control form-control-sm" id="subject" name="subject" type="text">
+                                            <input class="form-control form-control-sm" id="subject" name="subject"
+                                                type="text">
                                         </div>
                                     </div>
 
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="contact-message">Your Message</label>
-                                            <textarea name="contact-message" id="contact-message" cols="30" rows="10"></textarea>
+                                            <textarea name="contact-message" id="contact-message" cols="30"
+                                                rows="10"></textarea>
                                         </div>
                                     </div>
 
@@ -1025,7 +1086,8 @@
                     <!-- End of .modal-header -->
 
                     <div class="modal-body">
-                        <img src="assets/images/blog/blog-big-01.jpg" alt="news modal" class="img-fluid modal-feat-img">
+                        <img src="assets/images/blog/blog-big-01.jpg" alt="news modal"
+                            class="img-fluid modal-feat-img">
                         <div class="news-details">
                             <span class="date">2 May, 2021</span>
                             <h2 class="title">Digital Marketo to Their New Office.</h2>
@@ -1131,7 +1193,7 @@
             <div class="row">
                 <div class="col-xl-3 col-12 col-lg-3 col-md-6 col-sm-6 col-12">
                     <div class="logo-thumbnail">
-                        <a href="#"><img src="assets/images/logo/logo.png" alt="logo-image"></a>
+                        <a href="#"><img src="assets/images/logo/logo-dark.png" alt="logo-image"></a>
                     </div>
                     <div class="social-icone-wrapper">
                         <ul class="social-share d-flex liststyle">
@@ -1177,34 +1239,25 @@
                         <div class="menu-title">
                             <h6>Developers</h6>
                         </div>
-                        <ul class="menu-footer">
+                        {{-- <ul class="menu-footer">
                             <li><a href="#">Documentation</a></li>
                             <li><a href="#">Authentication</a></li>
                             <li><a href="#">API Reference</a></li>
                             <li><a href="#">Support</a></li>
                             <li><a href="#">Open Source</a></li>
-                        </ul>
+                        </ul> --}}
                     </div>
                 </div>
             </div>
         </div>
         <div class="copyright text-center ptb--40 section-separator">
-            <p class="description">© 2021. All rights reserved by <a target="_blank" href="https://themeforest.net/user/rainbow-themes/portfolio">Rainbow-Themes.</a></p>
+            <p class="description">© 2021. All rights reserved by <a target="_blank"
+                    href="https://themeforest.net/user/rainbow-themes/portfolio">Rainbow-Themes.</a></p>
         </div>
     </div>
     <!-- Rn footer area end -->
     <!-- JS ============================================ -->
-    <script src="{{ asset('front/assets/js/vendor/jquery.js') }}"></script>
-    <script src="{{ asset('front/assets/js/vendor/modernizer.min.js') }}"></script>
-    <script src="{{ asset('front/assets/js/vendor/feather.min.js') }}"></script>
-    <script src="{{ asset('front/assets/js/vendor/slick.min.js') }}"></script>
-    <script src="{{ asset('front/assets/js/vendor/bootstrap.js') }}"></script>
-    <script src="{{ asset('front/assets/js/vendor/text-type.js') }}"></script>
-    <script src="{{ asset('front/assets/js/vendor/wow.js') }}"></script>
-    <script src="{{ asset('front/assets/js/vendor/aos.js') }}"></script>
-    <script src="{{ asset('front/assets/js/vendor/particles.j') }}s"></script>
-    <!-- main JS -->
-    <script src="{{ asset('front/assets/js/main.js') }}"></script>
+    @include('layouts.partial.js')
 </body>
 
 </html>

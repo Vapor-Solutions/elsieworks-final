@@ -1,5 +1,5 @@
 /*---------------------------
- CSS Index  
+ CSS Index
 ****************************
 
 01. Variables
@@ -39,11 +39,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 :root {
-  --color-primary: #ff014f;
+  --color-primary: #936037;
   --color-secondary: #f4f5f6;
   --color-tertiary: #0d1013;
   --color-gray: #f6f6f6;
-  --color-subtitle: #f9004d;
+  --color-subtitle: #ca9e67;
   --background-color-1: linear-gradient(145deg, #1e2024, #23272b);
   --background-color-2: #212428;
   --shadow-1: 10px 10px 19px #1c1e22,
@@ -52,7 +52,7 @@
   --inner-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
   --shadow-white-3: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
   --gradient-box-w: linear-gradient(145deg, #e2e8ec, #ffffff);
-  --gradient-red-hover: linear-gradient(145deg, #ff014f, #d11414);
+  --gradient-red-hover: linear-gradient(125deg, #936037, #412610);
   --color-heading: #ffffff;
   --color-heading-wv: #1e2125;
   --color-body: #878e99;
@@ -373,7 +373,7 @@ var {
   font-family: 'Poppins', sans-serif; }
 
 /*---------------------------
-	List Style 
+	List Style
 ---------------------------*/
 ul,
 ol {
@@ -434,7 +434,7 @@ ol {
     padding-left: 30px; }
 
 /*=========================
-    Section Separation 
+    Section Separation
 ==========================*/
 .slick-dotted.slick-slider {
   margin-bottom: 0; }
@@ -4017,7 +4017,7 @@ select {
   appearance: none;
   border: 1px solid var(--color-border);
   border-radius: 4px;
-  background: url(../images/icons/arrow-icon.png) 95% center no-repeat transparent;
+  background: url(../images/icons/short-arrow-right.png) 95% center no-repeat transparent;
   padding-right: 32px; }
 
 input[type="text"],
@@ -4336,7 +4336,7 @@ input[type="submit"] {
 /*==============================
  *  Utilities
 =================================*/
-/* 
+/*
 font-family: 'Red Hat Display', sans-serif;
 */
 .clearfix:before,
@@ -4354,7 +4354,7 @@ font-family: 'Red Hat Display', sans-serif;
   margin-bottom: -10px; }
 
 /*===============================
-    Background Color 
+    Background Color
 =================================*/
 .bg-color-primary {
   background: var(--color-primary); }
@@ -4378,7 +4378,7 @@ font-family: 'Red Hat Display', sans-serif;
   background: var(--color-extra03); }
 
 /*===========================
-Background Image 
+Background Image
 =============================*/
 .bg_image {
   background-repeat: no-repeat;
@@ -4822,7 +4822,7 @@ textarea:-ms-input-placeholder {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; }
 
 /*=============================
-	Overlay styles 
+	Overlay styles
 ==============================*/
 [data-overlay],
 [data-black-overlay],
@@ -4910,7 +4910,7 @@ textarea:-ms-input-placeholder {
   opacity: 1; }
 
 /*------------------------------
-    Scroll Up 
+    Scroll Up
 --------------------------------*/
 #scrollUp {
   width: 70px;
@@ -4990,7 +4990,7 @@ textarea:-ms-input-placeholder {
     color: var(--color-primary); }
 
 /*--------------------
-    Contact Form 
+    Contact Form
 ----------------------*/
 .form-message {
   margin-bottom: 0;
@@ -5003,7 +5003,7 @@ textarea:-ms-input-placeholder {
     color: #0d8d2d; }
 
 /*---------------------------
-    Banner Area Styles 
+    Banner Area Styles
 -----------------------------*/
 .template-color-2 {
   background: #1D1E24; }
@@ -5193,7 +5193,7 @@ textarea:-ms-input-placeholder {
       box-shadow: var(--shadow-1); }
       .social-share-style-1 .social-share li a.only-border {
         background: transparent;
-        border: 1px solid #ff014f87; }
+        border: 1px solid #93603787; }
         .social-share-style-1 .social-share li a.only-border::before {
           display: none; }
       .social-share-style-1 .social-share li a.border-white {
@@ -7809,9 +7809,9 @@ Copyright (c) 2015 Daniel Eden
 .no-js .cd-words-wrapper b.is-visible {
   opacity: 1; }
 
-/* -------------------------------- 
+/* --------------------------------
 
-xclip 
+xclip
 
 -------------------------------- */
 .cd-headline.clip span {
@@ -7840,7 +7840,7 @@ xclip
 
 /* Header  */
 /*---------------------------
-    Header Area Styles 
+    Header Area Styles
 -----------------------------*/
 body.template-color-1 {
   background-color: #212428; }
@@ -8180,7 +8180,7 @@ body.template-color-1 {
     color: var(--color-primary); }
 
 /*--------------------------
-    Navigation Styles  
+    Navigation Styles
 ----------------------------*/
 .mainmenu-nav .primary-menu {
   display: flex;
@@ -8230,7 +8230,7 @@ body.template-color-1 {
   opacity: 0.5; }
 
 /*----------------------------
-    Mobile Menu Styles  
+    Mobile Menu Styles
 ------------------------------*/
 .popup-mobile-menu {
   z-index: 9999;
@@ -8354,7 +8354,7 @@ body.template-color-1 {
   box-shadow: none; }
 
 /*----------------------
-    Right Demo  
+    Right Demo
 -----------------------*/
 .rn-right-demo {
   width: 40px;
@@ -8599,7 +8599,7 @@ body.template-color-1 {
     z-index: -1; }
 
 /*-------------------
- Popup Tab  
+ Popup Tab
 -----------------------*/
 .popuptab-area {
   justify-content: center;
@@ -8645,7 +8645,7 @@ body.template-color-1 {
           opacity: 1; }
 
 /*---------------------------------
-    Right Demo Light Version  
+    Right Demo Light Version
 ----------------------------------*/
 .demo-modal-area.white-version .wrapper .rn-modal-inner {
   background: var(--gradient-box-w);
@@ -8691,7 +8691,7 @@ body.template-color-1 {
 
 /* Elements  */
 /*---------------------------
-    Header Area Styles 
+    Header Area Styles
 -----------------------------*/
 a.rn-btn,
 button.rn-btn {
@@ -9052,7 +9052,7 @@ figcaption {
     display: block !important; } }
 
 .section-title span.subtitle {
-  color: #ff014f;
+  color: #936037;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 14px;
@@ -9084,7 +9084,7 @@ figcaption {
       font-size: 34px; } }
 
 /*---------------------------
-    Banner Area Styles 
+    Banner Area Styles
 -----------------------------*/
 .skill-share-inner-one .skill-share {
   flex-wrap: wrap;
@@ -9176,7 +9176,7 @@ figcaption {
             font-size: 32px;
             line-height: 40px; } }
         .slide .content .inner .title span {
-          color: #ff014f; }
+          color: #936037; }
         .slide .content .inner .title .header-caption span {
           color: var(--color-white);
           font-weight: 600; }
@@ -9640,7 +9640,7 @@ figcaption {
       .banner-details-wrapper-sticky .banner-title-area .title .span {
         font-size: 36px; } }
   .banner-details-wrapper-sticky .banner-title-area .title span {
-    color: #ff014f; }
+    color: #936037; }
     @media only screen and (max-width: 575px) {
       .banner-details-wrapper-sticky .banner-title-area .title span {
         font-size: 32px; } }
@@ -10042,7 +10042,7 @@ figcaption {
       color: var(--color-body); }
 
 /*---------------------------
-    Service Area Styles 
+    Service Area Styles
 -----------------------------*/
 .rn-service {
   text-align: left;
@@ -10404,7 +10404,7 @@ div#featured-project-carousel {
   color: var(--color-lightn); }
 
 /*=====================
-    Skill Area 
+    Skill Area
 ========================*/
 @media only screen and (max-width: 479px) {
   .section-title.text-center span.subtitle {
@@ -10485,7 +10485,7 @@ div#featured-project-carousel {
         .rn-nav-list .nav-item .nav-link {
           font-size: 18px; } }
       .rn-nav-list .nav-item .nav-link:hover, .rn-nav-list .nav-item .nav-link.active {
-        color: #ff014f;
+        color: #936037;
         background-color: transparent;
         border-color: transparent;
         border: 0 none;
@@ -10775,7 +10775,7 @@ div#featured-project-carousel {
       margin-top: 20px; } }
 
 /*=========================
-    Progress Bar Styles 
+    Progress Bar Styles
 ==========================*/
 .progress-charts {
   overflow: hidden; }
@@ -10803,7 +10803,8 @@ div#featured-project-carousel {
     border-radius: 10px;
     padding: 3px;
     background: #212428;
-    box-shadow: inset 8px 8px 16px #00000075,  inset -8px -8px 16px #383e4575; }
+    box-shadow: inset 8px 8px 16px #00000075,
+ inset -8px -8px 16px #383e4575; }
     .progress-charts .progress .progress-bar {
       overflow: visible;
       position: relative;
@@ -10822,7 +10823,7 @@ div#featured-project-carousel {
         opacity: 0.9; }
 
 /*---------------------------
-    Testimonial Area Styles 
+    Testimonial Area Styles
 -----------------------------*/
 .rn-testimonial {
   padding: 30px 15px; }
@@ -11242,7 +11243,7 @@ div#featured-project-carousel {
       text-align: center !important; } }
 
 /*------------------------------
-    Client Single Card 
+    Client Single Card
 --------------------------------*/
 .client-card {
   display: flex;
@@ -11463,7 +11464,7 @@ div#featured-project-carousel {
   padding: 0; }
 
 /*---------------------------
-    Pricing Area Styles 
+    Pricing Area Styles
 -----------------------------*/
 .navigation-wrapper {
   margin-left: 10px;
@@ -11885,7 +11886,7 @@ div#featured-project-carousel {
       margin-top: 30px; } }
 
 /*---------------------------
-    Contact Area Styles 
+    Contact Area Styles
 -----------------------------*/
 .contact-about-area {
   padding: 30px;
@@ -12574,7 +12575,7 @@ div#featured-project-carousel {
       transition: var(--transition); }
 
 /*---------------------------
-    Contact Area Styles 
+    Contact Area Styles
 -----------------------------*/
 .footer-area h4 span {
   padding: 20px 23px;
@@ -12612,7 +12613,7 @@ div#featured-project-carousel {
   max-height: 100px; }
 
 /*-----------------------
-    Footer Style Two  
+    Footer Style Two
 --------------------------*/
 .footer-style-2 .copyright .description {
   color: var(--color-body);
@@ -12748,7 +12749,7 @@ div#featured-project-carousel {
             height: 12px; }
 
 /*---------------------------
-    Portfolio Area Styles 
+    Portfolio Area Styles
 -----------------------------*/
 .rn-portfolio,
 .rn-blog {
@@ -12950,7 +12951,7 @@ div#featured-project-carousel {
     padding: 35px 15px; }
 
 /*-----------------------------
-    Portfolio Style Two  
+    Portfolio Style Two
 -------------------------------*/
 .portfolio-style-two .carousel.slide {
   box-shadow: var(--shadow-1);
@@ -13234,7 +13235,7 @@ div#featured-project-carousel {
   margin-top: -25px; }
 
 /*----------------------
-Rn Slick Dots Style  
+Rn Slick Dots Style
 -----------------------*/
 .slick-initialized .slick-slide {
   margin-bottom: 0 !important; }
