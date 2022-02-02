@@ -1,3 +1,5 @@
 <div>
-    {{-- The best athlete wants his opponent at his best. --}}
+    <x-slot name="header">
+        {{ __('Create a new Client') }}
+    </x-slot>
 </div>

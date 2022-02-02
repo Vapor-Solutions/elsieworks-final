@@ -1,9 +1,11 @@
 <x-app-layout>
     <x-slot name="header">
-        <h2 class="h4 font-weight-bold">
             {{ __('Dashboard') }}
-        </h2>
     </x-slot>
 
-    <x-jet-welcome />
+    <div class="row">
+        <div class="col-md-9">
+            @livewire('image-tables', ['link' => 'client/images/bg'])
+        </div>
+    </div>
 </x-app-layout>

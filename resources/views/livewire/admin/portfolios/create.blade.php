@@ -1,3 +1,5 @@
 <div>
-    {{-- Care about people's approval and you will be their prisoner. --}}
+    <x-slot name="header">
+        Create a New Portfolio
+    </x-slot>
 </div>

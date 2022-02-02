@@ -1,3 +1,5 @@
 <div>
-    {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
+    <x-slot name="header">
+        {{ __('Clients\' List ') }}
+    </x-slot>
 </div>

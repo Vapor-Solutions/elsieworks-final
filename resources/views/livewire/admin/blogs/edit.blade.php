@@ -1,3 +1,6 @@
 <div>
-    {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
+    {{-- Close your eyes. Count to one. That is how long forever feels. --}}
+    <x-slot name="header">
+        {{ __('Edit Blog No. ').$id }}
+</x-slot>
 </div>

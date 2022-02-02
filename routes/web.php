@@ -37,35 +37,35 @@ Route::redirect('dashboard', 'admin/dashboard');
 Route::prefix('admin')->middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/dashboard', function(){
         return view('dashboard');
-    })->name('dashboard');
+    })->name('admin.dashboard');
 
-    Route::get('/clients', Clients\Index::class);
-    Route::get('/clients/create', Clients\Create::class);
-    Route::get('/clients/{id}/edit', Clients\Edit::class);
+    Route::get('/clients', Clients\Index::class)->name('admin.clients.index');
+    Route::get('/clients/create', Clients\Create::class)->name('admin.clients.create');
+    Route::get('/clients/{id}/edit', Clients\Edit::class)->name('admin.clients.edit');
 
-    Route::get('/blogs', Blogs\Index::class);
-    Route::get('/blogs/create', Blogs\Create::class);
-    Route::get('/blogs/{id}/edit', Blogs\Edit::class);
+    Route::get('/blogs', Blogs\Index::class)->name('admin.blogs.index');
+    Route::get('/blogs/create', Blogs\Create::class)->name('admin.blogs.create');
+    Route::get('/blogs/{id}/edit', Blogs\Edit::class)->name('admin.blogs.edit');
 
-    Route::get('/admins', Admins\Index::class);
-    Route::get('/admins/create', Admins\Create::class);
-    Route::get('/admins/{id}/edit', Admins\Edit::class);
+    Route::get('/admins', Admins\Index::class)->name('admin.admins.index');
+    Route::get('/admins/create', Admins\Create::class)->name('admin.admins.create');
+    Route::get('/admins/{id}/edit', Admins\Edit::class)->name('admin.admins.edit');
 
-    Route::get('/services', Services\Index::class);
-    Route::get('/services/create', Services\Create::class);
-    Route::get('/services/{id}/edit', Services\Edit::class);
+    Route::get('/services', Services\Index::class)->name('admin.services.index');
+    Route::get('/services/create', Services\Create::class)->name('admin.services.create');
+    Route::get('/services/{id}/edit', Services\Edit::class)->name('admin.services.edit');
 
-    Route::get('/portfolios', Portfolios\Index::class);
-    Route::get('/portfolios/create', Portfolios\Create::class);
-    Route::get('/portfolios/{id}/edit', Portfolios\Edit::class);
+    Route::get('/portfolios', Portfolios\Index::class)->name('admin.portfolios.index');
+    Route::get('/portfolios/create', Portfolios\Create::class)->name('admin.portfolios.create');
+    Route::get('/portfolios/{id}/edit', Portfolios\Edit::class)->name('admin.portfolios.edit');
 
-    Route::get('/contacts', Contacts\Index::class);
-    Route::get('/contacts/create', Contacts\Create::class);
-    Route::get('/contacts/{id}/edit', Contacts\Edit::class);
+    Route::get('/contacts', Contacts\Index::class)->name('admin.contacts.index');
+    Route::get('/contacts/create', Contacts\Create::class)->name('admin.contacts.create');
+    Route::get('/contacts/{id}/edit', Contacts\Edit::class)->name('admin.contacts.edit');
 
-    Route::get('/skills', Skills\Index::class);
-    Route::get('/skills/create', Skills\Create::class);
-    Route::get('/skills/{id}/edit', Skills\Edit::class);
+    Route::get('/skills', Skills\Index::class)->name('admin.skills.index');
+    Route::get('/skills/create', Skills\Create::class)->name('admin.skills.create');
+    Route::get('/skills/{id}/edit', Skills\Edit::class)->name('admin.skills.edit');
 
 
 });

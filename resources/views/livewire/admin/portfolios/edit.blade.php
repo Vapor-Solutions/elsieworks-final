@@ -1,3 +1,5 @@
 <div>
-    {{-- Stop trying to control. --}}
+    <x-slot name="header">
+        Edit Portfolio No.{{ $id }}
+    </x-slot>
 </div>

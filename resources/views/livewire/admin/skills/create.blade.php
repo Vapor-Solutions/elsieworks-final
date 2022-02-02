@@ -1,3 +1,5 @@
 <div>
-    {{-- In work, do what you enjoy. --}}
+    <x-slot name="header">
+        Create a new Skill
+    </x-slot>
 </div>

@@ -57,5 +57,21 @@ class User extends Authenticatable
      */
     protected $appends = [
         'profile_photo_url',
+        'is_admin'
     ];
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    public function getIsAdminAttribute()
+    {
+        return $this->role_id == 1 || $this->role_id == 2;
+    }
+
+    public function projects()
+    {
+        return $this->hasMany(Project::class);
+    }
 }

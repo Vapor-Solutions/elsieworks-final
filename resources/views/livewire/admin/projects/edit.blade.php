@@ -1,3 +1,5 @@
 <div>
-    {{-- The whole world belongs to you. --}}
+    <x-slot name="header">
+        Edit Project No. {{ $id }}
+    </x-slot>
 </div>

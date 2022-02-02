@@ -1,3 +1,5 @@
 <div>
-    {{-- In work, do what you enjoy. --}}
+    <x-slot name="header">
+        {{ __('Edit Client No.').$id }}
+    </x-slot>
 </div>

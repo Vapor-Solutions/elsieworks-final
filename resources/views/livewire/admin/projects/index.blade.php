@@ -1,3 +1,5 @@
 <div>
-    {{-- Nothing in the world is as soft and yielding as water. --}}
+    <x-slot name="header">
+        Projects' list
+    </x-slot>
 </div>

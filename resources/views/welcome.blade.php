@@ -65,18 +65,7 @@
                             </ul>
                             <!-- End Mainmanu Nav -->
                         </nav>
-                        <!-- Start Header Right  -->
-                        <div class="header-right">
-                            <a class="rn-btn no-shadow btn-theme" target="_blank"
-                                href="https://themeforest.net/checkout/from_item/33188244?license=regular"><span>BUY
-                                    NOW</span></a>
-                            <i id="menuBtn" class="feather-menu humberger-menu d-block d-xl-none"></i>
-                            <div class="close-menu d-block">
-                                <span class="closeTrigger">
-                                    <i data-feather="x"></i>
-                                </span>
-                            </div>
-                        </div>
+
                         <!-- End Header Right  -->
                     </div>
                 </div>

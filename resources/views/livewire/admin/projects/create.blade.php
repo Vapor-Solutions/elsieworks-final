@@ -1,3 +1,5 @@
 <div>
-    {{-- Close your eyes. Count to one. That is how long forever feels. --}}
+    <x-slot name="header">
+        Create a new Project
+    </x-slot>
 </div>

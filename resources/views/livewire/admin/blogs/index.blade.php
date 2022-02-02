@@ -1,3 +1,6 @@
 <div>
-    {{-- If your happiness depends on money, you will never be happy with yourself. --}}
+    {{-- Do your work, then step back. --}}
+    <x-slot name="header">
+        {{ __('Blog\' List') }}
+    </x-slot>
 </div>
