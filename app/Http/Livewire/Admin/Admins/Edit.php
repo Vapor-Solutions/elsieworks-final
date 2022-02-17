@@ -8,16 +8,27 @@ use Livewire\Component;
 class Edit extends Component
 {
 
+    public User $admin;
+
     protected $rules = [
-        'admin.name'=>'required',
-        'admin.email'=>'required',
-        'admin.role_id'=>'required',
+        'admin.name' => 'required',
+        'admin.email' => 'required',
     ];
 
     public function mount($id)
     {
         $this->admin = User::find($id);
+        $this->role_id = 1;
     }
+
+    public function submit()
+    {
+        $this->validate();
+        $this->admin->save();
+        return redirect()->route('admin.admins.index');
+    }
+
+
     public function render()
     {
         return view('livewire.admin.admins.edit');

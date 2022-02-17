@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="client/images/favicon.ico">
     @include('layouts.partial.css')
 
 </head>
@@ -27,7 +27,7 @@
                     <div class="header-left">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="assets/images/logo/logos-circle.png" alt="logo">
+                                <img src="client/images/logo/logos-circle.png" alt="logo">
                             </a>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                 <div class="menu-top">
                     <div class="menu-header">
                         <a class="logo" href="index.html">
-                            <img src="assets/images/logo/logos-circle.png" alt="Personal Portfolio">
+                            <img src="client/images/logo/logos-circle.png" alt="Personal Portfolio">
                         </a>
                         <div class="close-button">
                             <button class="close-menu-activation close"><i data-feather="x"></i></button>
@@ -195,7 +195,7 @@
                         <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true"
                             class="image-area">
                             <div class="thumbnail">
-                                <img src="assets/images/about/about-1.jpg" alt="Personal Portfolio Image">
+                                <img src="client/images/about/about-1.jpg" alt="Personal Portfolio Image">
                             </div>
                         </div>
                     </div>
@@ -238,31 +238,31 @@
                             <ul class="skill-style-1">
                                 <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
                                     title="ReactJs">
-                                    <img src="assets/images/icons/react.png" alt="skill">
+                                    <img src="client/images/icons/react.png" alt="skill">
                                 </li>
                                 <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true"
                                     title="Figma">
-                                    <img src="assets/images/icons/figma.png" alt="skill">
+                                    <img src="client/images/icons/figma.png" alt="skill">
                                 </li>
                                 <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true"
                                     title="XD">
-                                    <img src="assets/images/icons/xd.png" alt="skill">
+                                    <img src="client/images/icons/xd.png" alt="skill">
                                 </li>
                                 <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="400" data-aos-once="true"
                                     title="PS">
-                                    <img src="assets/images/icons/photoshop.png" alt="skill">
+                                    <img src="client/images/icons/photoshop.png" alt="skill">
                                 </li>
                                 <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
                                     title="vueJS">
-                                    <img src="assets/images/icons/vuejs.png" alt="skill">
+                                    <img src="client/images/icons/vuejs.png" alt="skill">
                                 </li>
                                 <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true"
                                     title="js">
-                                    <img src="assets/images/icons/js.png" alt="skill">
+                                    <img src="client/images/icons/js.png" alt="skill">
                                 </li>
                                 <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true"
                                     title="angularJS">
-                                    <img src="assets/images/icons/angularjs.png" alt="skill">
+                                    <img src="client/images/icons/angularjs.png" alt="skill">
                                 </li>
                             </ul>
                         </div>
@@ -414,7 +414,7 @@
                                     </div>
                                     <div class="col-lg-7 col-xl-7">
                                         <div class="thumbnail">
-                                            <img src="assets/images/portfolio/portfolio-04.jpg"
+                                            <img src="client/images/portfolio/portfolio-04.jpg"
                                                 alt="Personal Portfolio Image">
                                         </div>
                                     </div>
@@ -467,7 +467,7 @@
                                     </div>
                                     <div class="col-lg-7 col-xl-7">
                                         <div class="thumbnail">
-                                            <img src="assets/images/portfolio/portfolio-01.jpg"
+                                            <img src="client/images/portfolio/portfolio-01.jpg"
                                                 alt="Personal Portfolio Image">
                                         </div>
                                     </div>
@@ -520,7 +520,7 @@
                                     </div>
                                     <div class="col-lg-7 col-xl-7">
                                         <div class="thumbnail">
-                                            <img src="assets/images/portfolio/portfolio-05.jpg"
+                                            <img src="client/images/portfolio/portfolio-05.jpg"
                                                 alt="Personal Portfolio Image">
                                         </div>
                                     </div>
@@ -558,7 +558,7 @@
                                     data-aos-once="true" class="main-content">
                                     <div class="inner text-center">
                                         <div class="thumbnail">
-                                            <a href="#"><img src="assets/images/client/png/brand-01.png"
+                                            <a href="#"><img src="client/images/client/png/brand-01.png"
                                                     alt="Client-image"></a>
                                         </div>
                                         <div class="seperator"></div>
@@ -573,7 +573,7 @@
                                     data-aos-once="true" class="main-content">
                                     <div class="inner text-center">
                                         <div class="thumbnail">
-                                            <a href="#"><img src="assets/images/client/png/brand-02.png"
+                                            <a href="#"><img src="client/images/client/png/brand-02.png"
                                                     alt="Client-image"></a>
                                         </div>
                                         <div class="seperator"></div>
@@ -588,7 +588,7 @@
                                     data-aos-once="true" class="main-content">
                                     <div class="inner text-center">
                                         <div class="thumbnail">
-                                            <a href="#"><img src="assets/images/client/png/brand-03.png"
+                                            <a href="#"><img src="client/images/client/png/brand-03.png"
                                                     alt="Client-image"></a>
                                         </div>
                                         <div class="seperator"></div>
@@ -603,7 +603,7 @@
                                     data-aos-once="true" class="main-content">
                                     <div class="inner text-center">
                                         <div class="thumbnail">
-                                            <a href="#"><img src="assets/images/client/png/brand-04.png"
+                                            <a href="#"><img src="client/images/client/png/brand-04.png"
                                                     alt="Client-image"></a>
                                         </div>
                                         <div class="seperator"></div>
@@ -618,7 +618,7 @@
                                     data-aos-once="true" class="main-content">
                                     <div class="inner text-center">
                                         <div class="thumbnail">
-                                            <a href="#"><img src="assets/images/client/png/brand-01.png"
+                                            <a href="#"><img src="client/images/client/png/brand-01.png"
                                                     alt="Client-image"></a>
                                         </div>
                                         <div class="seperator"></div>
@@ -633,7 +633,7 @@
                                     data-aos-once="true" class="main-content">
                                     <div class="inner text-center">
                                         <div class="thumbnail">
-                                            <a href="#"><img src="assets/images/client/png/brand-05.png"
+                                            <a href="#"><img src="client/images/client/png/brand-05.png"
                                                     alt="Client-image"></a>
                                         </div>
                                         <div class="seperator"></div>
@@ -672,7 +672,7 @@
                         <div class="testimonial-inner">
                             <div class="testimonial-header">
                                 <div class="thumbnail">
-                                    <img src="assets/images/client/testimonial-2.jpg" alt="client-image">
+                                    <img src="client/images/client/testimonial-2.jpg" alt="client-image">
                                 </div>
                                 <h5 class="ts-header">
                                     <span class="text-color-primary">@alamin</span> Engineer
@@ -695,7 +695,7 @@
                         <div class="testimonial-inner">
                             <div class="testimonial-header">
                                 <div class="thumbnail">
-                                    <img src="assets/images/client/testimonial-2.jpg" alt="client-image">
+                                    <img src="client/images/client/testimonial-2.jpg" alt="client-image">
                                 </div>
                                 <h5 class="ts-header">
                                     <span class="text-color-primary">@mr_rasel</span> Engineer
@@ -718,7 +718,7 @@
                         <div class="testimonial-inner">
                             <div class="testimonial-header">
                                 <div class="thumbnail">
-                                    <img src="assets/images/client/testimonial-2.jpg" alt="client-image">
+                                    <img src="client/images/client/testimonial-2.jpg" alt="client-image">
                                 </div>
                                 <h5 class="ts-header">
                                     <span class="text-color-primary">@Kabir</span> Engineer
@@ -741,7 +741,7 @@
                         <div class="testimonial-inner">
                             <div class="testimonial-header">
                                 <div class="thumbnail">
-                                    <img src="assets/images/client/testimonial-2.jpg" alt="client-image">
+                                    <img src="client/images/client/testimonial-2.jpg" alt="client-image">
                                 </div>
                                 <h5 class="ts-header">
                                     <span class="text-color-primary">@Tuhin</span> Engineer
@@ -882,7 +882,7 @@
                             <div class="inner">
                                 <div class="thumbnail">
                                     <a href="javascript:void(0)">
-                                        <img src="assets/images/blog/blog-01.jpg" alt="Personal Portfolio Images">
+                                        <img src="client/images/blog/blog-01.jpg" alt="Personal Portfolio Images">
                                     </a>
                                 </div>
                                 <div class="content">
@@ -910,7 +910,7 @@
                             <div class="inner">
                                 <div class="thumbnail">
                                     <a href="javascript:void(0)">
-                                        <img src="assets/images/blog/blog-02.jpg" alt="Personal Portfolio Images">
+                                        <img src="client/images/blog/blog-02.jpg" alt="Personal Portfolio Images">
                                     </a>
                                 </div>
                                 <div class="content">
@@ -937,7 +937,7 @@
                             <div class="inner">
                                 <div class="thumbnail">
                                     <a href="javascript:void(0)">
-                                        <img src="assets/images/blog/blog-03.jpg" alt="Personal Portfolio Images">
+                                        <img src="client/images/blog/blog-03.jpg" alt="Personal Portfolio Images">
                                     </a>
                                 </div>
                                 <div class="content">
@@ -969,7 +969,7 @@
                     <div class="col-lg-12">
                         <div class="section-title text-center">
                             <span class="subtitle">Contact</span>
-                            <h2 class="title">Contact With Me</h2>
+                            <h2 class="title">Contact Me</h2>
                         </div>
                     </div>
                 </div>
@@ -977,10 +977,10 @@
                     <div class="col-lg-5">
                         <div class="contact-about-area">
                             <div class="thumbnail">
-                                <img src="assets/images/contact/contact1.png" alt="contact-img">
+                                <img src="client/images/contact/contact1.png" alt="contact-img">
                             </div>
                             <div class="title-area">
-                                <h4 class="title">Nevine Acotanza</h4>
+                                <h4 class="title">Shirly Elsie</h4>
                                 <span>Chief Operating Officer</span>
                             </div>
                             <div class="description">
@@ -1075,7 +1075,7 @@
                     <!-- End of .modal-header -->
 
                     <div class="modal-body">
-                        <img src="assets/images/blog/blog-big-01.jpg" alt="news modal"
+                        <img src="client/images/blog/blog-big-01.jpg" alt="news modal"
                             class="img-fluid modal-feat-img">
                         <div class="news-details">
                             <span class="date">2 May, 2021</span>
@@ -1182,7 +1182,7 @@
             <div class="row">
                 <div class="col-xl-3 col-12 col-lg-3 col-md-6 col-sm-6 col-12">
                     <div class="logo-thumbnail">
-                        <a href="#"><img src="assets/images/logo/logo-dark.png" alt="logo-image"></a>
+                        <a href="#"><img src="client/images/logo/logo-dark.png" alt="logo-image"></a>
                     </div>
                     <div class="social-icone-wrapper">
                         <ul class="social-share d-flex liststyle">

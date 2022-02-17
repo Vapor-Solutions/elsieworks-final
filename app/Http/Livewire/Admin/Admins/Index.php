@@ -17,9 +17,7 @@ class Index extends Component
 
     public function mount()
     {
-        // $users = User::all();
         $this->admins = User::whereIn('role_id', [1,2])->get();
-        // $this->admins = User::all();
     }
 
 
@@ -27,15 +25,13 @@ class Index extends Component
     {
         if (auth()->user()->id == $id) {
             abort(403, 'You can\'t Delete yourself while logged in');
-
         }
         if ($id == 1) {
             abort(403, 'This User cannot be deleted');
         }
         User::find($id)->delete();
-        // $this->admins = User::whereIn('role_id', [1,2])->get();
-        $this->emit('deleted');
 
+        $this->emit('deleted');
     }
     public function render()
     {

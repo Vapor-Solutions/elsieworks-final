@@ -1,5 +1,81 @@
 <div>
     <x-slot name="header">
-        {{ __('Edit Client No.').$id }}
+        {{ __('Edit Client No.') . $client->id }}
     </x-slot>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-9 col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>
+                            Edit This Client
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <form wire:submit.prevent='submit'>
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Full name</label>
+                                        <input type="text" wire:model='client.name' name="name" id="name"
+                                            class="form-control" placeholder="Enter your client's Full Name"
+                                            aria-describedby="name">
+                                        <small id="name" class="text-muted">Enter the Full name of your
+                                            Client</small>
+                                        @error('client.name')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" wire:model='client.email' name="email" id="email"
+                                            class="form-control" placeholder="Enter your clients Email Address"
+                                            aria-describedby="email">
+                                        <small id="email" class="text-muted">Enter Your Client's Email
+                                            Address</small>
+                                        @error('client.email')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="mb-3">
+                                        <label for="phone_number" class="form-label">Phone Number</label>
+                                        <input wire:model='client.phone_number' type="tel" name="phone_number"
+                                            id="phone_number" class="form-control"
+                                            placeholder="Enter your clients Phone Number"
+                                            aria-describedby="phone_number">
+                                        <small id="phone_number" class="text-muted">Enter Your Client's Phone
+                                            Number</small>
+                                        @error('client.phone_number')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="row justify-content-center mb-3">
+                                        <div class="col-6">
+                                            <button type="submit" class="btn btn-primary">
+                                                Save
+                                            </button>
+                                        </div>
+                                        <div class="col-6">
+                                            <a href="{{ route('admin.clients.index') }}" class="btn btn-secondary">
+                                                Cancel
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
