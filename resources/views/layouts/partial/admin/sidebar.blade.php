@@ -49,16 +49,7 @@
                     <p>Blog</p>
                 </a>
             </li>
-            <li class="@if (Route::is('admin.skills.*'))
-        active
-        @endif ">
-                <a href="{{ route('admin.skills.index') }}">
-                    <i class="tim-icons icon-user-run
-
-                    "></i>
-                    <p>Skills</p>
-                </a>
-            </li>
+             
 
         </ul>
     </div>

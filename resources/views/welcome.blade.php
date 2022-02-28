@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Home Default || Inbio - Personal Portfolio Bootstrap Template</title>
+    <title>Home || {{ config('app.name', 'Laravel') }}</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -158,7 +158,9 @@
                                 <div class="inner mb_sm--80">
                                     <h1 class="title">Hi, Welcome to <span>ElsieWorks</span><br> </h1>
                                     <div>
-                                        <p class="description">For All your Photography and Videography needs, <br> We  don't just capture media, we <br> <span class="text-dark">FREEZE TIME!</span> </p>
+                                        <p class="description">For All your Photography and Videography needs, <br>
+                                            We don't just capture media, we <br> <span class="text-dark">FREEZE
+                                                TIME!</span> </p>
                                     </div>
                                 </div>
                                 <div class="row ">
@@ -287,64 +289,25 @@
                 <div class="row row--25 mt_md--10 mt_sm--10">
 
                     <!-- Start Single Service -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
-                        class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-service">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i data-feather="menu"></i>
+
+                    @foreach (App\Models\Service::all() as $service)
+                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                            class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
+                            <div class="rn-service">
+                                <div class="inner">
+                                    <div class="icon">
+                                        <i data-feather="menu"></i>
+                                    </div>
+                                    <div class="content">
+                                        <h4 class="title"><a href="#">{{ $service->title }}</a></h4>
+                                        <p class="description">{{$service->description}}</p>
+                                        <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
+                                    </div>
                                 </div>
-                                <div class="content">
-                                    <h4 class="title"><a href="#">Business Stratagy</a></h4>
-                                    <p class="description">I throw myself down among the tall grass by the stream as
-                                        I
-                                        lie close to the earth.</p>
-                                    <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
-                                </div>
+                                <a class="over-link" href="#"></a>
                             </div>
-                            <a class="over-link" href="#"></a>
                         </div>
-                    </div>
-                    <!-- End SIngle Service -->
-                    <!-- Start Single Service -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true"
-                        class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-service">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i data-feather="book-open"></i>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title"><a href="#">Business Development</a></h4>
-                                    <p class="description">I throw myself down among the tall grass by the stream as
-                                        I
-                                        lie close to the earth.</p>
-                                    <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <a class="over-link" href="#"></a>
-                        </div>
-                    </div>
-                    <!-- End SIngle Service -->
-                    <!-- Start Single Service -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true"
-                        class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-service">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i data-feather="tv"></i>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title"><a href="#">App Development</a></h4>
-                                    <p class="description">I throw myself down among the tall grass by the stream as
-                                        I
-                                        lie close to the earth.</p>
-                                    <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <a class="over-link" href="#"></a>
-                        </div>
-                    </div>
+                    @endforeach
                     <!-- End SIngle Service -->
 
                 </div>
@@ -371,56 +334,7 @@
                     <div class="carousel-inner">
 
                         <!-- Start Single Item  -->
-                        <div class="carousel-item active">
-                            <div class="portfolio-single">
-                                <div class="row direction">
-                                    <div class="col-lg-5">
-                                        <div class="inner">
-                                            <h5 class="title">
-                                                The services provice for Design
-                                            </h5>
-                                            <p class="discription">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quidem
-                                                dignissimos.
-                                                Perspiciatis fuga soluta officiis eligendi labore, omnis ut velit vitae
-                                                suscipit
-                                                alias cumque temporibus.
-                                            </p>
-                                            <div class="ft-area">
-                                                <div class="feature-wrapper">
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Responsive design</p>
-                                                    </div>
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Quiz builder</p>
-                                                    </div>
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Certification</p>
-                                                    </div>
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Stats & reports</p>
-                                                    </div>
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Retina ready</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-7 col-xl-7">
-                                        <div class="thumbnail">
-                                            <img src="client/images/portfolio/portfolio-04.jpg"
-                                                alt="Personal Portfolio Image">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                         <!-- End Single Item  -->
 
                         <!-- Start Single Item  -->
