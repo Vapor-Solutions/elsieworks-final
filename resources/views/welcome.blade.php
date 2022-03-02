@@ -86,7 +86,7 @@
                             <button class="close-menu-activation close"><i data-feather="x"></i></button>
                         </div>
                     </div>
-                    <p class="discription">Inbio is a personal portfolio template. You can customize all.</p>
+                    <p class="discription">Welcome to ElsieWorks! Through all the beautiful motion We Freeze Time</p>
                 </div>
                 <div class="content">
                     <ul class="primary-menu nav nav-pills">
@@ -168,11 +168,11 @@
                                         <div class="social-share-inner-left">
                                             <span class="title">find with me</span>
                                             <ul class="social-share d-flex liststyle">
-                                                <li class="instagram"><a href="#"><i
+                                                <li class="instagram"><a href="https://www.instagram.com/elsieworks_"><i
                                                             data-feather="instagram"></i></a>
                                                 </li>
-                                                <li class="linkedin"><a href="#"><i
-                                                            data-feather="linkedin"></i></a>
+                                                <li class="facebook"><a href="https://www.facebook.com/ElsieWorks/"><i
+                                                            data-feather="facebook"></i></a>
                                                 </li>
                                                 <li class="linkedin"><a href="#"><i
                                                             data-feather="twitter"></i></a>
