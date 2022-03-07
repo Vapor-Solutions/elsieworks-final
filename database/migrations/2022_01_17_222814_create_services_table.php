@@ -43,28 +43,7 @@ class CreateServicesTable extends Migration
                 'title' => 'Food & Drink Photography',
                 'description' => 'It builds a brand and tells a story. As a restaurant owner, you have the chance to control how the world perceives your restaurant. You are in control of what you show and what image you put out to the world. Professional food photos can help you build a brand that stands out and shapes your restaurant identity.'
             ],
-            // [
-            //     'title' => 'Cookbook Photography',
-            // ],
-            // [
-            //     'title' => 'Restaurant & Hospitality Photography'
-            // ],
-            [
-                'title' => 'Event Photography',
-                'description'=> "Photographers understand unique angles to make shots look more interesting and know little tricks to getting the best expressions out of your guests. Not only will a photographer thoroughly capture your event, we will also take the time afterwards to go through each and every photo and select the best shots."
-            ],
-            // [
-            //     'title' => 'Social Media & Email Marketing Photography'
-            // ],
-            // [
-            //     'title' => 'Floral Photography'
-            // ],
-            // [
-            //     'title' => 'Corporate Photography'
-            // ],
-            // [
-            //     'title' => 'Filming and Editing'
-            // ],
+
         ]);
     }
 
