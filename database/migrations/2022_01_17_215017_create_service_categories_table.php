@@ -23,13 +23,16 @@ class CreateServiceCategoriesTable extends Migration
 
         DB::table('service_categories')->insert([
             [
-                'title'=>'Corporate Photography'
+                'title'=>'Corporate Photography',
+                'description'=>'Entails business packages for conferencing and retreat coverage'
             ],
             [
-                'title'=>'Event Photography'
+                'title'=>'Event Photography',
+                'description' => 'Includes the photography and video coverage of events.'
             ],
             [
-                'title'=>'Decor & System Setup'
+                'title'=>'Decor & System Setup',
+                'description'=>'Involves the setting up for your next shoot and interior setup to go along with it'
             ],
         ]);
     }
