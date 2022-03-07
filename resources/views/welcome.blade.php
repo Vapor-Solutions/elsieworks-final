@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="client/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/ew-primary.ico">
     @include('layouts.partial.css')
 
 </head>
@@ -26,8 +26,8 @@
                 <div class="col-lg-2 col-6">
                     <div class="header-left">
                         <div class="logo">
-                            <a href="index.html">
-                                <img src="client/images/logo/logos-circle.png" alt="logo">
+                            <a href="/">
+                                <img src="/ew-primary.png" class="img-fluid rounded-circle w-25" alt="">
                             </a>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                 <div class="menu-top">
                     <div class="menu-header">
                         <a class="logo" href="index.html">
-                            <img src="client/images/logo/logos-circle.png" alt="Personal Portfolio">
+                            <img src="/ew-black.png" class="img-fluid rounded-circle w-25" alt="Personal Portfolio">
                         </a>
                         <div class="close-button">
                             <button class="close-menu-activation close"><i data-feather="x"></i></button>
@@ -168,10 +168,12 @@
                                         <div class="social-share-inner-left">
                                             <span class="title">find with me</span>
                                             <ul class="social-share d-flex liststyle">
-                                                <li class="instagram"><a href="https://www.instagram.com/elsieworks_"><i
+                                                <li class="instagram"><a
+                                                        href="https://www.instagram.com/elsieworks_"><i
                                                             data-feather="instagram"></i></a>
                                                 </li>
-                                                <li class="facebook"><a href="https://www.facebook.com/ElsieWorks/"><i
+                                                <li class="facebook"><a
+                                                        href="https://www.facebook.com/ElsieWorks/"><i
                                                             data-feather="facebook"></i></a>
                                                 </li>
                                                 <li class="linkedin"><a href="#"><i
@@ -205,28 +207,26 @@
                         class="col-lg-7 mt_sm--30">
                         <div class="contant">
                             <div class="section-title text-left">
-                                <span class="subtitle">Visit my portfolio & Hire me</span>
+                                <span class="subtitle">Visit Our portfolio & Hire us</span>
                                 <h2 class="title">About Us</h2>
                             </div>
                             <p class="discription">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum in eos saepe ipsa
-                                cupiditate accusantium voluptatibus quidem nam, reprehenderit, et necessitatibus
-                                adipisci labore sit veritatis vero tempore sequi at sed facere dolore. Quae obcaecati
-                                eius quasi doloribus illum minus fugit.
+                                We are your friendly neighbourhood creatives with diverse skills in the art of
+                                photography and videography
                             </p>
                             <p class="discription">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum in eos saepe ipsa
-                                cupiditate accusantium voluptatibus quidem nam, reprehenderit,
+                                if you are looking for something beyond the wildness of the event itself to be captured,
+                                you are in the right place
+                                as we don't just give you extraordinary...we give world class!!
                             </p>
-                            <a class="rn-btn" href="#contacts"><span>DOWNLOAD MY CV</span></a>
+                            {{-- <a class="rn-btn" href="#contacts"><span>DOWNLOAD MY CV</span></a> --}}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- End about Area -->
-
-        <!-- skill area Start -->
+        {{-- <!-- skill area Start -->
         <div id="skill" class="rn-skill-area rn-section-gap section-separator">
             <div class="container">
                 <div class="row">
@@ -272,7 +272,7 @@
                 </div>
             </div>
         </div>
-        <!-- skill area End -->
+        <!-- skill area End --> --}}
 
         <!-- Start Service Area -->
         <div id="service" class="rn-service-area rn-section-gap section-separator">
@@ -281,7 +281,7 @@
                     <div class="col-lg-12">
                         <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
                             class="section-title text-left">
-                            <span class="subtitle">Features</span>
+                            <span class="subtitle">Services</span>
                             <h2 class="title">What We Do</h2>
                         </div>
                     </div>
@@ -300,7 +300,7 @@
                                     </div>
                                     <div class="content">
                                         <h4 class="title"><a href="#">{{ $service->title }}</a></h4>
-                                        <p class="description">{{$service->description}}</p>
+                                        <p class="description">{{ $service->description }}</p>
                                         <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
                                     </div>
                                 </div>
@@ -334,7 +334,56 @@
                     <div class="carousel-inner">
 
                         <!-- Start Single Item  -->
-
+                        <div class="carousel-item active">
+                            <div class="portfolio-single">
+                                <div class="row direction">
+                                    <div class="col-lg-5">
+                                        <div class="inner">
+                                            <h5 class="title">
+                                                The services provice for Design
+                                            </h5>
+                                            <p class="discription">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quidem
+                                                dignissimos.
+                                                Perspiciatis fuga soluta officiis eligendi labore, omnis ut velit vitae
+                                                suscipit
+                                                alias cumque temporibus.
+                                            </p>
+                                            <div class="ft-area">
+                                                <div class="feature-wrapper">
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Responsive design</p>
+                                                    </div>
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Quiz builder</p>
+                                                    </div>
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Certification</p>
+                                                    </div>
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Stats & reports</p>
+                                                    </div>
+                                                    <div class="single-feature">
+                                                        <i data-feather="check"></i>
+                                                        <p>Retina ready</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-7 col-xl-7">
+                                        <div class="thumbnail">
+                                            <img src="/client/images/portfolio/portfolio-04.jpg"
+                                                alt="Personal Portfolio Image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <!-- End Single Item  -->
 
                         <!-- Start Single Item  -->
@@ -381,7 +430,7 @@
                                     </div>
                                     <div class="col-lg-7 col-xl-7">
                                         <div class="thumbnail">
-                                            <img src="client/images/portfolio/portfolio-01.jpg"
+                                            <img src="/client/images/portfolio/portfolio-01.jpg"
                                                 alt="Personal Portfolio Image">
                                         </div>
                                     </div>
@@ -434,7 +483,7 @@
                                     </div>
                                     <div class="col-lg-7 col-xl-7">
                                         <div class="thumbnail">
-                                            <img src="client/images/portfolio/portfolio-05.jpg"
+                                            <img src="/client/images/portfolio/portfolio-05.jpg"
                                                 alt="Personal Portfolio Image">
                                         </div>
                                     </div>

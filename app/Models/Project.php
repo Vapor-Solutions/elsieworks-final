@@ -13,4 +13,9 @@ class Project extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function photos()
+    {
+        return $this->belongsToMany(Photo::class, 'photo_project', 'project_id', 'photo_id');
+    }
 }

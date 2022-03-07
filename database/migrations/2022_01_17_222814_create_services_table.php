@@ -16,6 +16,7 @@ class CreateServicesTable extends Migration
     {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('service_category_id');
             $table->string('title');
             $table->longText('description')->nullable();
             $table->timestamps();
@@ -23,7 +24,8 @@ class CreateServicesTable extends Migration
 
         DB::table('services')->insert([
             [
-                'title' => 'Editorial Photography',
+                'service_category_id' => 1,
+                'title' => 'Staff Portraits',
                 'description' => 'Editorial images offer photographers a way to explore their creative freedom while telling a story.'
             ],
             [
