@@ -44,15 +44,15 @@
                                 </li>
                                 <li class="nav-item"><a class="nav-link smoth-animation" href="#about">About</a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link smoth-animation" href="#skill">Skill</a>
+                                {{-- <li class="nav-item"><a class="nav-link smoth-animation" href="#skill">Skill</a> --}}
                                 </li>
                                 <li class="nav-item"><a class="nav-link smoth-animation"
-                                        href="#service">Service</a>
+                                        href="#service">Services</a>
                                 </li>
                                 <li class="nav-item"><a class="nav-link smoth-animation"
                                         href="#portfolio">Portfolio</a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link smoth-animation" href="#client">Client</a>
+                                <li class="nav-item"><a class="nav-link smoth-animation" href="#client">Clients</a>
                                 </li>
                                 <li class="nav-item"><a class="nav-link smoth-animation"
                                         href="#pricing">Pricing</a>
@@ -60,7 +60,7 @@
                                 <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">blog</a>
                                 </li>
                                 <li class="nav-item"><a class="nav-link smoth-animation"
-                                        href="#contacts">Contact</a>
+                                        href="#contacts">Contact us</a>
                                 </li>
                             </ul>
                             <!-- End Mainmanu Nav -->
@@ -516,95 +516,25 @@
                         <div class="skill-style-1">
                             <div class="client-card">
 
-                                <!-- Start Single Brand  -->
-                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"
-                                    data-aos-once="true" class="main-content">
-                                    <div class="inner text-center">
-                                        <div class="thumbnail">
-                                            <a href="#"><img src="client/images/client/png/brand-01.png"
-                                                    alt="Client-image"></a>
-                                        </div>
-                                        <div class="seperator"></div>
-                                        <div class="client-name"><span><a href="#">Marth Smiths</a></span>
+                                @foreach (App\Models\Client::all() as $client)
+                                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"
+                                        data-aos-once="true" class="main-content">
+                                        <div class="inner text-center">
+                                            <div class="thumbnail">
+                                                <img class="rounded-circle shadow"
+                                                    src="{{ $client->image ?? $client->image_url }}"
+                                                    alt="Client-image">
+                                            </div>
+                                            <div class="seperator"></div>
+                                            <div class="client-name"><span>{{ $client->name }}</span>
+                                            </div>
+                                            <div class="client-name"><small><a
+                                                        href="mailto:{{ $client->email }}">{{ $client->email }}</a></small>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- End Single Brand  -->
+                                @endforeach
 
-                                <!-- Start Single Brand  -->
-                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"
-                                    data-aos-once="true" class="main-content">
-                                    <div class="inner text-center">
-                                        <div class="thumbnail">
-                                            <a href="#"><img src="client/images/client/png/brand-02.png"
-                                                    alt="Client-image"></a>
-                                        </div>
-                                        <div class="seperator"></div>
-                                        <div class="client-name"><span><a href="#">Marth Smiths</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Single Brand  -->
-
-                                <!-- Start Single Brand  -->
-                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500"
-                                    data-aos-once="true" class="main-content">
-                                    <div class="inner text-center">
-                                        <div class="thumbnail">
-                                            <a href="#"><img src="client/images/client/png/brand-03.png"
-                                                    alt="Client-image"></a>
-                                        </div>
-                                        <div class="seperator"></div>
-                                        <div class="client-name"><span><a href="#">Marth Smiths</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Single Brand  -->
-
-                                <!-- Start Single Brand  -->
-                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"
-                                    data-aos-once="true" class="main-content">
-                                    <div class="inner text-center">
-                                        <div class="thumbnail">
-                                            <a href="#"><img src="client/images/client/png/brand-04.png"
-                                                    alt="Client-image"></a>
-                                        </div>
-                                        <div class="seperator"></div>
-                                        <div class="client-name"><span><a href="#">Marth Smiths</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Single Brand  -->
-
-                                <!-- Start Single Brand  -->
-                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300"
-                                    data-aos-once="true" class="main-content">
-                                    <div class="inner text-center">
-                                        <div class="thumbnail">
-                                            <a href="#"><img src="client/images/client/png/brand-01.png"
-                                                    alt="Client-image"></a>
-                                        </div>
-                                        <div class="seperator"></div>
-                                        <div class="client-name"><span><a href="#">Marth Smiths</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Single Brand  -->
-
-                                <!-- Start Single Brand  -->
-                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500"
-                                    data-aos-once="true" class="main-content">
-                                    <div class="inner text-center">
-                                        <div class="thumbnail">
-                                            <a href="#"><img src="client/images/client/png/brand-05.png"
-                                                    alt="Client-image"></a>
-                                        </div>
-                                        <div class="seperator"></div>
-                                        <div class="client-name"><span><a href="#">Marth Smiths</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Single Brand  -->
                             </div>
                         </div>
                     </div>
@@ -630,97 +560,30 @@
                 <div class="testimonial-activation-item-3 slick-arrow-style-one mb--60" data-aos="fade-up"
                     data-aos-duration="500" data-aos-delay="300" data-aos-once="true">
 
-                    <!-- Start single Testimonial -->
-                    <div class="rn-testimonial">
-                        <div class="testimonial-inner">
-                            <div class="testimonial-header">
-                                <div class="thumbnail">
-                                    <img src="client/images/client/testimonial-2.jpg" alt="client-image">
+                    @foreach (App\Models\Client::all() as $client)
+                        @if ($client->testimonial)
+                            <!-- Start single Testimonial -->
+                            <div class="rn-testimonial">
+                                <div class="testimonial-inner">
+                                    <div class="testimonial-header">
+                                        <div class="thumbnail">
+                                            <img src="{{ $client->image ?? $client->image_url }}" alt="client-image">
+                                        </div>
+                                        <h5 class="ts-header">
+                                            <span class="text-color-primary">{{ $client->name }}</span>
+                                        </h5>
+                                        <small>{{ $client->testimonial->job_title }}</small>
+                                    </div>
+                                    <div class="testimonial-body">
+                                        <p class="discription">
+                                            {{ $client->testimonial->description }}
+                                        </p>
+                                    </div>
                                 </div>
-                                <h5 class="ts-header">
-                                    <span class="text-color-primary">@alamin</span> Engineer
-                                </h5>
                             </div>
-                            <div class="testimonial-body">
-                                <p class="discription">@mr_rasel Ypur plaser well for your template
-                                    from
-                                    <span>@mr_faruk </span> There is no is best issueusing it too. It'll really
-                                    speed up the design and
-                                    development process :).
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End single Testimonial -->
-
-                    <!-- Start single Testimonial -->
-                    <div class="rn-testimonial">
-                        <div class="testimonial-inner">
-                            <div class="testimonial-header">
-                                <div class="thumbnail">
-                                    <img src="client/images/client/testimonial-2.jpg" alt="client-image">
-                                </div>
-                                <h5 class="ts-header">
-                                    <span class="text-color-primary">@mr_rasel</span> Engineer
-                                </h5>
-                            </div>
-                            <div class="testimonial-body">
-                                <p class="discription">@Covis_jackson Much plaser well for your template
-                                    from
-                                    <span>@tabriz </span>! The team is best using it too. It'll really
-                                    speed up the design and
-                                    development process ==);.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End single Testimonial -->
-
-                    <!-- Start single Testimonial -->
-                    <div class="rn-testimonial">
-                        <div class="testimonial-inner">
-                            <div class="testimonial-header">
-                                <div class="thumbnail">
-                                    <img src="client/images/client/testimonial-2.jpg" alt="client-image">
-                                </div>
-                                <h5 class="ts-header">
-                                    <span class="text-color-primary">@Kabir</span> Engineer
-                                </h5>
-                            </div>
-                            <div class="testimonial-body">
-                                <p class="discription">@jack_danials thank you as well for your template
-                                    from
-                                    <span>@Alamin_Orko </span>! The team is using it too. It'll really
-                                    speed up the design and
-                                    development process 💨.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End single Testimonial -->
-
-                    <!-- Start single Testimonial -->
-                    <div class="rn-testimonial">
-                        <div class="testimonial-inner">
-                            <div class="testimonial-header">
-                                <div class="thumbnail">
-                                    <img src="client/images/client/testimonial-2.jpg" alt="client-image">
-                                </div>
-                                <h5 class="ts-header">
-                                    <span class="text-color-primary">@Tuhin</span> Engineer
-                                </h5>
-                            </div>
-                            <div class="testimonial-body">
-                                <p class="discription">@jack_danials thank you as well for your template
-                                    from
-                                    <span>@Alamin_Orko </span>! The team is using it too. It'll really
-                                    speed up the design and
-                                    development process 🏃.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End single Testimonial -->
+                            <!-- End single Testimonial -->
+                        @endif
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -739,86 +602,39 @@
                                 <h2 class="title">Our Pricing</h2>
                             </div>
                             <p class="title-disc">
-                                Use the free templates with your whole team or choose a premium. ith your whole team or
-                                choose a premium.
-                            </p>
-                            <p class="title-disc-2">
-                                Get the bundle and get lifetime support and one year updates.
+                                Our Rates vary fully depending on the type of services that you would like us to offer
+                                and range on a variety of packages to give control over the quality and quantity we
+                                deliver
                             </p>
                         </div>
                     </div>
 
-                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true"
-                        class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="pricing-wrapper">
-                            <div class="ts-header">
-                                <h6>STARTER</h6>
-                                <span>Try and decide.</span>
-                            </div>
-                            <h3 class="price">$0</h3>
-                            <div class="pricing-body">
-                                <div class="feature">
-                                    <i data-feather="check"></i>
-                                    <span class="name">2 demo templates.</span>
+                    @foreach (App\Models\Rate::all() as $rate)
+                        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true"
+                            class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="pricing-wrapper">
+                                <div class="ts-header">
+                                    <h6>{{ $rate->title }}</h6>
+                                    <span>Try and decide.</span>
                                 </div>
-                                <div class="feature">
-                                    <i data-feather="check"></i>
-                                    <span class="name">Fully responsive.</span>
-                                </div>
-                                <div class="feature">
-                                    <i class="off" data-feather="x"></i>
-                                    <span class="name off">Figma</span>
-                                </div>
-                                <div class="feature">
-                                    <i class="off" data-feather="x"></i>
-                                    <span class="name off">Spacial offer</span>
-                                </div>
-                                <div class="feature">
-                                    <i class="off" data-feather="x"></i>
-                                    <span class="name off">All Demoes</span>
-                                </div>
-                            </div>
-                            <div class="pricing-footer">
-                                <a class="rn-btn" href="#contacts"><span>BUY NOW</span></a>
-                            </div>
-                        </div>
-                    </div>
+                                <h3 class="price">{{ $rate->price }}</h3>
+                                <div class="pricing-body">
+                                    @foreach ($rate->features as $feature)
+                                        <div class="feature">
+                                            <i data-feather="check"></i>
+                                            <span class="name">{{ $feature->title }}</span>
+                                        </div>
+                                    @endforeach
 
-                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" data-aos-once="true"
-                        class="col-lg-4 col-md-6 col-sm-12">
-                        <div class="pricing-wrapper-pro">
-                            <div class="ts-header">
-                                <h6>BUNDLE</h6>
-                                <span>Try and decide.</span>
-                            </div>
-                            <h3 class="price">$60</h3>
-                            <div class="pricing-body">
-                                <div class="feature">
-                                    <i data-feather="check"></i>
-                                    <span class="name">2 demo templates.</span>
                                 </div>
-                                <div class="feature">
-                                    <i data-feather="check"></i>
-                                    <span class="name">Fully responsive.</span>
+                                <div class="pricing-footer">
+                                    <a class="rn-btn" href="#contacts"><span>BUY NOW</span></a>
                                 </div>
-                                <div class="feature">
-                                    <i class="" data-feather="check"></i>
-                                    <span class="name">Figma</span>
-                                </div>
-                                <div class="feature">
-                                    <i class="of" data-feather="check"></i>
-                                    <span class="name">Spacial offer</span>
-                                </div>
-                                <div class="feature">
-                                    <i class="" data-feather="check"></i>
-                                    <span class="name">All Demoes</span>
-                                </div>
-                            </div>
-                            <div class="pricing-footer">
-                                <a class="rn-btn" href="#contacts"><span>BUY NOW</span></a>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
+
+
                 </div>
             </div>
         </div>
@@ -939,26 +755,48 @@
                 <div class="row mt--50 mt_md--40 mt_sm--40 mt-contact-sm">
                     <div class="col-lg-5">
                         <div class="contact-about-area">
-                            <div class="thumbnail">
-                                <img src="client/images/contact/contact1.png" alt="contact-img">
-                            </div>
-                            <div class="title-area">
-                                <h4 class="title">Shirly Elsie</h4>
-                                <span>Chief Operating Officer</span>
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <div class="thumbnail">
+                                        <img src="client/images/contact/contact1.png" alt="contact-img">
+                                    </div>
+                                    <div class="title-area">
+                                        <h4 class="title">Shirley E.</h4>
+                                        <span>Hybrid Shooter</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="thumbnail">
+                                        <img src="client/images/contact/contact1.png" alt="contact-img">
+                                    </div>
+                                    <div class="title-area">
+                                        <h4 class="title">Wambui P. </h4>
+                                        <span>Hybrid Shooter</span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="description">
-                                <p>I am available for freelance work. Connect with me via and call in to my account.
+                                <p>We are available for freelance work.Connect with us via call or via email
                                 </p>
-                                <span class="phone">Phone: <a href="tel:01941043264">+01234567890</a></span>
-                                <span class="mail">Email: <a
-                                        href="mailto:admin@example.com">admin@example.com</a></span>
+                                <div class="row mb-5">
+                                    <div class="col-6"><span class="phone">
+                                            Phone: <a href="tel:+254715903918"><small>+254 715 903 918</small>
+                                            </a></span>
+                                    </div>
+                                    <div class="col-6"><span class="phone">
+                                            Phone: <a href="tel:+254718491650"><small>+254 718 491 650</small>
+                                            </a></span>
+                                    </div>
+                                </div>
+                                <span class="mail text-center">Email: <a
+                                        href="mailto:info@elsieworks.com">info@elsieworks.com</a></span>
                             </div>
                             <div class="social-area">
-                                <div class="name">FIND WITH ME</div>
+                                <div class="name">FIND US HERE</div>
                                 <div class="social-icone">
-                                    <a href="#"><i data-feather="facebook"></i></a>
-                                    <a href="#"><i data-feather="linkedin"></i></a>
-                                    <a href="#"><i data-feather="instagram"></i></a>
+                                    <a href="https://www.facebook.com/ElsieWorks/"><i data-feather="facebook"></i></a>
+                                    <a href="https://www.instagram.com/elsieworks_/"><i
+                                            data-feather="instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -967,22 +805,25 @@
                         <div class="contact-form-wrapper">
                             <div class="introduce">
 
-                                <form class="rnt-contact-form rwt-dynamic-form row" id="contact-form" method="POST"
-                                    action="mail.php">
-
+                                <form class="rnt-contact-form rwt-dynamic-form row" method="POST"
+                                    action="{{ route('contacts.create') }}">
+                                    @method('POST')
+                                    @csrf
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for="contact-name">Your Name</label>
-                                            <input class="form-control form-control-lg" name="contact-name"
+                                            <input name="name" class="form-control form-control-lg"
                                                 id="contact-name" type="text">
+                                            <span class="error text-danger" id="nameErrorMsg"></span>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for="contact-phone">Phone Number</label>
-                                            <input class="form-control" name="contact-phone" id="contact-phone"
+                                            <input name="phone_number" class="form-control" id="contact-phone"
                                                 type="text">
+                                                <span class="error text-danger" id="mobileErrorMsg" ></span>
                                         </div>
                                     </div>
 
@@ -990,7 +831,8 @@
                                         <div class="form-group">
                                             <label for="contact-email">Email</label>
                                             <input class="form-control form-control-sm" id="contact-email"
-                                                name="contact-email" type="email">
+                                                name="email" type="email">
+                                                <span class="error text-danger" id="emailErrorMsg"></span>
                                         </div>
                                     </div>
 
@@ -999,19 +841,20 @@
                                             <label for="subject">subject</label>
                                             <input class="form-control form-control-sm" id="subject" name="subject"
                                                 type="text">
+                                                <span class="error text-danger" id="subjectErrorMsg"></span>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="contact-message">Your Message</label>
-                                            <textarea name="contact-message" id="contact-message" cols="30"
-                                                rows="10"></textarea>
+                                            <textarea name="message" id="contact-message" cols="30" rows="10"></textarea>
+                                            <span class="error text-danger" id="messageErrorMsg"></span>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-12">
-                                        <button name="submit" type="submit" id="submit" class="rn-btn">
+                                        <button name="submit" type="submit" class="rn-btn">
                                             <span>SEND MESSAGE</span>
                                             <i data-feather="arrow-right"></i>
                                         </button>
@@ -1141,70 +984,9 @@
 
     <!-- Rn footer area Start -->
     <div id="footer" class="rn-footer-area footer-style-2 rn-section-gapTop section-separator">
-        <div class="container pb--80 pb_sm--40 plr_sm--20">
-            <div class="row">
-                <div class="col-xl-3 col-12 col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="logo-thumbnail">
-                        <a href="#"><img src="client/images/logo/logo-dark.png" alt="logo-image"></a>
-                    </div>
-                    <div class="social-icone-wrapper">
-                        <ul class="social-share d-flex liststyle">
-                            <li class="facebook"><a href="#"><i data-feather="linkedin"></i></a>
-                            </li>
-                            <li class="instagram"><a href="#"><i data-feather="instagram"></i></a>
-                            </li>
-                            <li class="linkedin"><a href="#"><i data-feather="twitter"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sl-3 col-12 mt_sm--20 col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="menu-wrapper">
-                        <div class="menu-title">
-                            <h6>product</h6>
-                        </div>
-                        <ul class="menu-footer">
-                            <li><a href="#">Database</a></li>
-                            <li><a href="#">Authentication</a></li>
-                            <li><a href="#">Storage</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">Pricing</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sl-3 col-12 mt_sm--20 col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="menu-wrapper">
-                        <div class="menu-title">
-                            <h6>Resources</h6>
-                        </div>
-                        <ul class="menu-footer">
-                            <li><a href="#">Authentication</a></li>
-                            <li><a href="#">System Status</a></li>
-                            <li><a href="#">Terms of service</a></li>
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">over right</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sl-3 col-12 mt_sm--20 col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="menu-wrapper">
-                        <div class="menu-title">
-                            <h6>Developers</h6>
-                        </div>
-                        {{-- <ul class="menu-footer">
-                            <li><a href="#">Documentation</a></li>
-                            <li><a href="#">Authentication</a></li>
-                            <li><a href="#">API Reference</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">Open Source</a></li>
-                        </ul> --}}
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="copyright text-center ptb--40 section-separator">
             <p class="description">© 2021. All rights reserved by <a target="_blank"
-                    href="https://themeforest.net/user/rainbow-themes/portfolio">Rainbow-Themes.</a></p>
+                    href="https://elsieworks.com">ElsieWorks</a></p>
         </div>
     </div>
     <!-- Rn footer area end -->

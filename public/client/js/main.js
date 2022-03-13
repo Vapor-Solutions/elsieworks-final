@@ -28,10 +28,10 @@
             imJs.wowActive();
             imJs.awsActivation();
             imJs.activePopupDemo();
-            
+
         },
 
-        
+
         activePopupDemo: function (e) {
             $('.popuptab-area li a.demo-dark').on('click', function (e) {
                 $('.demo-modal-area').addClass('dark-version');
@@ -44,19 +44,24 @@
             })
         },
 
-       
+
 
         contactForm: function () {
             $('.rwt-dynamic-form').on('submit', function (e) {
 				e.preventDefault();
-				var _self = $(this);
+                var _self = $(this);
+                $('#nameErrorMsg').text(null);
+                $('#emailErrorMsg').text(null);
+                $('#mobileErrorMsg').text(null);
+                $('#subjectErrorMsg').text(null);
+                $('#messageErrorMsg').text(null);
 				var __selector = _self.closest('input,textarea');
 				_self.closest('div').find('input,textarea').removeAttr('style');
 				_self.find('.error-msg').remove();
 				_self.closest('div').find('button[type="submit"]').attr('disabled', 'disabled');
 				var data = $(this).serialize();
 				$.ajax({
-					url: 'mail.php',
+					url: '/contact',
 					type: "post",
 					dataType: 'json',
 					data: data,
@@ -75,13 +80,21 @@
 								$('.success-msg').fadeOut('slow');
 							}, 5000);
 						}
-					}
+                    },
+                    error: function (response) {
+                        $('#nameErrorMsg').text(response.responseJSON.errors.name);
+                        $('#emailErrorMsg').text(response.responseJSON.errors.email);
+                        $('#mobileErrorMsg').text(response.responseJSON.errors.phone_number);
+                        $('#subjectErrorMsg').text(response.responseJSON.errors.subject);
+                        $('#messageErrorMsg').text(response.responseJSON.errors.message);
+                        _self.closest('div').find('button[type="submit"]').attr('disabled', false);
+                    }
 				});
 			});
         },
 
-        
-        
+
+
         wowActive: function () {
             new WOW().init();
         },
@@ -316,7 +329,7 @@
                     $(scrollTop).css('opacity', '0');
                 }
             });
-            
+
             //Click event to scroll to top
             $(scrollTop).on('click', function () {
                 $('html, body').animate({

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomepageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Admin\Clients;
 use App\Http\Livewire\Admin\Admins;
@@ -22,13 +23,8 @@ use App\Http\Livewire\Admin\Skills;
 
 Route::get('/', function () {
     return view('welcome');
-});
-
-Route::middleware('web')->group(function() {
-
-
-});
-
+})->name('home');
+Route::post('/contact', [HomepageController::class, 'addContact'])->name('contacts.create');
 
 Route::redirect('dashboard', 'admin/dashboard');
 
