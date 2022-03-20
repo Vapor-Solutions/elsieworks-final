@@ -27,7 +27,7 @@
                     <div class="header-left">
                         <div class="logo">
                             <a href="/">
-                                <img src="/ew-primary.png" class="img-fluid rounded-circle w-25" alt="">
+                                <img src="/ew-secondary.png" class="img-fluid" alt="">
                             </a>
                         </div>
                     </div>
@@ -52,15 +52,16 @@
                                 <li class="nav-item"><a class="nav-link smoth-animation"
                                         href="#portfolio">Portfolio</a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link smoth-animation" href="#client">Clients</a>
+                                <li class="nav-item"><a class="nav-link smoth-animation"
+                                        href="#client">Clients</a>
                                 </li>
                                 <li class="nav-item"><a class="nav-link smoth-animation"
                                         href="#pricing">Pricing</a>
                                 </li>
                                 <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">blog</a>
                                 </li>
-                                <li class="nav-item"><a class="nav-link smoth-animation"
-                                        href="#contacts">Contact us</a>
+                                <li class="nav-item"><a class="nav-link smoth-animation" href="#contacts">Contact
+                                        us</a>
                                 </li>
                             </ul>
                             <!-- End Mainmanu Nav -->
@@ -112,27 +113,28 @@
                     <div class="social-share-style-1 mt--40">
                         <span class="title">find with me</span>
                         <ul class="social-share d-flex liststyle">
-                            <li class="facebook"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="feather feather-facebook">
+                            <li class="facebook"><a href="https://www.facebook.com/ElsieWorks"
+                                    target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
                                         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z">
                                         </path>
                                     </svg></a>
                             </li>
-                            <li class="instagram"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            <li class="instagram"><a href="https://www.instagram.com/elsieworks_/"
+                                    target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
                                         class="feather feather-instagram">
                                         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                                     </svg></a>
                             </li>
-                            <li class="linkedin"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                            <li class="twitter"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24"
                                         height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="feather feather-linkedin">
+                                        class="feather feather-twitter">
                                         <path
                                             d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
                                         </path>
@@ -150,7 +152,7 @@
 
         <!-- Start Slider Area -->
         <div id="home" class="rn-slider-area">
-            <div class="slide slider-style-4 bg_image bg_image--1">
+            <div class="slide slider-style-4 bg_image bg_image--14">
                 <div class="container">
                     <div class="row">
                         <div class="order-2 order-lg-1 col-lg-9 col-xl-7">
@@ -159,7 +161,7 @@
                                     <h1 class="title">Hi, Welcome to <span>ElsieWorks</span><br> </h1>
                                     <div>
                                         <p class="description">For All your Photography and Videography needs, <br>
-                                            We don't just capture media, we <br> <span class="text-dark">FREEZE
+                                            We don't just capture media, we <span class="text-white">FREEZE
                                                 TIME!</span> </p>
                                     </div>
                                 </div>
@@ -168,15 +170,15 @@
                                         <div class="social-share-inner-left">
                                             <span class="title">find with me</span>
                                             <ul class="social-share d-flex liststyle">
-                                                <li class="instagram"><a
+                                                <li class="instagram"><a target="_blank"
                                                         href="https://www.instagram.com/elsieworks_"><i
                                                             data-feather="instagram"></i></a>
                                                 </li>
-                                                <li class="facebook"><a
+                                                <li class="facebook"><a target="_blank"
                                                         href="https://www.facebook.com/ElsieWorks/"><i
                                                             data-feather="facebook"></i></a>
                                                 </li>
-                                                <li class="linkedin"><a href="#"><i
+                                                <li class="linkedin"><a target="_blank" href="#"><i
                                                             data-feather="twitter"></i></a>
                                                 </li>
                                             </ul>
@@ -215,9 +217,9 @@
                                 photography and videography
                             </p>
                             <p class="discription">
-                                if you are looking for something beyond the wildness of the event itself to be captured,
+                                If you are looking for something beyond the wildness of the event itself to be captured,
                                 you are in the right place
-                                as we don't just give you extraordinary...we give world class!!
+                                as we don't just give you extraordinary, we give world class!!
                             </p>
                             {{-- <a class="rn-btn" href="#contacts"><span>DOWNLOAD MY CV</span></a> --}}
                         </div>
@@ -299,12 +301,35 @@
                                         <i data-feather="menu"></i>
                                     </div>
                                     <div class="content">
-                                        <h4 class="title"><a href="#">{{ $service->title }}</a></h4>
+                                        <h4 class="title">{{ $service->title }}</h4>
                                         <p class="description">{{ $service->description }}</p>
-                                        <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
+                                        <button class="btn read-more-button" data-bs-toggle="modal"
+                                            data-bs-target="#{{ $service->id }}"><i
+                                                class="feather-arrow-right"></i></button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="{{ $service->id }}" tabindex="-1" role="dialog"
+                            aria-labelledby="modelTitleId" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Modal title</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Body
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save</button>
                                     </div>
                                 </div>
-                                <a class="over-link" href="#"></a>
                             </div>
                         </div>
                     @endforeach
@@ -315,193 +340,6 @@
         </div>
         <!-- End Service Area  -->
 
-        <!-- Start portfolio Area -->
-        <div id="portfolio" class="rn-project-area portfolio-style-two rn-section-gap section-separator">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-12">
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
-                            class="section-title text-left mb_md--25 mb_sm--25">
-                            <span class="subtitle">Look My project & JUDGE</span>
-                            <h2 class="title">My Best Work</h2>
-                        </div>
-                    </div>
-
-                </div>
-                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true"
-                    id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-
-                        <!-- Start Single Item  -->
-                        <div class="carousel-item active">
-                            <div class="portfolio-single">
-                                <div class="row direction">
-                                    <div class="col-lg-5">
-                                        <div class="inner">
-                                            <h5 class="title">
-                                                The services provice for Design
-                                            </h5>
-                                            <p class="discription">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quidem
-                                                dignissimos.
-                                                Perspiciatis fuga soluta officiis eligendi labore, omnis ut velit vitae
-                                                suscipit
-                                                alias cumque temporibus.
-                                            </p>
-                                            <div class="ft-area">
-                                                <div class="feature-wrapper">
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Responsive design</p>
-                                                    </div>
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Quiz builder</p>
-                                                    </div>
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Certification</p>
-                                                    </div>
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Stats & reports</p>
-                                                    </div>
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Retina ready</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-7 col-xl-7">
-                                        <div class="thumbnail">
-                                            <img src="/client/images/portfolio/portfolio-04.jpg"
-                                                alt="Personal Portfolio Image">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Item  -->
-
-                        <!-- Start Single Item  -->
-                        <div class="carousel-item">
-                            <div class="portfolio-single">
-                                <div class="row direction">
-                                    <div class="col-lg-5">
-                                        <div class="inner">
-                                            <h5 class="title">
-                                                The services provice for Development
-                                            </h5>
-                                            <p class="discription">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quidem
-                                                dignissimos.
-                                                Perspiciatis fuga soluta officiis eligendi labore, omnis ut velit vitae
-                                                suscipit
-                                                alias cumque temporibus.
-                                            </p>
-                                            <div class="ft-area">
-                                                <div class="feature-wrapper">
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Divice maintain</p>
-                                                    </div>
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Theme builder</p>
-                                                    </div>
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Certification</p>
-                                                    </div>
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Stats & reports</p>
-                                                    </div>
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Retina ready</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-7 col-xl-7">
-                                        <div class="thumbnail">
-                                            <img src="/client/images/portfolio/portfolio-01.jpg"
-                                                alt="Personal Portfolio Image">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Item  -->
-
-                        <!-- Start Single Item  -->
-                        <div class="carousel-item">
-                            <div class="portfolio-single">
-                                <div class="row direction">
-                                    <div class="col-lg-5">
-                                        <div class="inner">
-                                            <h5 class="title">
-                                                The services provice for Android user
-                                            </h5>
-                                            <p class="discription">
-                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, quidem
-                                                dignissimos.
-                                                Perspiciatis fuga soluta officiis eligendi labore, omnis ut velit vitae
-                                                suscipit
-                                                alias cumque temporibus.
-                                            </p>
-                                            <div class="ft-area">
-                                                <div class="feature-wrapper">
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Customer satisfaction</p>
-                                                    </div>
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Quiz builder</p>
-                                                    </div>
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Certification</p>
-                                                    </div>
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Stats & reports</p>
-                                                    </div>
-                                                    <div class="single-feature">
-                                                        <i data-feather="check"></i>
-                                                        <p>Football & reports</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-7 col-xl-7">
-                                        <div class="thumbnail">
-                                            <img src="/client/images/portfolio/portfolio-05.jpg"
-                                                alt="Personal Portfolio Image">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Item  -->
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                        <i data-feather="chevron-left"></i>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                        <i data-feather="chevron-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- End portfolio Area -->
 
         <!-- Start Cient Area -->
         <div id="client" class="rn-client-area rn-client-style-2 rn-section-gap section-separator">
@@ -633,8 +471,29 @@
                             </div>
                         </div>
                     @endforeach
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true"
+                        class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="pricing-wrapper">
+                            <div class="ts-header">
+                                <h6>Starter</h6>
+                                <span>Try and decide.</span>
+                            </div>
+                            <h3 class="price">KES {{ number_format(10000) }}</h3>
+                            <div class="pricing-body">
+                                <div class="feature">
+                                    <i data-feather="check"></i>
+                                    <span class="name">Lorem ipsum dolor sit amet, consectetur
+                                        adipisicing elit. Similique at minus doloremque eaque dolorum aut facere
+                                        dolorem hic tempore sint atque id consequatur accusamus unde est ipsum iste,
+                                        rerum voluptatibus?</span>
+                                </div>
 
-
+                            </div>
+                            <div class="pricing-footer">
+                                <a class="rn-btn" href="#contacts"><span>BUY NOW</span></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -762,7 +621,7 @@
                                     </div>
                                     <div class="title-area">
                                         <h4 class="title">Shirley E.</h4>
-                                        <span>Hybrid Shooter</span>
+                                        {{-- <span>Hybrid Shooter</span> --}}
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
@@ -771,7 +630,7 @@
                                     </div>
                                     <div class="title-area">
                                         <h4 class="title">Wambui P. </h4>
-                                        <span>Hybrid Shooter</span>
+                                        {{-- <span>Hybrid Shooter</span> --}}
                                     </div>
                                 </div>
                             </div>
@@ -812,8 +671,8 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for="contact-name">Your Name</label>
-                                            <input name="name" class="form-control form-control-lg"
-                                                id="contact-name" type="text">
+                                            <input name="name" class="form-control form-control-lg" id="contact-name"
+                                                type="text">
                                             <span class="error text-danger" id="nameErrorMsg"></span>
                                         </div>
                                     </div>
@@ -823,16 +682,16 @@
                                             <label for="contact-phone">Phone Number</label>
                                             <input name="phone_number" class="form-control" id="contact-phone"
                                                 type="text">
-                                                <span class="error text-danger" id="mobileErrorMsg" ></span>
+                                            <span class="error text-danger" id="mobileErrorMsg"></span>
                                         </div>
                                     </div>
 
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="contact-email">Email</label>
-                                            <input class="form-control form-control-sm" id="contact-email"
-                                                name="email" type="email">
-                                                <span class="error text-danger" id="emailErrorMsg"></span>
+                                            <input class="form-control form-control-sm" id="contact-email" name="email"
+                                                type="email">
+                                            <span class="error text-danger" id="emailErrorMsg"></span>
                                         </div>
                                     </div>
 
@@ -841,7 +700,7 @@
                                             <label for="subject">subject</label>
                                             <input class="form-control form-control-sm" id="subject" name="subject"
                                                 type="text">
-                                                <span class="error text-danger" id="subjectErrorMsg"></span>
+                                            <span class="error text-danger" id="subjectErrorMsg"></span>
                                         </div>
                                     </div>
 

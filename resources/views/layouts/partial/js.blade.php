@@ -9,3 +9,4 @@
 <script src="/client/js/vendor/particles.js"></script>
 <!-- main JS -->
 <script src="/client/js/main.js"></script>
+<script src="/js/main.js"></script>

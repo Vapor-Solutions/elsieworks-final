@@ -7,3 +7,4 @@
     <link rel="stylesheet" href="/client/css/plugins/feature.css">
     <!-- Style css -->
     <link rel="stylesheet" href="/client/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
