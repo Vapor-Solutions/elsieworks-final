@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>Coming Soon 2</title>
+    <title>{{ config('app.name') }} - Site Maintenance</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="/maintenance/images/icons/favicon.ico" />
+    <link rel="icon" type="image/png" href="/ew-primary.ico" />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="/maintenance/vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
@@ -47,11 +47,15 @@
                 Coming Soon
             </h3>
 
-            <p class="m2-txt1 txt-center p-b-48">
-                Our website is under construction, follow us for update now!
-            </p>
+            <p class="m2-txt1 txt-center p-b-48">Sorry for the inconvenience. We&rsquo;re performing some maintenance at
+                the moment. If you need to
+                you can always follow us on <a href="http://www.instagram.com/elsieworks_">Instagram</a> for updates,
+                otherwise
+                we&rsquo;ll be back up shortly!</p>
+            <p>&mdash; The ElsieWorks Team</p>
 
-            <div class="flex-w flex-c-m cd100 p-b-33">
+
+            <div class="flex-w flex-c-m cd100 p-b-33 mt-5">
                 <div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
                     <span class="l2-txt1 p-b-9 days">35</span>
                     <span class="s2-txt1">Days</span>
