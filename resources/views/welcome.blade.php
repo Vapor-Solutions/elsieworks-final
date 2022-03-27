@@ -348,8 +348,8 @@
                     <div class="col-lg-12">
                         <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
                             class="section-title text-center">
-                            <span class="subtitle">Visit my Client</span>
-                            <h2 class="title">Our Trusted Client</h2>
+                            <span class="subtitle">Clients</span>
+                            <h2 class="title">Our Trusted Clients</h2>
                         </div>
                         <div class="skill-style-1">
                             <div class="client-card">
@@ -390,7 +390,7 @@
                         <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
                             class="section-title text-center mb--20 mb_md--20 mb_sm--20">
                             <span class="subtitle">What Clients Say</span>
-                            <h2 class="title">Testimonial</h2>
+                            <h2 class="title">Testimonials</h2>
                         </div>
                     </div>
                 </div>
@@ -437,7 +437,7 @@
                         <div class="title-area-wrapper mb_md--20 mb_sm--20">
                             <div class="section-title text-left">
                                 <span class="subtitle">Pricing</span>
-                                <h2 class="title">Our Pricing</h2>
+                                <h2 class="title">Our Packages</h2>
                             </div>
                             <p class="title-disc">
                                 Our Rates vary fully depending on the type of services that you would like us to offer
@@ -506,8 +506,8 @@
                     <div class="col-lg-12">
                         <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true"
                             class="section-title text-center">
-                            <span class="subtitle">Visit my blog and keep your feedback</span>
-                            <h2 class="title">My Blog</h2>
+                            <span class="subtitle">Visit Our blog and give us your feedback</span>
+                            <h2 class="title">Our Blog</h2>
                         </div>
                     </div>
                 </div>
@@ -607,7 +607,7 @@
                     <div class="col-lg-12">
                         <div class="section-title text-center">
                             <span class="subtitle">Contact</span>
-                            <h2 class="title">Contact Me</h2>
+                            <h2 class="title">Contact Us</h2>
                         </div>
                     </div>
                 </div>
