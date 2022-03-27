@@ -19,328 +19,28 @@
     <!-- Start Main Page Wrapper -->
     <main class="main-page-wrapper spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
 
-        <!-- Start Header -->
-        <header class="rn-header haeder-default black-logo-version header--fixed header--sticky">
-            <div class="header-wrapper m--0 rn-popup-mobile-menu row align-items-center">
-                <!-- Start Header Left -->
-                <div class="col-lg-2 col-6">
-                    <div class="header-left">
-                        <div class="logo">
-                            <a href="/">
-                                <img src="/ew-secondary.png" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Header Left -->
-                <!-- Start Header Center -->
-                <div class="col-lg-10 col-6">
-                    <div class="header-center">
-                        <nav id="sideNav" class="mainmenu-nav navbar-example2">
-                            <!-- Start Mainmanu Nav -->
-                            <ul class="primary-menu nav nav-pills">
-                                <li class="nav-item"><a class="nav-link smoth-animation active"
-                                        href="#home">Home</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link smoth-animation" href="#about">About</a>
-                                </li>
-                                {{-- <li class="nav-item"><a class="nav-link smoth-animation" href="#skill">Skill</a> --}}
-                                </li>
-                                <li class="nav-item"><a class="nav-link smoth-animation"
-                                        href="#service">Services</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link smoth-animation"
-                                        href="#portfolio">Portfolio</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link smoth-animation"
-                                        href="#client">Clients</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link smoth-animation"
-                                        href="#pricing">Pricing</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">blog</a>
-                                </li>
-                                <li class="nav-item"><a class="nav-link smoth-animation" href="#contacts">Contact
-                                        us</a>
-                                </li>
-                            </ul>
-                            <!-- End Mainmanu Nav -->
-                        </nav>
+        @include('homepage.header')
 
-                        <!-- End Header Right  -->
-                    </div>
-                </div>
-                <!-- End Header Center -->
-            </div>
-        </header>
-        <!-- End Header Area -->
+        @include('homepage.popup-mobile')
 
-        <!-- Start Popup Mobile Menu  -->
-        <div class="popup-mobile-menu">
-            <div class="inner">
-                <div class="menu-top">
-                    <div class="menu-header">
-                        <a class="logo" href="index.html">
-                            <img src="/ew-black.png" class="img-fluid rounded-circle w-25" alt="Personal Portfolio">
-                        </a>
-                        <div class="close-button">
-                            <button class="close-menu-activation close"><i data-feather="x"></i></button>
-                        </div>
-                    </div>
-                    <p class="discription">Welcome to ElsieWorks! Through all the beautiful motion We Freeze Time</p>
-                </div>
-                <div class="content">
-                    <ul class="primary-menu nav nav-pills">
-                        <li class="nav-item"><a class="nav-link smoth-animation active" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link smoth-animation" href="#about">About</a></li>
+        @include('homepage.slider')
 
-                        <li class="nav-item"><a class="nav-link smoth-animation" href="#skill">Skill</a></li>
+        @include('homepage.about')
 
-                        <li class="nav-item"><a class="nav-link smoth-animation" href="#service">Service</a></li>
+        @include('homepage.services')
 
-                        <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">portfolio</a>
-                        </li>
+        @include('homepage.clients')
 
-                        <li class="nav-item"><a class="nav-link smoth-animation" href="#client">client</a></li>
+        @include('homepage.testimonials')
 
-                        <li class="nav-item"><a class="nav-link smoth-animation" href="#pricing">pricing</a></li>
+        @include('homepage.pricing')
 
-                        <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">blog</a></li>
+        @include('homepage.blog')
 
-                        <li class="nav-item"><a class="nav-link smoth-animation" href="#contacts">contact</a></li>
-                    </ul>
-                    <!-- social sharea area -->
-                    <div class="social-share-style-1 mt--40">
-                        <span class="title">find with me</span>
-                        <ul class="social-share d-flex liststyle">
-                            <li class="facebook"><a href="https://www.facebook.com/ElsieWorks"
-                                    target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-facebook">
-                                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z">
-                                        </path>
-                                    </svg></a>
-                            </li>
-                            <li class="instagram"><a href="https://www.instagram.com/elsieworks_/"
-                                    target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round"
-                                        class="feather feather-instagram">
-                                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                                    </svg></a>
-                            </li>
-                            <li class="twitter"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="feather feather-twitter">
-                                        <path
-                                            d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                                        </path>
-                                        <rect x="2" y="9" width="4" height="12"></rect>
-                                        <circle cx="4" cy="4" r="2"></circle>
-                                    </svg></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- end -->
-                </div>
-            </div>
-        </div>
-        <!-- End Popup Mobile Menu  -->
-
-        <!-- Start Slider Area -->
-        <div id="home" class="rn-slider-area">
-            <div class="slide slider-style-4 bg_image bg_image--14">
-                <div class="container">
-                    <div class="row">
-                        <div class="order-2 order-lg-1 col-lg-9 col-xl-7">
-                            <div class="content">
-                                <div class="inner mb_sm--80">
-                                    <h1 class="title">Hi, Welcome to <span>ElsieWorks</span><br> </h1>
-                                    <div>
-                                        <p class="description">For All your Photography and Videography needs, <br>
-                                            We don't just capture media, we <span class="text-white">FREEZE
-                                                TIME!</span> </p>
-                                    </div>
-                                </div>
-                                <div class="row ">
-                                    <div class="col-lg-12 col-xl-6 col-md-12 col-sm-12 col-12">
-                                        <div class="social-share-inner-left">
-                                            <span class="title">find with me</span>
-                                            <ul class="social-share d-flex liststyle">
-                                                <li class="instagram"><a target="_blank"
-                                                        href="https://www.instagram.com/elsieworks_"><i
-                                                            data-feather="instagram"></i></a>
-                                                </li>
-                                                <li class="facebook"><a target="_blank"
-                                                        href="https://www.facebook.com/ElsieWorks/"><i
-                                                            data-feather="facebook"></i></a>
-                                                </li>
-                                                <li class="linkedin"><a target="_blank" href="#"><i
-                                                            data-feather="twitter"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Slider Area -->
-
-        <!-- Start about Area -->
-        <div id="about" class="rn-about-area rn-section-gap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true"
-                            class="image-area">
-                            <div class="thumbnail">
-                                <img src="client/images/about/about-1.jpg" alt="Personal Portfolio Image">
-                            </div>
-                        </div>
-                    </div>
-                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true"
-                        class="col-lg-7 mt_sm--30">
-                        <div class="contant">
-                            <div class="section-title text-left">
-                                <span class="subtitle">Visit Our portfolio & Hire us</span>
-                                <h2 class="title">About Us</h2>
-                            </div>
-                            <p class="discription">
-                                We are your friendly neighbourhood creatives with diverse skills in the art of
-                                photography and videography
-                            </p>
-                            <p class="discription">
-                                If you are looking for something beyond the wildness of the event itself to be captured,
-                                you are in the right place
-                                as we don't just give you extraordinary, we give world class!!
-                            </p>
-                            {{-- <a class="rn-btn" href="#contacts"><span>DOWNLOAD MY CV</span></a> --}}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End about Area -->
-        {{-- <!-- skill area Start -->
-        <div id="skill" class="rn-skill-area rn-section-gap section-separator">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title text-center" data-aos="fade-up" data-aos-duration="500"
-                            data-aos-delay="100" data-aos-once="true">
-                            <span class="subtitle">Visit my skill & Hire me</span>
-                            <h2 class="title">My Skill</h2>
-                        </div>
-                        <div class="mt_md--40 mt_sm--40">
-                            <ul class="skill-style-1">
-                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
-                                    title="ReactJs">
-                                    <img src="client/images/icons/react.png" alt="skill">
-                                </li>
-                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true"
-                                    title="Figma">
-                                    <img src="client/images/icons/figma.png" alt="skill">
-                                </li>
-                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true"
-                                    title="XD">
-                                    <img src="client/images/icons/xd.png" alt="skill">
-                                </li>
-                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="400" data-aos-once="true"
-                                    title="PS">
-                                    <img src="client/images/icons/photoshop.png" alt="skill">
-                                </li>
-                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
-                                    title="vueJS">
-                                    <img src="client/images/icons/vuejs.png" alt="skill">
-                                </li>
-                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="200" data-aos-once="true"
-                                    title="js">
-                                    <img src="client/images/icons/js.png" alt="skill">
-                                </li>
-                                <li data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true"
-                                    title="angularJS">
-                                    <img src="client/images/icons/angularjs.png" alt="skill">
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- skill area End --> --}}
-
-        <!-- Start Service Area -->
-        <div id="service" class="rn-service-area rn-section-gap section-separator">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
-                            class="section-title text-left">
-                            <span class="subtitle">Services</span>
-                            <h2 class="title">What We Do</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row--25 mt_md--10 mt_sm--10">
-
-                    <!-- Start Single Service -->
-
-                    @foreach (App\Models\Service::all() as $service)
-                        <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
-                            class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
-                            <div class="rn-service">
-                                <div class="inner">
-                                    <div class="icon">
-                                        <i data-feather="menu"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h4 class="title">{{ $service->title }}</h4>
-                                        <p class="description">{{ $service->description }}</p>
-                                        <button class="btn read-more-button" data-bs-toggle="modal"
-                                            data-bs-target="#{{ $service->id }}"><i
-                                                class="feather-arrow-right"></i></button>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="modal fade" id="{{ $service->id }}" tabindex="-1" role="dialog"
-                            aria-labelledby="modelTitleId" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title">Modal title</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Body
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                    <!-- End SIngle Service -->
-
-                </div>
-            </div>
-        </div>
-        <!-- End Service Area  -->
+        @include('homepage.contact')
 
 
+<<<<<<< HEAD
         <!-- Start Cient Area -->
         <div id="client" class="rn-client-area rn-client-style-2 rn-section-gap section-separator">
             <div class="container">
@@ -831,6 +531,8 @@
             </div>
         </div>
         <!-- End Modal Blog area -->
+=======
+>>>>>>> d37148261f7119661dfa1fcf8d5a0f0d4c2b4ab7
         <!-- Back to  top Start -->
         <div class="backto-top">
             <div>
@@ -838,6 +540,7 @@
             </div>
         </div>
         <!-- Back to top end -->
+
 
     </main>
 
