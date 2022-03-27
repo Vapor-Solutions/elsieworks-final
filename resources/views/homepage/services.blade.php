@@ -15,7 +15,8 @@
             <!-- Start Single Service -->
 
             @foreach (App\Models\Service::all() as $service)
-                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                <div data-toggle="modal"
+                                    data-target="#modal{{ $service->id }}" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
                     class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
                     <div class="rn-service">
                         <div class="inner">
@@ -27,8 +28,7 @@
                                 <p class="description">{{ $service->description }}</p>
 
                                 <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
-                                    data-target="#modal{{ $service->id }}">
+                                <button type="button" class="btn btn-lg" >
                                     <i class="feather-arrow-right"></i>
                                 </button>
 
@@ -42,20 +42,9 @@
                 <div class="modal fade" id="modal{{ $service->id }}" tabindex="-1" role="dialog"
                     aria-labelledby="modelTitleId" aria-hidden="true">
                     <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">Modal title</h5>
-                                <button type="button" class="btn-close" data-dismiss="modal"
-                                    aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <div class="container-fluid">
-                                    Add rows here
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save</button>
+                        <div class="card">
+                            <div class="card-body">
+                                .row
                             </div>
                         </div>
                     </div>

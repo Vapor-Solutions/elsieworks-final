@@ -9,6 +9,8 @@ use App\Http\Livewire\Admin\Contacts;
 use App\Http\Livewire\Admin\Portfolios;
 use App\Http\Livewire\Admin\Services;
 use App\Http\Livewire\Admin\Skills;
+use App\Models\MaintenanceSub;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +30,20 @@ Route::post('/contact', [HomepageController::class, 'addContact'])->name('contac
 
 Route::redirect('dashboard', 'admin/dashboard');
 
+
+Route::post('maintenance-sub', function(Request $request){
+    $request->validate([
+        'email'=>'email|required'
+    ]);
+
+    $sub = new MaintenanceSub();
+
+    $sub->email = $request->email;
+
+    $sub->save();
+
+    return response('Successfully Subscribed! you will receive a notification when we go live', 200);
+})->name('maintenance.sub');
 
 
 Route::prefix('admin')->middleware(['auth:sanctum', 'verified'])->group(function () {
