@@ -15,8 +15,8 @@
             <!-- Start Single Service -->
 
             @foreach (App\Models\Service::all() as $service)
-                <div data-toggle="modal"
-                                    data-target="#modal{{ $service->id }}" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                <div data-toggle="modal" data-target="#modal{{ $service->id }}" data-aos="fade-up"
+                    data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
                     class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
                     <div class="rn-service">
                         <div class="inner">
@@ -28,7 +28,7 @@
                                 <p class="description">{{ $service->description }}</p>
 
                                 <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-lg" >
+                                <button type="button" class="btn btn-lg">
                                     <i class="feather-arrow-right"></i>
                                 </button>
 
@@ -42,10 +42,13 @@
                 <div class="modal fade" id="modal{{ $service->id }}" tabindex="-1" role="dialog"
                     aria-labelledby="modelTitleId" aria-hidden="true">
                     <div class="modal-dialog" role="document">
-                        <div class="card">
-                            <div class="card-body">
-                                .row
+                        <div class="modal-content">
+                            <div class="row">
+                                <div class="col-4 my-2">
+                                    <img src="/client/images/bg/bg-image-1.jpg" alt="" srcset="">
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
