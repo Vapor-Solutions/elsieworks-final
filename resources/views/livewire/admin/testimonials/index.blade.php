@@ -46,6 +46,30 @@
                             Client's not given Testimonials
                         </h5>
                     </div>
+                    <div class="card-body">
+                        <table class="table table-hover table-responsive">
+                            <thead class="thead-default">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Client Name</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td scope="row"></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td scope="row"></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                        </table>
+
+                    </div>
                 </div>
             </div>
         </div>
