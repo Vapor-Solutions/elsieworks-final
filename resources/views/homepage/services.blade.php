@@ -39,14 +39,17 @@
                     </div>
                 </div>
                 <!-- Modal -->
-                <div class="modal fade" id="modal{{ $service->id }}" tabindex="-1" role="dialog"
+                <div style="z-index: 9999" class="modal fade" id="modal{{ $service->id }}" tabindex="-1" role="dialog"
                     aria-labelledby="modelTitleId" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="row">
                                 <div class="col-4 my-2">
-                                    <img src="/client/images/bg/bg-image-1.jpg" alt="" srcset="">
+                                    <a href="/client/images/bg/bg-image-1.jpg" data-lightbox="projects" >
+                                        <img src="/client/images/bg/bg-image-1.jpg" alt="image">
+                                    </a>
                                 </div>
+
                             </div>
 
                         </div>

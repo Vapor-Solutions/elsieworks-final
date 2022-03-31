@@ -10,6 +10,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/ew-primary.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script type="text/javascript">
+        const lightbox = GLightbox({
+            touchNavigation: true,
+            loop: true,
+            autoplayVideos: true
+        });
+    </script>
     @include('layouts.partial.css')
 
 </head>
@@ -50,7 +59,6 @@
 
 
     </main>
-
     <!-- Rn footer area Start -->
     <div id="footer" class="rn-footer-area footer-style-2 rn-section-gapTop section-separator">
         <div class="copyright text-center ptb--40 section-separator">
@@ -58,8 +66,11 @@
                     href="https://elsieworks.com">ElsieWorks</a></p>
         </div>
     </div>
+
     <!-- Rn footer area end -->
     <!-- JS ============================================ -->
+
+
     @include('layouts.partial.js')
 </body>
 

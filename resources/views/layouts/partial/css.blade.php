@@ -8,3 +8,5 @@
     <!-- Style css -->
     <link rel="stylesheet" href="/client/css/style.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/client/css/vendor/lightbox.css">
+    {{-- <link rel="stylesheet" href="/css/app.css"> --}}
