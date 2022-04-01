@@ -42,29 +42,7 @@
                     </div>
                 </div>
             @endforeach
-            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true"
-                class="col-lg-4 col-md-6 col-sm-12">
-                <div class="pricing-wrapper">
-                    <div class="ts-header">
-                        <h6>Starter</h6>
-                        <span>Try and decide.</span>
-                    </div>
-                    <h3 class="price">KES {{ number_format(10000) }}</h3>
-                    <div class="pricing-body">
-                        <div class="feature">
-                            <i data-feather="check"></i>
-                            <span class="name">Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. Similique at minus doloremque eaque dolorum aut facere
-                                dolorem hic tempore sint atque id consequatur accusamus unde est ipsum iste,
-                                rerum voluptatibus?</span>
-                        </div>
 
-                    </div>
-                    <div class="pricing-footer">
-                        <a class="rn-btn" href="#contacts"><span>BUY NOW</span></a>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
