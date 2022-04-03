@@ -39,9 +39,9 @@
             <div class="card-footer">
                 <div class="d-flex flex-row">
                     <div class="flex-col">
-                        <button class="btn btn-primary">
+                        <a href="{{ route('admin.service_categories.create') }}" class="btn btn-primary">
                             Add New
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
