@@ -19,18 +19,6 @@
                   @enderror
                 </div>
                 <div class="mb-3">
-                  <label for="category_id" class="form-label">Category</label>
-                  <select wire:model="service.service_category_id" class="form-control bg-dark" name="category_id" id="category_id">
-                    <option>Choose a category</option>
-                    @foreach (App\Models\ServiceCategory::all() as $category)
-                    <option value="{{ $category->id }}">{{ $category->title }}</option>
-                    @endforeach
-                  </select>
-                  @error('service.category_id')
-                      <small class="text-danger">{{ $message }}</small>
-                  @enderror
-                </div>
-                <div class="mb-3">
                   <label for="description" class="form-label">Description</label>
                   <textarea wire:model='service.description' class="form-control" name="description" id="description" rows="3"></textarea>
                   @error('service.title')

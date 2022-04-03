@@ -11,7 +11,6 @@ class Create extends Component
 
     protected $rules = [
         'service.title' => 'required',
-        'service.service_category_id' => 'required',
         'service.description' => 'required',
     ];
     public function mount()

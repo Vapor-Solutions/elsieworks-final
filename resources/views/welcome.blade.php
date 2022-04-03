@@ -20,6 +20,8 @@
         });
     </script>
     @include('layouts.partial.css')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 
 </head>
 
@@ -72,6 +74,25 @@
 
 
     @include('layouts.partial.js')
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function(event) {
+            console.log("loaded");
+            const lightbox = GLightbox({
+                selector: 'glightbox1',
+                touchNavigation: true,
+                loop: true,
+                autoplayVideos: true,
+                onOpen: () => {
+                    console.log('Lightbox opened')
+                },
+                beforeSlideLoad: (slide, data) => {
+                    // Need to execute a script in the slide?
+                    // You can do that here...
+                }
+            });
+            console.log("worked");
+        })
+    </script>
 </body>
 
 </html>

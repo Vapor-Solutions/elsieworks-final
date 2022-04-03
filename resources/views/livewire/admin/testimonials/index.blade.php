@@ -46,8 +46,9 @@
                             Client's not given Testimonials
                         </h5>
                     </div>
-                    <div class="card-body">
-                        <table class="table table-hover table-responsive">
+                    <div class="card-body table-responsive">
+
+                        <table class="table table-hover ">
                             <thead class="thead-default">
                                 <tr>
                                     <th>ID</th>

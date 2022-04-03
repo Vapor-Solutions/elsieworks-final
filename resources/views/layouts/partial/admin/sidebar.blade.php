@@ -27,7 +27,7 @@
             </li>
             <li class="@if (Route::is('admin.testimonials.*')) active @endif ">
                 <a href="{{ route('admin.testimonials.index') }}">
-                    <i class="tim-icons icon-paper"></i>
+                    <i class="tim-icons icon-chat-33"></i>
                     <p>Client's Testimonials</p>
                 </a>
             </li>
@@ -40,13 +40,31 @@
             <li class="@if (Route::is('admin.services.*')) active @endif ">
                 <a href="{{ route('admin.services.index') }}">
                     <i class="tim-icons icon-paper"></i>
-                    <p>Service Types</p>
+                    <p>Services Offered</p>
+                </a>
+            </li>
+            <li class="@if (Route::is('admin.service_categories.*')) active @endif ">
+                <a href="{{ route('admin.service_categories.index') }}">
+                    <i class="tim-icons icon-atom"></i>
+                    <p>Service Categories</p>
+                </a>
+            </li>
+            <li class="@if (Route::is('admin.rates.*')) active @endif ">
+                <a href="{{ route('admin.rates.index') }}">
+                    <i class="tim-icons icon-coins"></i>
+                    <p>Rates and Packages</p>
                 </a>
             </li>
             <li class="@if (Route::is('admin.projects.*')) active @endif ">
                 <a href="{{ route('admin.projects.index') }}">
-                    <i class="tim-icons icon-palette"></i>
+                    <i class="tim-icons icon-delivery-fast"></i>
                     <p>Projects</p>
+                </a>
+            </li>
+            <li class="@if (Route::is('admin.payments.*')) active @endif ">
+                <a href="{{ route('admin.payments.index') }}">
+                    <i class="tim-icons icon-bank"></i>
+                    <p>Payments<span class="badge rounded-pill bg-primary">coming soon</span></p>
                 </a>
             </li>
             <li class="@if (Route::is('admin.blogs.*')) active @endif ">
@@ -54,7 +72,13 @@
                     <i class="tim-icons icon-caps-small
 
                     "></i>
-                    <p>Blog</p>
+                    <p>Blog Posts</p>
+                </a>
+            </li>
+            <li class="@if (Route::is('admin.contacts.*')) active @endif ">
+                <a href="{{ route('admin.contacts.index') }}">
+                    <i class="tim-icons icon-book-bookmark"></i>
+                    <p>Contacts</p>
                 </a>
             </li>
 

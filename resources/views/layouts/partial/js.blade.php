@@ -12,3 +12,4 @@
 <script src="/js/main.js"></script>
 
 <script src="/client/js/vendor/lightbox.js"></script>
+<script src="/client/js/vendor/glightbox.js"></script>

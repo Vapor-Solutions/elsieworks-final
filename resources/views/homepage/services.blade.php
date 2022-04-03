@@ -45,7 +45,7 @@
                         <div class="modal-content">
                             <div class="row">
                                 <div class="col-4 my-2">
-                                    <a href="/client/images/bg/bg-image-1.jpg" data-lightbox="projects" >
+                                    <a href="/client/images/bg/bg-image-1.jpg" class="glightbox3" data-gallery="gallery1" >
                                         <img src="/client/images/bg/bg-image-1.jpg" alt="image">
                                     </a>
                                 </div>

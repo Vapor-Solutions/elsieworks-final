@@ -24,7 +24,7 @@
                             <tr>
                                 <td scope="row">{{ $service->id }}</td>
                                 <td>{{ $service->title }}</td>
-                                <td>{{ $service->category }}</td>
+                                <td>{{ count($service->categories) }}</td>
                                 <td>{{ $service->description }}</td>
                                 <td>
                                     <div class="d-flex flex-row">

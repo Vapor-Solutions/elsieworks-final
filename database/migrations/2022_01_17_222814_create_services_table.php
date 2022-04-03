@@ -23,20 +23,24 @@ class CreateServicesTable extends Migration
 
         DB::table('services')->insert([
             [
-                'title' => 'Staff Portraits',
-                'description' => 'Editorial images offer photographers a way to explore their creative freedom while telling a story.'
+                'title' => 'Corporate',
+                'description' => 'Corporate coverage allows organisations to show and tell their milestones, plans and agendas to their partners and investors. We capture these moments in ways that are curated to suit what each organisation stands for.'
             ],
             [
-                'title' => 'Advertising Photography',
-                'description' => "Good advertising photography persuades you to purchase something that you don't really need. It works by putting products, goods or services in front of an audience, and then convincing them to be interested."
+                'title' => 'Advertising/Products',
+                'description' => "Good advertising imagery persuades you to purchase something that you didn’t think you needed. We work with you by putting products, good or services in front of your ideal audience."
             ],
             [
-                'title' => 'Portrait Photography',
-                'description' => "Good portrait photographers are able to capture the personality and emotion of people around them, along with earning money via wedding photography, senior portraits, family photography sessions, and so on."
+                'title' => 'Portraits',
+                'description' => "Good portraiture captures the personality and emotion of the person in front of the lens."
             ],
             [
-                'title' => 'Food & Drink Photography',
-                'description' => 'It builds a brand and tells a story. As a restaurant owner, you have the chance to control how the world perceives your restaurant. You are in control of what you show and what image you put out to the world. Professional food photos can help you build a brand that stands out and shapes your restaurant identity.'
+                'title' => 'Events & Ceremonies',
+                'description' => 'We Freeze time! When it comes to recording moments of your life, we are there with you every step of the way.'
+            ],
+            [
+                'title' => 'Content Creation',
+                'description' => 'With the digital age, the internet is the fastest way to get information and entertainment'
             ],
 
         ]);

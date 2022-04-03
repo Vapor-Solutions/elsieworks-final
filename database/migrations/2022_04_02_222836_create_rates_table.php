@@ -15,7 +15,12 @@ class CreateRatesTable extends Migration
     {
         Schema::create('rates', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('service_id');
+            $table->foreignId('service_category_id')->nullable();
             $table->string('title');
+            $table->longText('description');
+            $table->foreignId('price_type_id');
+            $table->float('price');
             $table->timestamps();
         });
     }
