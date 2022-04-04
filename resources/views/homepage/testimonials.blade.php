@@ -22,7 +22,7 @@ id="testimonial">
                     <div class="testimonial-inner">
                         <div class="testimonial-header">
                             <div class="thumbnail">
-                                <img src="{{ $client->image ?? $client->image_url }}" alt="client-image">
+                                <img src="{{ $client->testimonial->image_url }}" alt="client-image">
                             </div>
                             <h5 class="ts-header">
                                 <span class="text-color-primary">{{ $client->name }}</span>
@@ -31,7 +31,7 @@ id="testimonial">
                         </div>
                         <div class="testimonial-body">
                             <p class="discription">
-                                {{ $client->testimonial->description }}
+                                {{ $client->testimonial->text }}
                             </p>
                         </div>
                     </div>

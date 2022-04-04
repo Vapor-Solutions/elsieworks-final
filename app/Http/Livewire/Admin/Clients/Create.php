@@ -12,7 +12,7 @@ class Create extends Component
     protected $rules = [
         'client.name'=>'required',
         'client.phone_number'=>'required',
-        'client.email'=>'unique:users,email',
+        'client.email'=>'nullable|unique:users,email',
     ];
 
 

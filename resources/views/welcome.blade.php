@@ -25,8 +25,7 @@
 
 </head>
 
-<body class="template-color-1 home-classic spybody white-version" data-spy="scroll" data-target=".navbar-example2"
-    data-offset="150">
+<body class="white-version home-classic spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
     <!-- Start Main Page Wrapper -->
     <main class="main-page-wrapper spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
 

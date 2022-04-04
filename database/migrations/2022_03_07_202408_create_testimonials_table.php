@@ -17,7 +17,6 @@ class CreateTestimonialsTable extends Migration
             $table->id();
             $table->foreignId('client_id');
             $table->longText('text');
-            $table->string('image');
             $table->timestamps();
         });
     }

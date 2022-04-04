@@ -5,7 +5,7 @@
             <div class="col-lg-12">
                 <div class="section-title text-center">
                     <span class="subtitle">Contact</span>
-                    <h2 class="title">Contact Me</h2>
+                    <h2 class="title">Contact Us</h2>
                 </div>
             </div>
         </div>

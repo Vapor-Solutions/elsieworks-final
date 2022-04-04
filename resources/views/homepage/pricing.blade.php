@@ -18,65 +18,100 @@
                 </div>
             </div>
 
-            <div class="col-lg-6 col-sm-12">
+            <div class="col-lg-8 col-sm-12">
                 <div class="row">
                     @foreach (App\Models\Service::all() as $service)
                         <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true"
-                            class="col-6">
+                            class="col-6 mt-5">
                             <div class="pricing-wrapper">
                                 <div class="ts-header">
                                     <h6>{{ $service->title }}</h6>
-                                    <span>Try and decide.</span>
+                                    <span>Check it out and Decide</span>
                                 </div>
-                                <h3 class="price">{{ $service->price }}</h3>
-
                                 <div class="pricing-footer">
-                                    <a class=" rn-btn" data-toggle="modal" data-target="#package{{ $service->id }}"><span>PACKAGES</span></a>
+                                    <a class=" rn-btn" data-toggle="modal"
+                                        data-target="#package{{ $service->id }}"><span>PACKAGES</span></a>
                                 </div>
-
-
-                                <!-- Modal -->
-
                             </div>
                         </div>
-                        <div class="modal fade" style="z-index: 9999" id="package{{ $service->id }}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                        <div class="modal fade" style="z-index: 9999" id="package{{ $service->id }}" tabindex="-1"
+                            role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
-                                        <div class="modal-header">
-                                                <h5 class="modal-title">Modal title</h5>
-                                                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                                            </div>
-                                    <div class="modal-body">
+                                    <div class="modal-header">
+                                        <h6 class="modal-title text-dark">{{ $service->title }}</h6>
+                                    </div>
+                                    <div class="modal-body mt-4">
                                         <div class="container-fluid">
-                                            <!-- Button trigger modal -->
-                                            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#book{{ $service->id }}">
-                                              Launch
-                                            </button>
+                                            @if (count($service->categories)>0)
+                                                @foreach ($service->categories as $category)
+                                                    @if (count($category->rates) > 0)
+                                                        <div>
+                                                            <small class="text-center text-dark text-uppercase">
+                                                                {{ $category->title }}
+                                                            </small>
 
-                                            <!-- Modal -->
-
+                                                            <div class="row mt-3 mb-5">
+                                                                @foreach ($category->rates as $rate)
+                                                                    <div class="col-lg-4 col-md-6 col-12">
+                                                                        <div data-aos="fade-up" data-aos-duration="1000"
+                                                                            data-aos-delay="300" data-aos-once="true"
+                                                                            class="">
+                                                                            <div class="pricing-wrapper">
+                                                                                <div class="ts-header">
+                                                                                    <h6>{{ $rate->title }}</h6>
+                                                                                </div>
+                                                                                <h3 class="price">KES
+                                                                                    {{ number_format($rate->price) }}
+                                                                                </h3>
+                                                                                <small>{{ $rate->price_type->title }}</small>
+                                                                                <div class="pricing-body">
+                                                                                    <small>{{ $rate->description }}</small>
+                                                                                </div>
+                                                                                <div class="pricing-footer">
+                                                                                    <a class="rn-btn"
+                                                                                        href="#contacts"><span>BOOK
+                                                                                            NOW</span></a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                @endforeach
+                                                            </div>
+                                                        </div>
+                                                    @endif
+                                                @endforeach
+                                            @else
+                                                @if (count($service->rates) > 0 )
+                                                    <div class="row mt-3 mb-5">
+                                                        @foreach ($service->rates as $rate)
+                                                            <div class="col-lg-4 col-md-6 col-12">
+                                                                <div data-aos="fade-up" data-aos-duration="1000"
+                                                                    data-aos-delay="300" data-aos-once="true"
+                                                                    class="">
+                                                                    <div class="pricing-wrapper">
+                                                                        <div class="ts-header">
+                                                                            <h6>{{ $rate->title }}</h6>
+                                                                        </div>
+                                                                        <h3 class="price">KES
+                                                                            {{ number_format($rate->price) }}</h3>
+                                                                        <small>{{ $rate->price_type->title }}</small>
+                                                                        <div class="pricing-body">
+                                                                            <small>{{ $rate->description }}</small>
+                                                                        </div>
+                                                                        <div class="pricing-footer">
+                                                                            <a class="rn-btn"
+                                                                                href="#contacts"><span>BOOK
+                                                                                    NOW</span></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        @endforeach
+                                                    </div>
+                                                @endif
+                                            @endif
                                         </div>
-                                    </div>
-                                    <div class="modal fade" style="z-index: 99999" id="book{{ $service->id }}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title">Modal title</h5>
-                                                        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    Body
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-primary">Save</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save</button>
                                     </div>
                                 </div>
                             </div>
