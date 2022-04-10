@@ -108,7 +108,7 @@
             endtimeHours: {{ Carbon\Carbon::createFromTimestamp(env('MAINTENANCE_END'))->format('H') }},
             endtimeMinutes: {{ Carbon\Carbon::createFromTimestamp(env('MAINTENANCE_END'))->format('i') }},
             endtimeSeconds: {{ Carbon\Carbon::createFromTimestamp(env('MAINTENANCE_END'))->format('s') }},
-            timeZone: "GMT+3"
+            // timeZone: "GMT"
             // ex:  timeZone: "America/New_York"
             //go to " http://momentjs.com/timezone/ " to get timezone
         });
