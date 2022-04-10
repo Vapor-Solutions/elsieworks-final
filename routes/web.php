@@ -28,6 +28,7 @@ Route::get('/', function () {
 Route::post('/contact', [HomepageController::class, 'addContact'])->name('contacts.create');
 
 Route::redirect('dashboard', 'admin/dashboard');
+Route::redirect('admin', 'admin/dashboard');
 
 
 Route::post('maintenance-sub', function(Request $request){
@@ -46,9 +47,7 @@ Route::post('maintenance-sub', function(Request $request){
 
 
 Route::prefix('admin')->middleware(['auth:sanctum', 'verified'])->group(function () {
-    Route::get('/dashboard', function(){
-        return view('dashboard');
-    })->name('admin.dashboard');
+    Route::get('/dashboard', Admin\Dashboard::class)->name('admin.dashboard');
 
     /**
      * Clients Routes

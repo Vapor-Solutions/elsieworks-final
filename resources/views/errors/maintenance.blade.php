@@ -101,12 +101,13 @@
         $('.cd100').countdown100({
             /*Set Endtime here*/
             /*Endtime must be > current time*/
-            endtimeYear: 2022,
-            endtimeMonth: 4,
-            endtimeDate: 10,
-            endtimeHours: 14,
-            endtimeMinutes: 0,
-            endtimeSeconds: 0,
+
+            endtimeYear: {{ Carbon\Carbon::createFromTimestamp(env('MAINTENANCE_END'))->format('Y') }},
+            endtimeMonth: {{ Carbon\Carbon::createFromTimestamp(env('MAINTENANCE_END'))->format('m') }},
+            endtimeDate: {{ Carbon\Carbon::createFromTimestamp(env('MAINTENANCE_END'))->format('j') }},
+            endtimeHours: {{ Carbon\Carbon::createFromTimestamp(env('MAINTENANCE_END'))->format('H') }},
+            endtimeMinutes: {{ Carbon\Carbon::createFromTimestamp(env('MAINTENANCE_END'))->format('i') }},
+            endtimeSeconds: {{ Carbon\Carbon::createFromTimestamp(env('MAINTENANCE_END'))->format('s') }},
             timeZone: "GMT+3"
             // ex:  timeZone: "America/New_York"
             //go to " http://momentjs.com/timezone/ " to get timezone
