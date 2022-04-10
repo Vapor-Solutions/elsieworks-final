@@ -27,8 +27,11 @@
                                 <td>{{ $category->service->title }}</td>
                                 <td>
                                     <a href="{{ route('admin.service_categories.edit', $category->id) }}" class="btn btn-info">
-                                        Edit
+                                        <i class="fas fa-edit"></i>
                                     </a>
+                                    <button wire:click="delete({{ $category->id }})" class="btn btn-danger">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
                                 </td>
                             </tr>
                         @endforeach

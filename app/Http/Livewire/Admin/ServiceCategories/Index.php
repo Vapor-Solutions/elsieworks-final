@@ -13,6 +13,15 @@ class Index extends Component
     {
         $this->categories = ServiceCategory::all();
     }
+
+    public function delete($id)
+    {
+        $category = ServiceCategory::find($id);
+        $category->delete();
+
+        return redirect()->route('admin.service_categories.index');
+
+    }
     public function render()
     {
         return view('livewire.admin.service-categories.index');
