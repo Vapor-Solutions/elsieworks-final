@@ -29,7 +29,7 @@
                                     <a href="{{ route('admin.service_categories.edit', $category->id) }}" class="btn btn-info">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <button wire:click="delete({{ $category->id }})" class="btn btn-danger">
+                                    <button onclick="confirm('Are you sure you want to delete this resource from the system?') || event.stopImmediatePropagation()" wire:click="delete({{ $category->id }})" class="btn btn-danger">
                                         <i class="fas fa-trash"></i>
                                     </button>
                                 </td>
