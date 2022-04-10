@@ -16,6 +16,25 @@ class Project extends Model
 
     public function photos()
     {
-        return $this->belongsToMany(Photo::class, 'photo_project', 'project_id', 'photo_id');
+        return $this->hasOne(Photo::class);
+    }
+
+    public function project_cost()
+    {
+        return $this->hasOne(ProjectCost::class);
+    }
+
+    public function service()
+    {
+        return $this->belongsTo(Service::class);
+    }
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }

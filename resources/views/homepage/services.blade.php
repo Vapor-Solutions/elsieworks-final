@@ -39,16 +39,22 @@
                     </div>
                 </div>
                 <!-- Modal -->
-                <div style="z-index: 9999" class="modal fade" id="modal{{ $service->id }}" tabindex="-1" role="dialog"
-                    aria-labelledby="modelTitleId" aria-hidden="true">
+                <div style="z-index: 9999" class="modal fade" id="modal{{ $service->id }}" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="row">
-                                <div class="col-4 my-2">
-                                    <a href="/client/images/bg/bg-image-1.jpg" class="glightbox3" data-gallery="gallery1" >
-                                        <img src="/client/images/bg/bg-image-1.jpg" alt="image">
-                                    </a>
-                                </div>
+                                @foreach (App\Models\Project::where('service_id', $service->id)->get() as $project)
+                                    <div class="col-4 my-2">
+                                        @foreach ($project->photos()->get() as $photo)
+                                            <a href="/storage/projects/{{ $photo->path }}" data-lightbox="{{ Str::slug($project->title) }}">
+                                                @if ($photo == $project->photos()->first())
+                                                    <img src="/storage/projects/{{ $photo->path }}" alt="image">
+                                                @endif
+                                            </a>
+                                        @endforeach
+                                        <small class="text-right">{{ $project->title }} - {{ Carbon\Carbon::parse($project->created_at)->format("jS M, y") }}</small>
+                                    </div>
+                                @endforeach
 
                             </div>
 

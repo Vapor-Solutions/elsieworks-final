@@ -4,15 +4,20 @@ namespace App\Http\Livewire\Admin\Clients;
 
 use App\Models\Client;
 use Livewire\Component;
+use Livewire\WithFileUploads;
+use Illuminate\Support\Str;
 
 class Create extends Component
 {
+    use WithFileUploads;
     public Client $client;
+    public $image;
 
     protected $rules = [
         'client.name'=>'required',
         'client.phone_number'=>'required',
         'client.email'=>'nullable|unique:users,email',
+        'image'=>'nullable|image|unique:users,email',
     ];
 
 
@@ -26,6 +31,11 @@ class Create extends Component
     public function submit()
     {
         $this->validate();
+
+        if(isset($this->image)){
+            $this->image->storeAs('/public/clients',Str::slug($this->client->name).'.'.$this->image->extension());
+            $this->client->image = Str::slug($this->client->name) . '.' . $this->image->extension();
+        }
 
         $this->client->save();
 

@@ -26,7 +26,7 @@
                                             href="https://www.facebook.com/ElsieWorks/"><i
                                                 data-feather="facebook"></i></a>
                                     </li>
-                                    <li class="linkedin"><a target="_blank" href="#"><i
+                                    <li class="linkedin"><a target="_blank" href="https://twitter.com/ElsieWorks_"><i
                                                 data-feather="twitter"></i></a>
                                     </li>
                                 </ul>

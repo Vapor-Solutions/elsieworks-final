@@ -26,14 +26,14 @@
                         </li>
                         <li class="nav-item"><a class="nav-link smoth-animation" href="#service">Services</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Portfolio</a>
-                        </li>
                         <li class="nav-item"><a class="nav-link smoth-animation" href="#client">Clients</a>
                         </li>
                         <li class="nav-item"><a class="nav-link smoth-animation" href="#pricing">Pricing</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">blog</a>
-                        </li>
+                        @if (count(App\Models\Blog::all()) > 0)
+                            <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">Blog</a>
+                            </li>
+                        @endif
                         <li class="nav-item"><a class="nav-link smoth-animation" href="#contacts">Contact
                                 us</a>
                         </li>

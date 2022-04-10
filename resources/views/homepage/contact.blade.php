@@ -15,7 +15,7 @@
                     <div class="row">
                         <div class="col-md-6 col-12">
                             <div class="thumbnail">
-                                <img src="client/images/contact/contact1.png" alt="contact-img">
+                                <img src="client/images/contact/contact1.jpg" alt="contact-img">
                             </div>
                             <div class="title-area">
                                 <h4 class="title">Shirley E.</h4>
@@ -24,7 +24,7 @@
                         </div>
                         <div class="col-md-6 col-12">
                             <div class="thumbnail">
-                                <img src="client/images/contact/contact1.png" alt="contact-img">
+                                <img src="client/images/contact/contact2.jpg" alt="contact-img">
                             </div>
                             <div class="title-area">
                                 <h4 class="title">Wambui P. </h4>

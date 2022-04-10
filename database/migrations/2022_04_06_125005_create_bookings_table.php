@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTestimonialsTable extends Migration
+class CreateBookingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateTestimonialsTable extends Migration
      */
     public function up()
     {
-        Schema::create('testimonials', function (Blueprint $table) {
+        Schema::create('bookings', function (Blueprint $table) {
             $table->id();
             $table->foreignId('client_id');
-            $table->longText('text');
-            $table->string('image');
+            $table->foreignId('rate_id');
+            $table->dateTime('booking_time');
+            $table->longText('special_requests')->nullable();
+            $table->boolean('is_confirmed')->default(false);
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateTestimonialsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('testimonials');
+        Schema::dropIfExists('bookings');
     }
 }

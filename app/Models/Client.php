@@ -18,7 +18,9 @@ class Client extends Model
             return $segment[0] ?? '';
         })->join(' '));
 
-        return 'https://ui-avatars.com/api/?name='.urlencode($name).'&color=7F9CF5&background=EBF4FF';
+        if ($this->image != null) $image = '/storage/clients/' . $this->image;
+
+        return $image??'https://ui-avatars.com/api/?name='.urlencode($name).'&color=7F9CF5&background=EBF4FF';
     }
 
     public function testimonial()

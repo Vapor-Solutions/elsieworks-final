@@ -138,10 +138,3 @@
             application: "black-dashboard-free"
         });
 </script>
-
-<script type="text /javascript" src="/richtexteditor/rte.js"></script>
-<script type="text /javascript" src='/richtexteditor/plugins/all_plugins.js'></script>
-
-<script>
-     new RichTextEditor("#inp_editor1");
-</script>

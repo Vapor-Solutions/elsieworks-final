@@ -41,11 +41,15 @@
 
         @include('homepage.clients')
 
-        @include('homepage.testimonials')
+        @if (count(App\Models\Testimonial::all()) > 0)
+            @include('homepage.testimonials')
+        @endif
 
         @include('homepage.pricing')
 
-        @include('homepage.blog')
+        @if (count(App\Models\Blog::all()) > 0)
+            @include('homepage.blog')
+        @endif
 
         @include('homepage.contact')
 

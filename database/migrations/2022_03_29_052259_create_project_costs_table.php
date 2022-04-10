@@ -15,6 +15,8 @@ class CreateProjectCostsTable extends Migration
     {
         Schema::create('project_costs', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('project_id');
+            $table->float('cost_kes');
             $table->timestamps();
         });
     }

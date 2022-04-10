@@ -22,7 +22,7 @@
                 <div class="row">
                     @foreach (App\Models\Service::all() as $service)
                         <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" data-aos-once="true"
-                            class="col-6 mt-5">
+                            class="col-md-6 col-12 mt-5">
                             <div class="pricing-wrapper">
                                 <div class="ts-header">
                                     <h6>{{ $service->title }}</h6>
@@ -70,8 +70,7 @@
                                                                                 </div>
                                                                                 <div class="pricing-footer">
                                                                                     <a class="rn-btn"
-                                                                                        href="#contacts"><span>BOOK
-                                                                                            NOW</span></a>
+                                                                                        href="{{ route('booking.request',$rate->id) }}"><span>REQUEST BOOKING</span></a>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -101,7 +100,7 @@
                                                                         </div>
                                                                         <div class="pricing-footer">
                                                                             <a class="rn-btn"
-                                                                                href="#contacts"><span>BOOK
+                                                                                href="{{ route('booking.request',$rate->id) }}"><span>BOOK
                                                                                     NOW</span></a>
                                                                         </div>
                                                                     </div>

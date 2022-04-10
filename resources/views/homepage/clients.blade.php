@@ -18,7 +18,7 @@
                                     <div class="inner text-center">
                                         <div class="thumbnail">
                                             <img class="rounded-circle shadow"
-                                                src="{{ $client->image ?? $client->image_url }}" alt="Client-image">
+                                                src="{{$client->image_url }}" width="75px" alt="Client-image">
                                         </div>
                                         <div class="seperator"></div>
                                         <div class="client-name"><span>{{ $client->name }}</span>
