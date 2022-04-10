@@ -23,7 +23,7 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return env('MAINTENANCE_MODE')?view('errors.maintenance'):view('welcome');
 })->name('home');
 Route::post('/contact', [HomepageController::class, 'addContact'])->name('contacts.create');
 
