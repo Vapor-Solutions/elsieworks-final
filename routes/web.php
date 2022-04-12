@@ -45,6 +45,9 @@ Route::post('maintenance-sub', function(Request $request){
     return response('Successfully Subscribed! you will receive a notification when we go live', 200);
 })->name('maintenance.sub');
 
+Route::get('bookings/{id}/request', function ($id) {
+    return view('bookings.request')->with('rate', Rate::find($id));
+})->name('booking.request');
 
 Route::prefix('admin')->middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/dashboard', Admin\Dashboard::class)->name('admin.dashboard');
@@ -130,9 +133,7 @@ Route::prefix('admin')->middleware(['auth:sanctum', 'verified'])->group(function
      */
     Route::get('/payments', Admin\Payments\Index::class)->name('admin.payments.index');
 
-    Route::get('bookings/{id}/request', function($id){
-       return view('bookings.request')->with('rate',Rate::find($id));
-    })->name('booking.request');
+
 
 
     Route::post('bookings/{id}/create', 'App\Http\Controllers\BookingsController@book')->name('booking.create');
