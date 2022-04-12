@@ -3,6 +3,8 @@
 namespace App\Http\Livewire\Admin;
 
 use App\Http\Controllers\DashboardController;
+use App\Models\Client;
+use App\Models\Project;
 use Carbon\Carbon;
 use Livewire\Component;
 
@@ -11,6 +13,8 @@ class Dashboard extends Component
 
     public $date;
 
+    public $total_earnings, $projects, $clients;
+
     protected $listeners=[
         'done'=>'render'
     ];
@@ -18,6 +22,17 @@ class Dashboard extends Component
     protected $rules = [
         'date'=>'required'
     ];
+
+    public function mount()
+    {
+        $this->total_earnings = 0;
+        $this->projects = Project::all();
+        $this->clients = Client::all();
+
+        for ($i = 0; $i < count($this->projects); $i++) {
+            $this->total_earnings += $this->projects[$i]->project_cost->cost_kes;
+        }
+    }
 
     public function maintenance_switch()
     {

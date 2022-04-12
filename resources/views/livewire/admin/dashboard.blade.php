@@ -2,17 +2,6 @@
     <x-slot name="header">
         {{ __('Dashboard') }}
     </x-slot>
-
-    @php
-        $total_earnings = 0;
-        $projects = App\Models\Project::all();
-        $clients = App\Models\Client::all();
-
-        for ($i = 0; $i < count($projects); $i++) {
-            $total_earnings += $projects[$i]->project_cost->cost_kes;
-        }
-
-    @endphp
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4 col-6">
@@ -26,7 +15,7 @@
                         <div class="text-right">
                             KES
                             <h2>
-                                {{ number_format($total_earnings, 2) }}
+                                {{ number_format($total_earnings??0, 2) }}
                             </h2>
                         </div>
                     </div>
@@ -42,7 +31,7 @@
                     <div class="card-body">
                         <div class="text-right">
                             <h2>
-                                {{ number_format(count($projects), 0) }}
+                                {{ number_format(count($projects??0), 0) }}
                             </h2>
                         </div>
                     </div>
@@ -58,7 +47,7 @@
                     <div class="card-body">
                         <div class="text-right align-bottom">
                             <h2>
-                                {{ number_format(count($clients), 0) }}
+                                {{ number_format(count($clients??0), 0) }}
                             </h2>
                         </div>
                     </div>
