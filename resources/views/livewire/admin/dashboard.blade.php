@@ -3,7 +3,7 @@
         {{ __('Dashboard') }}
     </x-slot>
     <div class="container-fluid">
-        <div class="row">
+        {{-- <div class="row">
             <div class="col-md-4 col-6">
                 <div class="card" style="height: 145px">
                     <div class="card-header">
@@ -53,7 +53,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="row">
             <div class="col-md-8 col-12">
                 <div class="card">

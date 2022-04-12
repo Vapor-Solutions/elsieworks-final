@@ -30,7 +30,7 @@ class Dashboard extends Component
         $this->clients = Client::all();
 
         for ($i = 0; $i < count($this->projects); $i++) {
-            $this->total_earnings += $this->projects[$i]->project_cost->cost_kes;
+            $this->total_earnings += $this->projects[$i]->project_cost->cost_kes??0;
         }
     }
 
