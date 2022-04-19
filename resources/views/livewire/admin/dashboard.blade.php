@@ -65,7 +65,7 @@
                     <div class="card-body">
                         <div class="row">
                             <div class="col-3">
-                                <img src="/client/images/about/about-1.jpg" alt="">
+                                <img width="200px" src="/client/images/about/about-1.jpg" alt="">
                             </div>
                             <div class="col-9 my-auto">
                                 <form action="{{ route('change_about') }}" method="POST"
@@ -129,7 +129,7 @@
                     <div class="card-body">
                         <div class="row my-4">
                             <div class="col-3">
-                                <img src="/client/images/contact/contact1.jpg" alt="">
+                                <img width="200px" src="/client/images/contact/contact1.jpg" alt="">
                             </div>
                             <div class="col-9 my-auto">
                                 <form action="{{ route('change_shirley') }}" method="POST"
@@ -148,7 +148,7 @@
                         </div>
                         <div class="row my-4">
                             <div class="col-3">
-                                <img src="/client/images/contact/contact2.jpg" alt="">
+                                <img width="200px" src="/client/images/contact/contact2.jpg" alt="">
                             </div>
                             <div class="col-9 my-auto">
                                 <form action="{{ route('change_wambui') }}" method="POST"

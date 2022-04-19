@@ -59,14 +59,14 @@
                                                 <div class="col-md-6 col-12">
                                                     <a href="{{ route('admin.admins.edit', $item->id) }}"
                                                         class="btn btn-secondary">
-                                                        <i class="tim-icons icon-pencil                                                        "></i>
+                                                        <i class="fa fa-edit"></i>
 
                                                     </a>
                                                 </div>
                                                 @if (auth()->user()->id != $item->id)
                                                 <div class="col-md-6 col-12" >
-                                                    <button class="btn btn-danger" wire:click="delete({{ $item->id }})">
-                                                        <i class="tim-icons icon-trash-simple"></i>
+                                                    <button class="btn btn-danger" onclick="confirm('Are you sure you want to delete this Admin?')||event.stopImmediatePropagation()" wire:click="delete({{ $item->id }})">
+                                                        <i class="fa fa-trash"></i>
                                                     </button>
                                                 </div>
                                                 @endif

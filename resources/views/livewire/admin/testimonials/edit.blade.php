@@ -14,7 +14,7 @@
                     <div class="col-md-6 col-12">
                         <div class="mb-3">
                             <label for="client_id" class="form-label">Client</label>
-                            <select disabled wire:model='testimonial.client_id' class="form-control bg-dark" name="client_id" id="client_id">
+                            <select disabled wire:model='testimonial.client_id' class="form-control " name="client_id" id="client_id">
                                 <option selected>Choose a new Client</option>
                                 @foreach (App\Models\Client::all() as $client)
                                         <option value="{{ $client->id }}">{{ $client->name }}</option>
@@ -28,7 +28,7 @@
                     <div class="col-md-6 col-12">
                         <div class="mb-3">
                             <label for="image" class="form-label">Image</label>
-                            <input type="file" wire:model='image' class="bg-dark form-control" name="image" id="image" aria-describedby="helpId"
+                            <input type="file" wire:model='image' class=" form-control" name="image" id="image" aria-describedby="helpId"
                                 placeholder="image">
                             @error('image')
                                 <small id="helpId" class="form-text text-danger text-muted">{{ $message }}</small>
@@ -38,7 +38,7 @@
                     <div class="col-12">
                         <div class="mb-3">
                             <label for="testimonial" class="form-label">Testimonial</label>
-                            <textarea  wire:model='testimonial.text' class="bg-dark form-control" name="testimonial" id="testimonial" rows="3"></textarea>
+                            <textarea  wire:model='testimonial.text' class=" form-control" name="testimonial" id="testimonial" rows="3"></textarea>
                             @error('testimonial.text')
                                 <small id="helpId" class="form-text text-danger text-muted">{{ $message }}</small>
                             @enderror

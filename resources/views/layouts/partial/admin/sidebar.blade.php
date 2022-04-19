@@ -1,88 +1,43 @@
-<div class="sidebar">
-    <!--
-      Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
-  -->
-    <div class="sidebar-wrapper">
-        <div class="logo">
-            <x-jet-application-mark width="20" />
-        </div>
-        <ul class="nav">
-            <li class="@if (Route::is('admin.dashboard')) active @endif ">
-                <a href="{{ route('admin.dashboard') }}">
-                    <i class="tim-icons icon-chart-pie-36"></i>
-                    <p>Dashboard</p>
-                </a>
-            </li>
-            <li class="@if (Route::is('admin.admins.*')) active @endif ">
-                <a href="{{ route('admin.admins.index') }}">
-                    <i class="tim-icons icon-molecule-40"></i>
-                    <p>Administrators</p>
-                </a>
-            </li>
-            <li class="@if (Route::is('admin.clients.*')) active @endif ">
-                <a href="{{ route('admin.clients.index') }}">
-                    <i class="tim-icons icon-satisfied"></i>
-                    <p>Clients</p>
-                </a>
-            </li>
-            <li class="@if (Route::is('admin.testimonials.*')) active @endif ">
-                <a href="{{ route('admin.testimonials.index') }}">
-                    <i class="tim-icons icon-chat-33"></i>
-                    <p>Client's Testimonials</p>
-                </a>
-            </li>
-            <li class="@if (Route::is('admin.skills.*')) active @endif ">
-                <a href="{{ route('admin.skills.index') }}">
-                    <i class="tim-icons icon-pencil"></i>
-                    <p>Skills</p>
-                </a>
-            </li>
-            <li class="@if (Route::is('admin.services.*')) active @endif ">
-                <a href="{{ route('admin.services.index') }}">
-                    <i class="tim-icons icon-paper"></i>
-                    <p>Services Offered</p>
-                </a>
-            </li>
-            <li class="@if (Route::is('admin.service_categories.*')) active @endif ">
-                <a href="{{ route('admin.service_categories.index') }}">
-                    <i class="tim-icons icon-atom"></i>
-                    <p>Service Categories</p>
-                </a>
-            </li>
-            <li class="@if (Route::is('admin.rates.*')) active @endif ">
-                <a href="{{ route('admin.rates.index') }}">
-                    <i class="tim-icons icon-coins"></i>
-                    <p>Rates and Packages</p>
-                </a>
-            </li>
-            <li class="@if (Route::is('admin.projects.*')) active @endif ">
-                <a href="{{ route('admin.projects.index') }}">
-                    <i class="tim-icons icon-delivery-fast"></i>
-                    <p>Projects</p>
-                </a>
-            </li>
-            <li class="@if (Route::is('admin.payments.*')) active @endif ">
-                <a href="{{ route('admin.payments.index') }}">
-                    <i class="tim-icons icon-bank"></i>
-                    <p>Payments<span class="badge rounded-pill bg-primary">coming soon</span></p>
-                </a>
-            </li>
-            <li class="@if (Route::is('admin.blogs.*')) active @endif ">
-                <a href="{{ route('admin.blogs.index') }}">
-                    <i class="tim-icons icon-caps-small
+<header class="main-nav">
+    <div class="sidebar-user text-center">
+        <a class="setting-primary" href="{{ route('profile.show') }}"><i data-feather="settings"></i></a>
+        <img class="img-90 rounded-circle"
+            src="{{ auth()->user()->profile_photo_path ?? auth()->user()->profile_photo_url }}" alt="" />
+        {{-- <div class="badge-bottom"><span class="badge badge-primary">New</span></div> --}}
+        <a href="user-profile">
+            <h6 class="mt-3 f-14 f-w-600">{{ auth()->user()->name }}</h6>
+        </a>
 
-                    "></i>
-                    <p>Blog Posts</p>
-                </a>
-            </li>
-            <li class="@if (Route::is('admin.contacts.*')) active @endif ">
-                <a href="{{ route('admin.contacts.index') }}">
-                    <i class="tim-icons icon-book-bookmark"></i>
-                    <p>Contacts</p>
-                </a>
-            </li>
+        {{-- @foreach (auth()->user()->roles as $role)
+            <p class="mb-0 font-roboto">
+                {{ $role->title }}
+            </p>
 
-
-        </ul>
+        @endforeach --}}
+        {{-- <ul>
+            <li>
+                <span><span class="counter">19.8</span>k</span>
+                <p>Follow</p>
+            </li>
+            <li>
+                <span>2 year</span>
+                <p>Experince</p>
+            </li>
+            <li>
+                <span><span class="counter">95.2</span>k</span>
+                <p>Follower</p>
+            </li>
+        </ul> --}}
     </div>
-</div>
+    <nav>
+        <div class="main-navbar">
+            <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
+            <div id="mainnav">
+                @if (auth()->user()->is_admin && Route::is('admin*'))
+                    <x-admin-links></x-admin-links>
+                @endif
+            </div>
+            <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
+        </div>
+    </nav>
+</header>

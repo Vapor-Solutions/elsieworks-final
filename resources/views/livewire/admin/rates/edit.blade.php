@@ -13,7 +13,7 @@
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label for="service_id" class="form-label">Service Type</label>
-                            <select wire:change='loadCategories' wire:model='rate.service_id' class="form-control bg-dark"
+                            <select wire:change='loadCategories' wire:model='rate.service_id' class="form-control "
                                 name="service_id" id="service_id">
                                 <option selected>Choose one Service</option>
                                 @foreach (App\Models\Service::all() as $service)
@@ -28,7 +28,7 @@
                     <div class="col-md-6">
                         <div class="mb-3">
                             <label for="service_id" class="form-label">Service Category</label>
-                            <select wire:model='rate.service_category_id' class="form-control bg-dark" name="service_id"
+                            <select wire:model='rate.service_category_id' class="form-control " name="service_id"
                                 id="service_id">
                                 <option selected>Choose one Service Category</option>
                                 @if ($service_categories)
@@ -55,17 +55,20 @@
                     <div class="col-12">
                         <div class="mb-3">
                           <label for="description" class="form-label">Description</label>
-                          <textarea  wire:model="rate.description" class="form-control" name="description" id="inp_editor1"></textarea>
-                          @error('rate.description')
-                            <small id="title" class="form-text text-muted">{{ $message }}</small>
-                          @enderror
+                            <div id="editor_container">
+                                <textarea wire:model="rate.description" placeholder="Enter your Description" id="editable"></textarea>
+                            </div>
+                            <div id="html_container"></div>
+                            @error('rate.description')
+                                <small class="form-text text-muted">{{ $message }}</small>
+                            @enderror
                         </div>
                     </div>
 
                     <div class="col-md-6 col-12">
                         <div class="mb-3">
                           <label for="price_type" class="form-label">Billing Format</label>
-                          <select wire:model="rate.price_type_id" class="form-control bg-dark" name="price_type" id="price_type">
+                          <select wire:model="rate.price_type_id" class="form-control " name="price_type" id="price_type">
                             <option>Choose your Billing Format for this package</option>
                             @foreach (App\Models\PriceType::all() as $pricetype)
                                 <option value="{{ $pricetype->id }}">{{ $pricetype->title }}</option>
@@ -81,7 +84,7 @@
                         <div class="mb-3">
                           <label for="price" class="form-label">Price</label>
                           <input wire:model="rate.price" type="number"
-                            class="form-control bg-dark" name="price" id="price" aria-describedby="helpId" placeholder="Enter your Price for this package">
+                            class="form-control " name="price" id="price" aria-describedby="helpId" placeholder="Enter your Price for this package">
                           @error('rate.price')
                             <small id="title" class="form-text text-muted">{{ $message }}</small>
                           @enderror

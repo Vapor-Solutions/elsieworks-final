@@ -1,77 +1,156 @@
-<nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
-    <div class="container-fluid">
-      <div class="navbar-wrapper">
-        <div class="navbar-toggle d-inline">
-          <button type="button" class="navbar-toggler">
-            <span class="navbar-toggler-bar bar1"></span>
-            <span class="navbar-toggler-bar bar2"></span>
-            <span class="navbar-toggler-bar bar3"></span>
-          </button>
+<div class="page-main-header">
+    <div class="main-header-right row m-0">
+        <div class="main-header-left">
+            <div class="logo-wrapper">
+                <a href="/">
+                    <x-jet-application-logo style="width: 150px;" />
+                </a>
+            </div>
+            <div class="dark-logo-wrapper"><a href="/"><img class="img-fluid"
+                        src="{{ asset('assets/images/logo/dark-logo.png') }}" alt=""></a></div>
+            <div class="toggle-sidebar"><i class="status_toggle middle" data-feather="align-center" id="sidebar-toggle">
+                </i></div>
         </div>
-        <a class="navbar-brand" href="javascript:void(0)">{{ $header }}</a>
-      </div>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-bar navbar-kebab"></span>
-        <span class="navbar-toggler-bar navbar-kebab"></span>
-        <span class="navbar-toggler-bar navbar-kebab"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navigation">
-        <ul class="navbar-nav ml-auto">
-          <li class="search-bar input-group">
-            <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split" ></i>
-              <span class="d-lg-none d-md-block">Search</span>
-            </button>
-          </li>
-          <li class="dropdown nav-item">
-            <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <div class="notification d-none d-lg-block d-xl-block"></div>
-              <i class="tim-icons icon-sound-wave"></i>
-              <p class="d-lg-none">
-                Notifications
-              </p>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
-              <li class="nav-link"><a href="#" class="nav-item dropdown-item">Mike John responded to your email</a></li>
-              <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">You have 5 more tasks</a></li>
-              <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Your friend Michael is in town</a></li>
-              <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Another notification</a></li>
-              <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Another one</a></li>
+        <div class="left-menu-header col">
+            <ul>
+                <li>
+                    <form class="form-inline search-form">
+                        <div class="search-bg"><i class="fa fa-search"></i>
+                            <input class="form-control-plaintext" placeholder="Search here.....">
+                        </div>
+                    </form>
+                    <span class="d-sm-none mobile-search search-bg"><i class="fa fa-search"></i></span>
+                </li>
             </ul>
-          </li>
-          <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <div class="photo">
-                <img src="{{ auth()->user()->profile_photo_url }}" alt="Profile Photo">
-              </div>
-              <b class="caret d-none d-lg-block d-xl-block"></b>
-              <p class="d-lg-none">
-                More
-              </p>
-            </a>
-            <ul class="dropdown-menu dropdown-navbar">
-              <li class="nav-link"><a href="{{ route('profile.show') }}" class="nav-item dropdown-item">Profile</a></li>
-              <li class="dropdown-divider"></li>
-              <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item" onclick="event.preventDefault();
-                document.getElementById('logout-form').submit();">Log out</a></li>
-                <form method="POST" id="logout-form" action="{{ route('logout') }}">
-                    @csrf
-                </form>
-            </ul>
-          </li>
-          <li class="separator d-lg-none"></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <i class="tim-icons icon-simple-remove"></i>
-          </button>
         </div>
-      </div>
+        <div class="nav-right col pull-right right-menu p-0">
+            <ul class="nav-menus">
+                {{-- <li><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i
+                            data-feather="maximize"></i></a></li>
+                <li class="onhover-dropdown">
+                    <div class="bookmark-box"><i data-feather="star"></i></div>
+                    <div class="bookmark-dropdown onhover-show-div">
+                        <div class="form-group mb-0">
+                            <div class="input-group">
+                                <div class="input-group-prepend"><span class="input-group-text"><i
+                                            class="fa fa-search"></i></span></div>
+                                <input class="form-control" type="text" placeholder="Search for bookmark...">
+                            </div>
+                        </div>
+                        <ul>
+                            <li class="add-to-bookmark"><i class="bookmark-icon" data-feather="inbox"></i>Email<span
+                                    class="pull-right"><i data-feather="star"></i></span></li>
+                            <li class="add-to-bookmark"><i class="bookmark-icon"
+                                    data-feather="message-square"></i>Chat<span class="pull-right"><i
+                                        data-feather="star"></i></span></li>
+                            <li class="add-to-bookmark"><i class="bookmark-icon" data-feather="command"></i>Feather
+                                Icon<span class="pull-right"><i data-feather="star"></i></span></li>
+                            <li class="add-to-bookmark"><i class="bookmark-icon"
+                                    data-feather="airplay"></i>Widgets<span class="pull-right"><i
+                                        data-feather="star"> </i></span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="onhover-dropdown">
+                    <div class="notification-box"><i data-feather="bell"></i><span class="dot-animated"></span></div>
+                    <ul class="notification-dropdown onhover-show-div">
+                        <li>
+                            <p class="f-w-700 mb-0">You have 3 Notifications<span
+                                    class="pull-right badge badge-primary badge-pill">4</span></p>
+                        </li>
+                        <li class="noti-primary">
+                            <div class="media">
+                                <span class="notification-bg bg-light-primary"><i data-feather="activity"> </i></span>
+                                <div class="media-body">
+                                    <p>Delivery processing </p>
+                                    <span>10 minutes ago</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="noti-secondary">
+                            <div class="media">
+                                <span class="notification-bg bg-light-secondary"><i data-feather="check-circle">
+                                    </i></span>
+                                <div class="media-body">
+                                    <p>Order Complete</p>
+                                    <span>1 hour ago</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="noti-success">
+                            <div class="media">
+                                <span class="notification-bg bg-light-success"><i data-feather="file-text"> </i></span>
+                                <div class="media-body">
+                                    <p>Tickets Generated</p>
+                                    <span>3 hour ago</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="noti-danger">
+                            <div class="media">
+                                <span class="notification-bg bg-light-danger"><i data-feather="user-check"> </i></span>
+                                <div class="media-body">
+                                    <p>Delivery Complete</p>
+                                    <span>6 hour ago</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="mode"><i class="fa fa-moon-o"></i></div>
+                </li>
+                <li class="onhover-dropdown">
+                    <i data-feather="message-square"></i>
+                    <ul class="chat-dropdown onhover-show-div">
+                        <li>
+                            <div class="media">
+                                <img class="img-fluid rounded-circle me-3"
+                                    src="{{ auth()->user()->profile_photo_path ?? auth()->user()->profile_photo_url }}"
+                                    alt="">
+                                <div class="media-body">
+                                    <span>Ain Chavez</span>
+                                    <p class="f-12 light-font">Lorem Ipsum is simply dummy...</p>
+                                </div>
+                                <p class="f-12">32 mins ago</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <img class="img-fluid rounded-circle me-3"
+                                    src="{{ asset('assets/images/user/1.jpg') }}" alt="">
+                                <div class="media-body">
+                                    <span>Erica Hughes</span>
+                                    <p class="f-12 light-font">Lorem Ipsum is simply dummy...</p>
+                                </div>
+                                <p class="f-12">58 mins ago</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <img class="img-fluid rounded-circle me-3"
+                                    src="{{ asset('assets/images/user/2.jpg') }}" alt="">
+                                <div class="media-body">
+                                    <span>Kori Thomas</span>
+                                    <p class="f-12 light-font">Lorem Ipsum is simply dummy...</p>
+                                </div>
+                                <p class="f-12">1 hr ago</p>
+                            </div>
+                        </li>
+                        <li class="text-center"> <a class="f-w-700" href="javascript:void(0)">See All </a>
+                        </li>
+                    </ul>
+                </li> --}}
+                <li class="onhover-dropdown p-0">
+                    <button class="btn btn-primary-light" type="button"
+                        onclick="document.getElementById('logout-form').submit()"><i data-feather="log-out"></i>Log
+                        out</button>
+                    <form id="logout-form" action="{{ route('logout') }}" method="post">
+                        @csrf
+                    </form>
+                </li>
+            </ul>
+        </div>
+        <div class="d-lg-none mobile-toggle pull-right w-auto"><i data-feather="more-horizontal"></i></div>
     </div>
-  </div>
+</div>
