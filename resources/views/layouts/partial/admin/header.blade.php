@@ -3,11 +3,11 @@
         <div class="main-header-left">
             <div class="logo-wrapper">
                 <a href="/">
-                    <x-jet-application-logo style="width: 150px;" />
+                    <img width="150" src="/ew-primary.png" alt="">
                 </a>
             </div>
-            <div class="dark-logo-wrapper"><a href="/"><img class="img-fluid"
-                        src="{{ asset('assets/images/logo/dark-logo.png') }}" alt=""></a></div>
+            <div class="dark-logo-wrapper"><a href="/"><img width="150" class="img-fluid"
+                        src="/ew-secondary.png" alt=""></a></div>
             <div class="toggle-sidebar"><i class="status_toggle middle" data-feather="align-center" id="sidebar-toggle">
                 </i></div>
         </div>
