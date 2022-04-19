@@ -30,7 +30,7 @@
 <link rel="stylesheet" type="text/css" href="/admin/css/prism.css">
     <link rel="stylesheet" type="text/css" href="/admin/css/vector-map.css">
 
-<link rel="stylesheet" type="text/css" href="/admin/css/simple-mde.css">
+{{-- <link rel="stylesheet" type="text/css" href="/admin/css/simple-mde.css"> --}}
 
 <link rel="stylesheet" type="text/css" href="/admin/css/whether-icon.css">
 <!-- Bootstrap css-->

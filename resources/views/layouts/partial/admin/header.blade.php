@@ -3,16 +3,20 @@
         <div class="main-header-left">
             <div class="logo-wrapper">
                 <a href="/">
-                    <img width="150" src="/ew-primary.png" alt="">
+                    <img class="img-fluid" width="150" src="/ew-secondary.png" alt="">
                 </a>
             </div>
-            <div class="dark-logo-wrapper"><a href="/"><img width="150" class="img-fluid"
-                        src="/ew-secondary.png" alt=""></a></div>
-            <div class="toggle-sidebar"><i class="status_toggle middle" data-feather="align-center" id="sidebar-toggle">
-                </i></div>
+            <div class="dark-logo-wrapper">
+                <a href="/">
+                    <img class="img-fluid" width="150" src="/ew-secondary.png" alt="">
+                </a>
+            </div>
+            <div class="toggle-sidebar">
+                <i class="status_toggle middle" data-feather="align-center" id="sidebar-toggle"></i>
+            </div>
         </div>
         <div class="left-menu-header col">
-            <ul>
+            {{-- <ul>
                 <li>
                     <form class="form-inline search-form">
                         <div class="search-bg"><i class="fa fa-search"></i>
@@ -21,10 +25,13 @@
                     </form>
                     <span class="d-sm-none mobile-search search-bg"><i class="fa fa-search"></i></span>
                 </li>
-            </ul>
+            </ul> --}}
         </div>
         <div class="nav-right col pull-right right-menu p-0">
             <ul class="nav-menus">
+                <li>
+                    <div class="mode"><i class="fa fa-moon-o"></i></div>
+                </li>
                 {{-- <li><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i
                             data-feather="maximize"></i></a></li>
                 <li class="onhover-dropdown">

@@ -36,23 +36,23 @@
                 </li>
             </ul>
         </li>
-        <li class="dropdown" class=" @if (Route::is('admin.clients.*')) active @endif ">
+        <li class="dropdown @if (Route::is('admin.clients.*')) active @endif ">
                 <a class=" nav-link" href="{{ route('admin.clients.index') }}">
             <i data-feather="users"></i>
             <span>Clients</span>
             </a>
         </li>
-        <li class="dropdown" class=" @if (Route::is('admin.testimonials.*')) active @endif ">
-                <a class=" nav-link" href="javascript:void(0)">
-            <i data-feather="message-square"></i>
-            <span>Client's Testimonials</span>
+        <li class="dropdown  @if (Route::is('admin.testimonials.*')) active @endif ">
+            <a class="nav-link menu-title" href="javascript:void(0)">
+                <i data-feather="compass"></i>
+                <span>Clients' Testimonials</span>
             </a>
             <ul class="nav-submenu menu-content"
                 style="display: {{ Request::is('admin/testimonials/*') ? 'block' : 'none' }}">
                 <li>
                     <a href="{{ route('admin.testimonials.index') }}"
                         class="{{ Route::currentRouteName() == 'admin.testimonials.index' ? 'active' : '' }}">
-                        List of Testimonials
+                        List of Testimonials Made
                     </a>
                 </li>
                 <li>

@@ -20,35 +20,32 @@
                             <div class="inner">
                                 <div class="card-info">
                                     <div class="card-thumbnail">
-                                        <img src="/client/images/testimonial/final-home--1st.png"
+                                        <img src="/storage/testimonials/{{ $testimonial->image }}"
                                             alt="Testimonial-image">
                                     </div>
                                     <div class="card-content">
-                                        <span class="subtitle mt--10">Rainbow-Themes</span>
-                                        <h3 class="title">Nevine Acotanza</h3>
-                                        <span class="designation">Chief Operating Officer</span>
+                                        {{-- <span class="subtitle mt--10">Rainbow-Themes</span> --}}
+                                        <h3 class="title">{{ $testimonial->client->name }}</h3>
+                                        {{-- <span class="designation">Chief Operating Officer</span> --}}
                                     </div>
                                 </div>
                                 <div class="card-description">
                                     <div class="title-area">
                                         <div class="title-info">
-                                            <h3 class="title">Android App Development</h3>
-                                            <span class="date">via Upwork - Mar 4, 2015 - Aug 30, 2021</span>
+                                            {{-- <h3 class="title">Android App Development</h3> --}}
+                                            <span class="date">{{ Carbon\Carbon::parse($testimonial->created_at)->format('jS \of F, Y') }}</span>
                                         </div>
-                                        <div class="rating">
+                                        {{-- <div class="rating">
                                             <img src="/client/images/icons/rating.png" alt="rating-image">
                                             <img src="/client/images/icons/rating.png" alt="rating-image">
                                             <img src="/client/images/icons/rating.png" alt="rating-image">
                                             <img src="/client/images/icons/rating.png" alt="rating-image">
-                                            {{-- <img src="/client/images/icons/rating.png" alt="rating-image"> --}}
-                                        </div>
+                                            <img src="/client/images/icons/rating.png" alt="rating-image">
+                                        </div> --}}
                                     </div>
                                     <div class="seperator"></div>
                                     <p class="discription">
-                                        Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam
-                                        sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis mauris
-                                        hendrerit ante. Ut tincidunt est ac dolor aliquam sodales phasellus smauris
-                                        .
+                                        {{$testimonial->text}}
                                     </p>
                                 </div>
                             </div>

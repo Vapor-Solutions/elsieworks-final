@@ -33,9 +33,9 @@
 {{-- <script src="/admin/js/editor/summernote/summernote.js"></script>
 <script src="/admin/js/editor/summernote/summernote.custom.js"></script> --}}
 
- <!-- Plugins JS start-->
+ {{-- <!-- Plugins JS start-->
     <script src="/admin/js/editor/simple-mde/simplemde.min.js"></script>
-    <script src="/admin/js/editor/simple-mde/simplemde.custom.js"></script>
+    <script src="/admin/js/editor/simple-mde/simplemde.custom.js"></script> --}}
 <!-- Plugins JS Ends-->
 <!-- Theme js-->
 <script src="/admin/js/script.js"></script>

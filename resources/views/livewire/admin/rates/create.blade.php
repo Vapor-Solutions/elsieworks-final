@@ -55,10 +55,7 @@
                     <div class="col-12">
                         <div class="mb-3">
                             <label for="description" class="form-label">Description</label>
-                            <div id="editor_container">
-                                <textarea wire:model="rate.description" placeholder="Enter your Description" id="editable"></textarea>
-                            </div>
-                            <div id="html_container"></div>
+                            <textarea wire:model="rate.description" class="form-control" rows="3"></textarea>
                             @error('rate.description')
                                 <small class="form-text text-muted">{{ $message }}</small>
                             @enderror
