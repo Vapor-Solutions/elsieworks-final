@@ -39,5 +39,5 @@
 <!-- Plugins JS Ends-->
 <!-- Theme js-->
 <script src="/admin/js/script.js"></script>
-<script src="/admin/js/theme-customizer/customizer.js"></script>
+{{-- <script src="/admin/js/theme-customizer/customizer.js"></script> --}}
 <script src="/admin/js/form-wizard/form-wizard-three.js"></script>
