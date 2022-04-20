@@ -1,37 +1,38 @@
+
 <x-guest-layout>
-    <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-5"><img class="bg-img-cover bg-center" src="/auth/side-image.jpg"
+                        alt="looginpage"></div>
+                <div class="col-xl-7 p-0">
+                    <div class="login-card">
+                        <x-jet-validation-errors class="mb-3 rounded-0" />
 
-        <div class="card-body">
+                        @if (session('status'))
+                            <div class="alert alert-success mb-3 rounded-0" role="alert">
+                                {{ session('status') }}
+                            </div>
+                        @endif
 
-            <div class="mb-3">
-                {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+
+                        <form method="POST" class="theme-form login-form" action="/forgot-password">
+                            @csrf
+
+                            <div class="mb-3">
+                                <x-jet-label value="Email" />
+                                <x-jet-input type="email" name="email" :value="old('email')" required autofocus />
+                            </div>
+
+                            <div class="d-flex justify-content-end mt-4">
+                                <x-jet-button>
+                                    {{ __('Email Password Reset Link') }}
+                                </x-jet-button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-
-            @if (session('status'))
-                <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
-                </div>
-            @endif
-
-            <x-jet-validation-errors class="mb-3" />
-
-            <form method="POST" action="/forgot-password">
-                @csrf
-
-                <div class="mb-3">
-                    <x-jet-label value="Email" />
-                    <x-jet-input type="email" name="email" :value="old('email')" required autofocus />
-                </div>
-
-                <div class="d-flex justify-content-end mt-4">
-                    <x-jet-button>
-                        {{ __('Email Password Reset Link') }}
-                    </x-jet-button>
-                </div>
-            </form>
         </div>
-    </x-jet-authentication-card>
+    </section>
 </x-guest-layout>
