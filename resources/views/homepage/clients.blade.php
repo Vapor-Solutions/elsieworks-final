@@ -9,7 +9,7 @@
                         <span class="subtitle">Visit my Client</span>
                         <h2 class="title">Our Trusted Client</h2>
                     </div>
-                    <div class="skill-style-1">
+                    <div>
                         <div class="client-card">
 
                             @foreach (App\Models\Client::all() as $client)
