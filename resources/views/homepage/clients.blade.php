@@ -6,12 +6,11 @@
                 <div class="col-lg-12">
                     <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
                         class="section-title text-center">
-                        <span class="subtitle">Visit my Client</span>
-                        <h2 class="title">Our Trusted Client</h2>
+                        <span class="subtitle">Here are</span>
+                        <h2 class="title">Our Trusted Clients</h2>
                     </div>
                     <div>
                         <div class="client-card">
-
                             @foreach (App\Models\Client::all() as $client)
                                 <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"
                                     data-aos-once="true" class="main-content">
