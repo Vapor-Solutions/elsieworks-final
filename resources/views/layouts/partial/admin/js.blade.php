@@ -1,3 +1,4 @@
+<script src="https://kit.fontawesome.com/2001f3269f.js"></script>
 <script src="/admin/js/jquery-3.5.1.min.js"></script>
 <!-- feather icon js-->
 <script src="/admin/js/icons/feather-icon/feather.min.js"></script>

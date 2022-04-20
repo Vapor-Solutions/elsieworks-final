@@ -44,7 +44,7 @@
 
 <link rel="stylesheet" type="text/css" href="/admin/css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="/admin/css/style.css">
-<link id="color" rel="stylesheet" href="/admin/css/color-1.css" media="screen">
+<link id="color" rel="stylesheet" href="/admin/css/color-2.css" media="screen">
 <!-- Responsive css-->
 <link rel="stylesheet" type="text/css" href="/admin/css/responsive.css">
 <!-- Plugins css start-->

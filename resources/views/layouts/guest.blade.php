@@ -4,10 +4,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="viho admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
-    <meta name="keywords" content="admin template, viho admin template, dashboard template, flat admin template, responsive admin template, web app">
-    <meta name="author" content="pixelstrap">
-    <link rel="icon" href="/admin/images/favicon.png" type="image/x-icon">
+    <meta name="description" content="We are your friendly neighbourhood creatives with diverse skills in the art of photography and videography. If you are looking for something beyond the wildness of the event itself to be captured, you are in the right place as we don't just give you extraordinary, we give world class!!">
+    <meta name="keywords" content="Freeze Time!">
+    <meta name="author" content="ElsieWorks">
+    <link rel="icon" href="/ew-primary.ico" type="image/x-icon">
     <link rel="shortcut icon" href="/ew-primary.ico" type="image/x-icon">
     <title>{{ config('app.name', 'Laravel') }} - {{ ucfirst(Route::currentRouteName()) }}</title>
     <!-- Google font-->

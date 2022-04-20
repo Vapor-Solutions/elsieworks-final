@@ -42,6 +42,12 @@
             <span>Clients</span>
             </a>
         </li>
+        <li class="dropdown @if (Route::is('admin.bookings.*')) active @endif ">
+                <a class=" nav-link" href="{{ route('admin.bookings.index') }}">
+            <i data-feather="book"></i>
+            <span>Bookings</span>
+            </a>
+        </li>
         <li class="dropdown  @if (Route::is('admin.testimonials.*')) active @endif ">
             <a class="nav-link menu-title" href="javascript:void(0)">
                 <i data-feather="compass"></i>
@@ -63,45 +69,45 @@
                 </li>
             </ul>
         </li>
-        <li class="dropdown" class=" @if (Route::is('admin.services.*')) active @endif ">
+        <li class="dropdown @if (Route::is('admin.services.*')) active @endif ">
                 <a class=" nav-link" href="{{ route('admin.services.index') }}">
-            <i data-feather="home"></i>
+            <i data-feather="server"></i>
             <span>Services Offered</span>
             </a>
         </li>
-        <li class="dropdown" class=" @if (Route::is('admin.service_categories.*')) active @endif ">
+        <li class="dropdown @if (Route::is('admin.service_categories.*')) active @endif ">
                 <a class=" nav-link" href="{{ route('admin.service_categories.index') }}">
-            <i data-feather="home"></i>
+            <i data-feather="award"></i>
             <span>Service Categories</span>
             </a>
         </li>
-        <li class="dropdown" class=" @if (Route::is('admin.rates.*')) active @endif ">
+        <li class="dropdown @if (Route::is('admin.rates.*')) active @endif ">
                 <a class=" nav-link" href="{{ route('admin.rates.index') }}">
-            <i data-feather="home"></i>
+            <i data-feather="bar-chart-2"></i>
             <span>Rates and Packages</span>
             </a>
         </li>
-        <li class="dropdown" class=" @if (Route::is('admin.projects.*')) active @endif ">
+        <li class="dropdown @if (Route::is('admin.projects.*')) active @endif ">
                 <a class=" nav-link" href="{{ route('admin.projects.index') }}">
-            <i data-feather="home"></i>
+            <i data-feather="cpu"></i>
             <span>Projects</span>
             </a>
         </li>
-        <li class="dropdown" class=" @if (Route::is('admin.payments.*')) active @endif ">
+        <li class="dropdown @if (Route::is('admin.payments.*')) active @endif ">
                 <a class=" nav-link" href="{{ route('admin.payments.index') }}">
-            <i data-feather="home"></i>
+            <i data-feather="dollar-sign"></i>
             <span>Payments<span class="badge rounded-pill bg-primary">coming soon</span></span>
             </a>
         </li>
-        <li class="dropdown" class=" @if (Route::is('admin.blogs.*')) active @endif ">
+        <li class="dropdown @if (Route::is('admin.blogs.*')) active @endif ">
                 <a class=" nav-link" href="{{ route('admin.blogs.index') }}">
-            <i data-feather="home"></i>
+            <i data-feather="rss"></i>
             <span>Blog Posts</span>
             </a>
         </li>
-        <li class="dropdown" class=" @if (Route::is('admin.contacts.*')) active @endif ">
+        <li class="dropdown @if (Route::is('admin.contacts.*')) active @endif ">
                 <a class=" nav-link" href="{{ route('admin.contacts.index') }}">
-            <i data-feather="home"></i>
+            <i data-feather="phone"></i>
             <span>Contacts</span>
             </a>
         </li>
