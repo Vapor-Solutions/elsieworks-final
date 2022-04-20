@@ -2,14 +2,14 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomepageController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\Admin\Clients;
 use App\Http\Livewire\Admin;
+use App\Http\Livewire\Admin\Clients;
 use App\Models\Booking;
 use App\Models\Client;
 use App\Models\MaintenanceSub;
 use App\Models\Rate;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +48,8 @@ Route::post('maintenance-sub', function(Request $request){
 Route::get('bookings/{id}/request', function ($id) {
     return view('bookings.request')->with('rate', Rate::find($id));
 })->name('booking.request');
+
+Route::post('bookings/{id}/create', 'App\Http\Controllers\BookingsController@book')->name('booking.create');
 
 Route::prefix('admin')->middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/dashboard', Admin\Dashboard::class)->name('admin.dashboard');
@@ -136,7 +138,6 @@ Route::prefix('admin')->middleware(['auth:sanctum', 'verified'])->group(function
 
 
 
-    Route::post('bookings/{id}/create', 'App\Http\Controllers\BookingsController@book')->name('booking.create');
 
     Route::post('/about-image', [DashboardController::class, 'change_about'])->name('change_about');
     Route::post('/shirley-image', [DashboardController::class, 'change_shirley'])->name('change_shirley');
