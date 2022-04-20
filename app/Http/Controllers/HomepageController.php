@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\SendEmailJob;
+use App\Mail\NewContactsMail;
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomepageController extends Controller
 {
@@ -27,6 +30,12 @@ class HomepageController extends Controller
 
         $contact->save();
 
-        return redirect()->route('home')->with('success', 'Successfully Submitted! You will be contacted shortly');
+        dispatch(new SendEmailJob($contact));
+
+        return response()->json([
+            'success'=>"Successfully Submitted! You will  be contacted Shortly"
+        ]);
+
+
     }
 }

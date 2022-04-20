@@ -52,8 +52,7 @@
                         <div class="name">FIND US HERE</div>
                         <div class="social-icone">
                             <a href="https://www.facebook.com/ElsieWorks/"><i data-feather="facebook"></i></a>
-                            <a href="https://www.instagram.com/elsieworks_/"><i
-                                    data-feather="instagram"></i></a>
+                            <a href="https://www.instagram.com/elsieworks_/"><i data-feather="instagram"></i></a>
                         </div>
                     </div>
                 </div>
@@ -62,7 +61,7 @@
                 <div class="contact-form-wrapper">
                     <div class="introduce">
 
-                        <form class="rnt-contact-form rwt-dynamic-form row" method="POST"
+                        <form class="rnt-contact-form1 rwt-dynamic-form1 row" method="POST"
                             action="{{ route('contacts.create') }}">
                             @method('POST')
                             @csrf
@@ -78,8 +77,7 @@
                             <div class="col-lg-6">
                                 <div class="form-group">
                                     <label for="contact-phone">Phone Number</label>
-                                    <input name="phone_number" class="form-control" id="contact-phone"
-                                        type="text">
+                                    <input name="phone_number" class="form-control" id="contact-phone" type="text">
                                     <span class="error text-danger" id="mobileErrorMsg"></span>
                                 </div>
                             </div>
@@ -96,8 +94,7 @@
                             <div class="col-lg-12">
                                 <div class="form-group">
                                     <label for="subject">subject</label>
-                                    <input class="form-control form-control-sm" id="subject" name="subject"
-                                        type="text">
+                                    <input class="form-control form-control-sm" id="subject" name="subject" type="text">
                                     <span class="error text-danger" id="subjectErrorMsg"></span>
                                 </div>
                             </div>
@@ -124,3 +121,46 @@
     </div>
 </div>
 <!-- End Contuct section -->
+
+@push('scripts')
+    <script>
+        $('.rnt-contact-form1').on('submit', e => {
+            e.preventDefault();
+            var _self = $('.rnt-contact-form1');
+            $('#nameErrorMsg').text(null);
+            $('#emailErrorMsg').text(null);
+            $('#mobileErrorMsg').text(null);
+            $('#subjectErrorMsg').text(null);
+            $('#messageErrorMsg').text(null);
+            var __selector = _self.closest('input,textarea');
+            _self.closest('div').find('input,textarea').removeAttr('style');
+            _self.find('.error-msg').remove();
+            _self.closest('div').find('button[type="submit"]').attr('disabled', 'disabled');
+            var data = $('.rnt-contact-form1').serialize()
+            // console.log(data)
+            $.ajax({
+                url: '/contact',
+                type: "post",
+                dataType: 'json',
+                data: data,
+                success: function(data) {
+                    _self.closest('div').find('button[type="submit"]').removeAttr('disabled');
+                    Toast.fire({
+                        icon:data.success?'success':'warning',
+                        text:data.success
+                    })
+
+                    $('form.rnt-contact-form1').trigger("reset")
+                },
+                error: function(response) {
+                    $('#nameErrorMsg').text(response.responseJSON.errors.name);
+                    $('#emailErrorMsg').text(response.responseJSON.errors.email);
+                    $('#mobileErrorMsg').text(response.responseJSON.errors.phone_number);
+                    $('#subjectErrorMsg').text(response.responseJSON.errors.subject);
+                    $('#messageErrorMsg').text(response.responseJSON.errors.message);
+                    _self.closest('div').find('button[type="submit"]').attr('disabled', false);
+                }
+            });
+        })
+    </script>
+@endpush

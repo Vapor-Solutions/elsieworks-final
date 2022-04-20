@@ -29,6 +29,7 @@
 </head>
 
 <body>
+    @include('sweetalert::alert')
     <!-- Loader starts-->
     <div class="loader-wrapper">
         <div class="theme-loader">

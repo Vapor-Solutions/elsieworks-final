@@ -51,6 +51,10 @@ Route::get('bookings/{id}/request', function ($id) {
 
 Route::post('bookings/{id}/create', 'App\Http\Controllers\BookingsController@book')->name('booking.create');
 
+
+/**
+ * ADMIN LINKS
+ */
 Route::prefix('admin')->middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/dashboard', Admin\Dashboard::class)->name('admin.dashboard');
 

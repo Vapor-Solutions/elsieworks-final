@@ -22,6 +22,7 @@
             autoplayVideos: true
         });
     </script>
+
     @include('layouts.partial.css')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
@@ -29,6 +30,7 @@
 </head>
 
 <body class="white-version home-classic spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
+    @include('sweetalert::alert')
     <!-- Start Main Page Wrapper -->
     <main class="main-page-wrapper spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="150">
 
