@@ -61,8 +61,35 @@
     </div>
     @livewireScripts
 
+    @includeIf('layouts.partial.admin.js')
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script>
+        if (localStorage.getItem("color"))
+            $("#color").attr("href", "../assets/css/" + localStorage.getItem("color") + ".css");
+        if (localStorage.getItem('body') == 'dark-only') {
+            $("body").addClass('dark-only')
+            $('.mode i').removeClass('fa-moon-o')
+            $('.mode i').addClass('fa-lightbulb-o')
+        }
+
+
+        $(".mode").on("click", function() {
+            // // $('.mode-sun').toggleClass("show")
+            if (localStorage.getItem('body') == 'dark-only') {
+                localStorage.setItem('body', 'light-only');
+                $("body").removeClass('dark-only')
+                $('.mode i').removeClass('fa-lightbulb-o')
+                $('.mode i').addClass('fa-moon-o')
+            } else {
+                localStorage.setItem('body', 'dark-only');
+                $("body").addClass('dark-only')
+                $('.mode i').removeClass('fa-moon-o')
+                $('.mode i').addClass('fa-lightbulb-o')
+            }
+            var color = $(this).attr("data-attr");
+        });
+
+
         const Toast = Swal.mixin({
             toast: true,
             position: 'top-end',
@@ -90,16 +117,15 @@
 
         @if (count($errors) > 0)
             @foreach ($errors->all() as $error)
-               Toast.fire({
-                   icon:'error',
-                   text:"{{ $error }}"
-               })
+                Toast.fire({
+                icon:'error',
+                text:"{{ $error }}"
+                })
             @endforeach
         @endif
     </script>
 
     {{-- <x-livewire-alert::scripts /> --}}
-    @includeIf('layouts.partial.admin.js')
     @stack('modals')
 
     @stack('scripts')

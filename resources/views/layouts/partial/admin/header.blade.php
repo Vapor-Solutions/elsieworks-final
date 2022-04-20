@@ -8,7 +8,7 @@
             </div>
             <div class="dark-logo-wrapper">
                 <a href="/">
-                    <img class="img-fluid" width="150" src="/ew-secondary.png" alt="">
+                    <img class="img-fluid" width="150" src="/ew-tertiary-white.png" alt="">
                 </a>
             </div>
             <div class="toggle-sidebar">

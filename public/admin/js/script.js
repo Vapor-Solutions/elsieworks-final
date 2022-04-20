@@ -1,25 +1,25 @@
-(function($) {
+(function ($) {
     "use strict";
-    $(".mobile-toggle").click(function(){
+    $(".mobile-toggle").click(function () {
         $(".nav-menus").toggleClass("open");
     });
-    $(".mobile-toggle-left").click(function(){
+    $(".mobile-toggle-left").click(function () {
         $(".left-header").toggleClass("open");
     });
-    $(".mobile-search").click(function(){
-       $(".form-control-plaintext").toggleClass("open");
-   });
-    $(".bookmark-search").click(function(){
+    $(".mobile-search").click(function () {
+        $(".form-control-plaintext").toggleClass("open");
+    });
+    $(".bookmark-search").click(function () {
         $(".form-control-search").toggleClass("open");
     })
-    $(".filter-toggle").click(function(){
+    $(".filter-toggle").click(function () {
         $(".product-sidebar").toggleClass("open");
     });
-    $(".toggle-data").click(function(){
+    $(".toggle-data").click(function () {
         $(".product-wrapper").toggleClass("sidebaron");
     });
-    $(".form-control-search").keyup(function(e){
-        if(e.target.value) {
+    $(".form-control-search").keyup(function (e) {
+        if (e.target.value) {
             $(".page-wrapper.horizontal-wrapper").addClass("offcanvas-bookmark");
         } else {
             $(".page-wrapper.horizontal-wrapper").removeClass("offcanvas-bookmark");
@@ -27,11 +27,11 @@
     });
 })(jQuery);
 
-$('.loader-wrapper').fadeOut('slow', function() {
+$('.loader-wrapper').fadeOut('slow', function () {
     $(this).remove();
 });
 
-$(window).on('scroll', function() {
+$(window).on('scroll', function () {
     if ($(this).scrollTop() > 600) {
         $('.tap-top').fadeIn();
     } else {
@@ -46,7 +46,7 @@ $('.media-size-email svg').on('click', function (e) {
 
 
 
-$('.tap-top').click( function() {
+$('.tap-top').click(function () {
     $("html, body").animate({
         scrollTop: 0
     }, 600);
@@ -73,10 +73,10 @@ function toggleFullScreen() {
         }
     }
 }
-(function($, window, document, undefined) {
+(function ($, window, document, undefined) {
     "use strict";
     var $ripple = $(".js-ripple");
-    $ripple.on("click.ui.ripple", function(e) {
+    $ripple.on("click.ui.ripple", function (e) {
         var $this = $(this);
         var $offset = $this.parent().offset();
         var $circle = $this.find(".c-ripple__circle");
@@ -90,14 +90,14 @@ function toggleFullScreen() {
     });
     $ripple.on(
         "animationend webkitAnimationEnd oanimationend MSAnimationEnd",
-        function(e) {
+        function (e) {
             $(this).removeClass("is-active");
         });
 })(jQuery, window, document);
 
 
 // active link
-$(".chat-menu-icons .toogle-bar").click(function(){
+$(".chat-menu-icons .toogle-bar").click(function () {
     $(".chat-menu").toggleClass("show");
 });
 
@@ -155,78 +155,78 @@ function translate(tnum) {
 }
 
 var trans = [{
-        en: 'General',
-        pt: 'Geral',
-        es: 'Generalo',
-        fr: 'GÃ©nÃ©rale',
-        de: 'Generel',
-        cn: 'ä¸€èˆ¬',
-        ae: 'Ø­Ø¬Ù†Ø±Ø§Ù„ Ù„ÙˆØ§Ø¡'
-    }, {
-        en: 'Dashboards,widgets & layout.',
-        pt: 'PainÃ©is, widgets e layout.',
-        es: 'Paneloj, fenestraÄµoj kaj aranÄo.',
-        fr: "Tableaux de bord, widgets et mise en page.",
-        de: 'Dashboards, widgets en lay-out.',
-        cn: 'ä»ªè¡¨æ¿ï¼Œå°å·¥å…·å’Œå¸ƒå±€ã€‚',
-        ae: 'Ù„ÙˆØ­Ø§Øª Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª ÙˆØ§Ù„Ø£Ø¯ÙˆØ§Øª ÙˆØ§Ù„ØªØ®Ø·ÙŠØ·.'
-    }, {
-        en: 'Dashboards',
-        pt: 'PainÃ©is',
-        es: 'Paneloj',
-        fr: 'Tableaux',
-        de: 'Dashboards',
-        cn: ' ä»ªè¡¨æ¿ ',
-        ae: 'ÙˆØ­Ø§Øª Ø§Ù„Ù‚ÙŠØ§Ø¯Ø© '
-    }, {
-        en: 'Default',
-        pt: 'PadrÃ£o',
-        es: 'Vaikimisi',
-        fr: 'DÃ©faut',
-        de: 'Standaard',
-        cn: 'é›»å­å•†å‹™',
-        ae: 'ÙˆØ¥ÙØªØ±Ø§Ø¶ÙŠ'
-    }, {
-        en: 'Ecommerce',
-        pt: 'ComÃ©rcio eletrÃ´nico',
-        es: 'Komerco',
-        fr: 'Commerce Ã©lectronique',
-        de: 'E-commerce',
-        cn: 'é›»å­å•†å‹™',
-        ae: 'ÙˆØ§Ù„ØªØ¬Ø§Ø±Ø© Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠØ©'
-    }, {
-        en: 'Widgets',
-        pt: 'Ferramenta',
-        es: 'Vidin',
-        fr: 'Widgets',
-        de: 'Widgets',
-        cn: 'å°éƒ¨ä»¶',
-        ae: 'ÙˆØ§Ù„Ø­Ø§Ø¬ÙŠØ§Øª'
-    }, {
-        en: 'Page layout',
-        pt: 'Layout da pÃ¡gina',
-        es: 'PaÄa aranÄo',
-        fr: 'Tableaux',
-        de: 'Mise en page',
-        cn: 'é é¢ä½ˆå±€',
-        ae: 'ÙˆØªØ®Ø·ÙŠØ· Ø§Ù„ØµÙØ­Ø©'
-    }, {
-        en: 'Applications',
-        pt: 'FormulÃ¡rios',
-        es: 'Aplikoj',
-        fr: 'Applications',
-        de: 'Toepassingen',
-        cn: 'æ‡‰ç”¨é ˜åŸŸ',
-        ae: 'ÙˆØ§Ù„ØªØ·Ø¨ÙŠÙ‚Ø§Øª'
-    }, {
-        en: 'Ready to use Apps',
-        pt: 'Pronto para usar aplicativos',
-        es: 'Preta uzi Apps',
-        fr: ' Applications prÃªtes Ã  lemploi ',
-        de: 'Klaar om apps te gebruiken',
-        cn: 'ä»ªè¡¨æ¿',
-        ae: 'Ø¬Ø§Ù‡Ø² Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø§Ù„ØªØ·Ø¨ÙŠÙ‚Ø§Øª'
-    },
+    en: 'General',
+    pt: 'Geral',
+    es: 'Generalo',
+    fr: 'GÃ©nÃ©rale',
+    de: 'Generel',
+    cn: 'ä¸€èˆ¬',
+    ae: 'Ø­Ø¬Ù†Ø±Ø§Ù„ Ù„ÙˆØ§Ø¡'
+}, {
+    en: 'Dashboards,widgets & layout.',
+    pt: 'PainÃ©is, widgets e layout.',
+    es: 'Paneloj, fenestraÄµoj kaj aranÄo.',
+    fr: "Tableaux de bord, widgets et mise en page.",
+    de: 'Dashboards, widgets en lay-out.',
+    cn: 'ä»ªè¡¨æ¿ï¼Œå°å·¥å…·å’Œå¸ƒå±€ã€‚',
+    ae: 'Ù„ÙˆØ­Ø§Øª Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª ÙˆØ§Ù„Ø£Ø¯ÙˆØ§Øª ÙˆØ§Ù„ØªØ®Ø·ÙŠØ·.'
+}, {
+    en: 'Dashboards',
+    pt: 'PainÃ©is',
+    es: 'Paneloj',
+    fr: 'Tableaux',
+    de: 'Dashboards',
+    cn: ' ä»ªè¡¨æ¿ ',
+    ae: 'ÙˆØ­Ø§Øª Ø§Ù„Ù‚ÙŠØ§Ø¯Ø© '
+}, {
+    en: 'Default',
+    pt: 'PadrÃ£o',
+    es: 'Vaikimisi',
+    fr: 'DÃ©faut',
+    de: 'Standaard',
+    cn: 'é›»å­å•†å‹™',
+    ae: 'ÙˆØ¥ÙØªØ±Ø§Ø¶ÙŠ'
+}, {
+    en: 'Ecommerce',
+    pt: 'ComÃ©rcio eletrÃ´nico',
+    es: 'Komerco',
+    fr: 'Commerce Ã©lectronique',
+    de: 'E-commerce',
+    cn: 'é›»å­å•†å‹™',
+    ae: 'ÙˆØ§Ù„ØªØ¬Ø§Ø±Ø© Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠØ©'
+}, {
+    en: 'Widgets',
+    pt: 'Ferramenta',
+    es: 'Vidin',
+    fr: 'Widgets',
+    de: 'Widgets',
+    cn: 'å°éƒ¨ä»¶',
+    ae: 'ÙˆØ§Ù„Ø­Ø§Ø¬ÙŠØ§Øª'
+}, {
+    en: 'Page layout',
+    pt: 'Layout da pÃ¡gina',
+    es: 'PaÄa aranÄo',
+    fr: 'Tableaux',
+    de: 'Mise en page',
+    cn: 'é é¢ä½ˆå±€',
+    ae: 'ÙˆØªØ®Ø·ÙŠØ· Ø§Ù„ØµÙØ­Ø©'
+}, {
+    en: 'Applications',
+    pt: 'FormulÃ¡rios',
+    es: 'Aplikoj',
+    fr: 'Applications',
+    de: 'Toepassingen',
+    cn: 'æ‡‰ç”¨é ˜åŸŸ',
+    ae: 'ÙˆØ§Ù„ØªØ·Ø¨ÙŠÙ‚Ø§Øª'
+}, {
+    en: 'Ready to use Apps',
+    pt: 'Pronto para usar aplicativos',
+    es: 'Preta uzi Apps',
+    fr: ' Applications prÃªtes Ã  lemploi ',
+    de: 'Klaar om apps te gebruiken',
+    cn: 'ä»ªè¡¨æ¿',
+    ae: 'Ø¬Ø§Ù‡Ø² Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù… Ø§Ù„ØªØ·Ø¨ÙŠÙ‚Ø§Øª'
+},
 
 ];
 
@@ -265,48 +265,48 @@ $('.show-hide').show();
 $('.show-hide span').addClass('show');
 
 $('.show-hide span').click(function () {
-if ($(this).hasClass('show')) {
-    $('input[name="login[password]"]').attr('type', 'text');
-    $(this).removeClass('show');
-} else {
-    $('input[name="login[password]"]').attr('type', 'password');
-    $(this).addClass('show');
-}
+    if ($(this).hasClass('show')) {
+        $('input[name="login[password]"]').attr('type', 'text');
+        $(this).removeClass('show');
+    } else {
+        $('input[name="login[password]"]').attr('type', 'password');
+        $(this).addClass('show');
+    }
 });
 $('form button[type="submit"]').on('click', function () {
-$('.show-hide span').addClass('show');
-$('.show-hide').parent().find('input[name="login[password]"]').attr('type', 'password');
+    $('.show-hide span').addClass('show');
+    $('.show-hide').parent().find('input[name="login[password]"]').attr('type', 'password');
 });
 
 
 
 //landing header //
-$(".toggle-menu").click(function(){
+$(".toggle-menu").click(function () {
     $('.landing-menu').toggleClass('open');
 });
-$(".menu-back").click(function(){
+$(".menu-back").click(function () {
     $('.landing-menu').toggleClass('open');
 });
 
-$('.product-size ul li ').on('click', function(e) {
+$('.product-size ul li ').on('click', function (e) {
     $(".product-size ul li ").removeClass("active");
     $(this).addClass("active");
 });
 
-$('.email-sidebar .email-aside-toggle ').on('click', function(e) {
+$('.email-sidebar .email-aside-toggle ').on('click', function (e) {
     $(".email-sidebar .email-left-aside ").toggleClass("open");
 });
 
 
-$('.job-sidebar .job-toggle ').on('click', function(e) {
+$('.job-sidebar .job-toggle ').on('click', function (e) {
     $(".job-sidebar .job-left-aside ").toggleClass("open");
 });
 
 
-$(".mode").on("click", function () {
-        $('.mode i').toggleClass("fa-moon-o").toggleClass("fa-lightbulb-o");
-        // $('.mode-sun').toggleClass("show")
-        $('body').toggleClass("dark-only");
-        var color = $(this).attr("data-attr");
-        localStorage.setItem('body', 'dark-only');
-    });
+// $(".mode").on("click", function () {
+//     $('.mode i').toggleClass("fa-moon-o").toggleClass("fa-lightbulb-o");
+//     // // $('.mode-sun').toggleClass("show")
+//     localStorage.setItem('body', 'dark-only');
+//     $('body').toggleClass("dark-only");
+//     var color = $(this).attr("data-attr");
+// });
