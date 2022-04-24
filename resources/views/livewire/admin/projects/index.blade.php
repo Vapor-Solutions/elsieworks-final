@@ -26,7 +26,7 @@
                                 <td scope="row">{{ $project->id }}</td>
                                 <td>{{ $project->client->name??'NOT SET' }}</td>
                                 <td>{{ $project->service->title }}</td>
-                                <td>KES {{ number_format($project->project_cost->cost_kes, 2) }}</td>
+                                <td>KES {{ number_format($project->project_cost->cost_kes??0, 2) }}</td>
                                 <td>Completed</td>
                                 <td>{{ $project->user->name }} ({{ Carbon\Carbon::parse($project->created_at)->format("jS \of M,Y h:i:s A") }})</td>
                             </tr>
