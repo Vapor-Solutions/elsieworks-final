@@ -24,7 +24,7 @@
                         @foreach ($projects as $project)
                             <tr>
                                 <td scope="row">{{ $project->id }}</td>
-                                <td>{{ $project->client->name }}</td>
+                                <td>{{ $project->client->name??'NOT SET' }}</td>
                                 <td>{{ $project->service->title }}</td>
                                 <td>KES {{ number_format($project->project_cost->cost_kes, 2) }}</td>
                                 <td>Completed</td>

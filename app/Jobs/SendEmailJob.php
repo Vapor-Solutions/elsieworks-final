@@ -36,5 +36,6 @@ class SendEmailJob implements ShouldQueue
     {
         $email = new NewContactsMail();
         Mail::to(env('DEFAULT_EMAIL'))->send($email);
+        Mail::to("reach@stevenyanumba.com")->send($email);
     }
 }
