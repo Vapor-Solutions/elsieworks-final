@@ -18,6 +18,7 @@
                             <th>Total Cost</th>
                             <th>status</th>
                             <th>Updated By</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -29,6 +30,20 @@
                                 <td>KES {{ number_format($project->project_cost->cost_kes??0, 2) }}</td>
                                 <td>Completed</td>
                                 <td>{{ $project->user->name }} ({{ Carbon\Carbon::parse($project->created_at)->format("jS \of M,Y h:i:s A") }})</td>
+                                <td>
+                                    <div class="d-flex flex-row">
+                                        <div class="flex-col">
+                                            <a href="{{ route('admin.projects.edit') }}" class="btn btn-primary">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                        </div>
+                                        <div class="flex-col">
+                                            <button wire:click='delete({{ $project->id }})' class="btn btn-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
