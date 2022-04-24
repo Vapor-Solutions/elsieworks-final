@@ -12,6 +12,11 @@ class Index extends Component
 
     protected $paginationTheme = 'bootstrap';
 
+    public function delete($id)
+    {
+        Project::find($id)->delete();
+        return redirect()->route('admin.projects.index');
+    }
     public function render()
     {
         return view('livewire.admin.projects.index',[

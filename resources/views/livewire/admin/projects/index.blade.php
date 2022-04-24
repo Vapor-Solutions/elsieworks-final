@@ -38,7 +38,7 @@
                                             </a>
                                         </div>
                                         <div class="flex-col">
-                                            <button wire:click='delete({{ $project->id }})' class="btn btn-danger">
+                                            <button onclick="confirm('Are you sure you want to delete this Project Entry?')||event.stopImmediatePropagation()" wire:click='delete({{ $project->id }})' class="btn btn-danger">
                                                 <i class="fas fa-trash"></i>
                                             </button>
                                         </div>
