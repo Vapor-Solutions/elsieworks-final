@@ -33,7 +33,7 @@
                                 <td>
                                     <div class="d-flex flex-row">
                                         <div class="flex-col">
-                                            <a href="{{ route('admin.projects.edit') }}" class="btn btn-primary">
+                                            <a href="{{ route('admin.projects.edit', $project->id) }}" class="btn btn-primary">
                                                 <i class="fas fa-edit"></i>
                                             </a>
                                         </div>
