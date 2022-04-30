@@ -17,7 +17,7 @@ var summernote_custom = {
                 search: function (keyword, callback) {
                     callback($.grep(this.words, function (item) {
                         return item.indexOf(keyword) === 0;
-                    }));    
+                    }));
                 }
             }
         });

@@ -34,13 +34,15 @@ class Edit extends Component
         $this->validate();
         $this->project->user_id = auth()->user()->id;
         $this->project->save();
-        for ($i = 0; $i < count($this->photos); $i++) {
-            $this->photos[$i]->storeAs("/public/projects", Str::slug($this->project->title) . "_" . $i . '.' . $this->photos[$i]->extension());
+        if(isset($this->photos)){
+            for ($i = 0; $i < count($this->photos); $i++) {
+                $this->photos[$i]->storeAs("/public/projects", Str::slug($this->project->title) . "_" . $i . '.' . $this->photos[$i]->extension());
 
-            $photo = new Photo();
-            $photo->project_id = $this->project->id;
-            $photo->path = Str::slug($this->project->title) . "_" . $i . '.' . $this->photos[$i]->extension();
-            $photo->save();
+                $photo = new Photo();
+                $photo->project_id = $this->project->id;
+                $photo->path = Str::slug($this->project->title) . "_" . $i . '.' . $this->photos[$i]->extension();
+                $photo->save();
+            }
         }
         $this->project_cost->project_id = $this->project->id;
         $this->project_cost->save();

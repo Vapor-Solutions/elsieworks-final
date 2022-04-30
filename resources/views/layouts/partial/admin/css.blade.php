@@ -19,7 +19,7 @@
 <!-- Feather icon-->
 <link rel="stylesheet" type="text/css" href="/admin/css/feather-icon.css">
 
-{{-- <link rel="stylesheet" type="text/css" href="/admin/css/summernote.css"> --}}
+<link rel="stylesheet" type="text/css" href="/admin/css/summernote.css">
 <!-- Plugins css start-->
 <link rel="stylesheet" type="text/css" href="/admin/css/datatables.css">
 <link rel="stylesheet" type="text/css" href="/admin/css/dropzone.css">

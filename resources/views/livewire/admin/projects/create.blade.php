@@ -21,10 +21,9 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <div class="mb-3">
+                        <div class="mb-3" wire:ignore>
                             <label for="description" class="form-label">Description</label>
-                            <textarea wire:model="project.description" class="form-control" name="description" id="description"
-                                rows="3"></textarea>
+                            <div name="description" id="description-text" ></div>
                             @error('project.description')
                                 <small id="title" class="text-muted text-danger">{{ $message }}</small>
                             @enderror
@@ -33,7 +32,8 @@
                     <div class="col-md-6 col-12">
                         <div class="mb-3">
                             <label for="client_id" class="form-label">Client Name</label>
-                            <select wire:model="project.client_id" class="form-control" name="client_id" id="client_id">
+                            <select wire:model="project.client_id" class="form-control" name="client_id"
+                                id="client_id">
                                 <option selected>Choose a Client</option>
                                 @foreach (App\Models\Client::all() as $client)
                                     <option value="{{ $client->id }}">{{ $client->name }}</option>
@@ -47,7 +47,8 @@
                     <div class="col-md-6 col-12">
                         <div class="mb-3">
                             <label for="service_id" class="form-label">Service Type</label>
-                            <select wire:model="project.service_id" class="form-control" name="service_id" id="service_id">
+                            <select wire:model="project.service_id" class="form-control" name="service_id"
+                                id="service_id">
                                 <option selected>Choose the type of service offered</option>
                                 @foreach (App\Models\Service::all() as $service)
                                     <option value="{{ $service->id }}">{{ $service->title }}</option>
@@ -60,18 +61,21 @@
                     </div>
                     <div class="col-md-6 col-12">
                         <div class="mb-3">
-                          <label for="" class="form-label">Photos</label>
-                          <input wire:model="photos" type="file" class="form-control" name="" id="" placeholder="Add Your Photos" aria-describedby="fileHelpId" multiple>
-                          @error('photos')
+                            <label for="" class="form-label">Photos</label>
+                            <input wire:model="photos" type="file" class="form-control" name="" id=""
+                                placeholder="Add Your Photos" aria-describedby="fileHelpId" multiple>
+                            @error('photos')
                                 <small id="title" class="text-muted text-danger">{{ $message }}</small>
                             @enderror
                         </div>
                     </div>
                     <div class="col-md-6 col-12">
                         <div class="mb-3">
-                          <label for="cost_kes" class="form-label">Total Cost</label>
-                          <input wire:model="project_cost.cost_kes" type="number" name="cost_kes" id="cost_kes" class="form-control" placeholder="Input the amount paid for this project" aria-describedby="cost_kes">
-                          @error('project_cost.cost_kes')
+                            <label for="cost_kes" class="form-label">Total Cost</label>
+                            <input wire:model="project_cost.cost_kes" type="number" name="cost_kes" id="cost_kes"
+                                class="form-control" placeholder="Input the amount paid for this project"
+                                aria-describedby="cost_kes">
+                            @error('project_cost.cost_kes')
                                 <small id="title" class="text-muted text-danger">{{ $message }}</small>
                             @enderror
                         </div>
@@ -85,3 +89,21 @@
         </div>
     </div>
 </div>
+
+
+
+@push('scripts')
+    <script>
+        $('#description-text').summernote({
+            height: 200,
+            codemirror: {
+                theme: 'monokai'
+            },
+            callbacks: {
+                onChange: function(contents, $editable) {
+                    @this.set('project.description', contents);
+                }
+            }
+        });
+    </script>
+@endpush
