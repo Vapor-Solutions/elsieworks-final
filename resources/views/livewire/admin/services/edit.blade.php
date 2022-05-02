@@ -18,9 +18,9 @@
                       <small class="text-danger">{{ $message }}</small>
                   @enderror
                 </div>
-                <div class="mb-3">
+                <div class="mb-3" wire:ignore>
                   <label for="description" class="form-label">Description</label>
-                  <textarea wire:model='service.description' class="form-control" name="description" id="description" rows="3"></textarea>
+                  <div id="description-text" rows="3">{!! $service->description !!}</div>
                   @error('service.title')
                       <small class="text-danger">{{ $message }}</small>
                   @enderror
@@ -31,3 +31,20 @@
         </div>
     </div>
 </div>
+
+
+@push('scripts')
+    <script>
+        $('#description-text').summernote({
+            height: 200,
+            codemirror: {
+                theme: 'monokai'
+            },
+            callbacks: {
+                onChange: function(contents, $editable) {
+                    @this.set('service.description', contents);
+                }
+            }
+        });
+    </script>
+@endpush

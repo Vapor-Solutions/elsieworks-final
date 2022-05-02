@@ -23,7 +23,7 @@
                     <div class="col-12">
                         <div class="mb-3" wire:ignore>
                             <label for="description" class="form-label">Description</label>
-                            <div name="description" id="description-text" >{{ $project->description }}</div>
+                            <div name="description" id="description-text" >{!! $project->description !!}</div>
                             @error('project.description')
                                 <small id="title" class="text-muted text-danger">{{ $message }}</small>
                             @enderror

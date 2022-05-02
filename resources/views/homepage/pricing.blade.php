@@ -66,7 +66,7 @@
                                                                                 </h3>
                                                                                 <small>{{ $rate->price_type->title }}</small>
                                                                                 <div class="pricing-body">
-                                                                                    <small>{{ $rate->description }}</small>
+                                                                                    <small>{!! $rate->description !!}</small>
                                                                                 </div>
                                                                                 <div class="pricing-footer">
                                                                                     <a class="rn-btn"
@@ -96,7 +96,7 @@
                                                                             {{ number_format($rate->price) }}</h3>
                                                                         <small>{{ $rate->price_type->title }}</small>
                                                                         <div class="pricing-body">
-                                                                            <small>{{ $rate->description }}</small>
+                                                                            <small>{!! $rate->description !!}</small>
                                                                         </div>
                                                                         <div class="pricing-footer">
                                                                             <a class="rn-btn"

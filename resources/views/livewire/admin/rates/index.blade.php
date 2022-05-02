@@ -24,7 +24,7 @@
                         @foreach ($rates as $rate)
                             <tr>
                                 <td scope="row">{{ $rate->id }}</td>
-                                <td><p>{{ $rate->title }} - <small>{{ $rate->description }}</small></p></td>
+                                <td><p>{{ $rate->title }} - <small>{!! $rate->description !!}</small></p></td>
                                 <td>{{ $rate->service->title }}</td>
                                 <td>{{ $rate->service_category->title??'NOT SET' }}</td>
                                 <td>KES {{ number_format($rate->price) }} </td>

@@ -53,9 +53,9 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <div class="mb-3">
+                        <div class="mb-3" wire:ignore>
                             <label for="description" class="form-label">Description</label>
-                            <textarea wire:model="rate.description" class="form-control" rows="3"></textarea>
+                            <div id="description-text"></div>
                             @error('rate.description')
                                 <small class="form-text text-muted">{{ $message }}</small>
                             @enderror
@@ -97,3 +97,20 @@
         </div>
     </div>
 </div>
+
+
+@push('scripts')
+    <script>
+        $('#description-text').summernote({
+            height: 200,
+            codemirror: {
+                theme: 'monokai'
+            },
+            callbacks: {
+                onChange: function(contents, $editable) {
+                    @this.set('rate.description', contents);
+                }
+            }
+        });
+    </script>
+@endpush
