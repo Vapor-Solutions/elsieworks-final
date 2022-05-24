@@ -54,6 +54,8 @@ class Edit extends Component
         $this->project_cost->project_id = $this->project->id;
         $this->project_cost->save();
 
+        $this->emit('done');
+
         return redirect()->route('admin.projects.index');
     }
 
