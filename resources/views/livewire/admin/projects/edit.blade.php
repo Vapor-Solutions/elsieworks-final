@@ -23,7 +23,7 @@
                     <div class="col-12">
                         <div class="mb-3" wire:ignore>
                             <label for="description" class="form-label">Description</label>
-                            <div name="description" id="description-text" >{!! $project->description !!}</div>
+                            <div name="description" id="description-text">{!! $project->description !!}</div>
                             @error('project.description')
                                 <small id="title" class="text-muted text-danger">{{ $message }}</small>
                             @enderror
@@ -88,9 +88,31 @@
             </div>
         </div>
     </div>
+    <div class="comtainer-fluid my-5">
+        <div class="card">
+            <div class="card-header">
+                <h5>Photos of the project</h5>
+            </div>
+            <div class="card-body">
+                <div class="row ">
+                    @foreach ($project->photos as $pic)
+                        <div class="col-md-4 col-6">
+                            <div class="cont">
+                                <img class="img-thumbnail project-img" src="/storage/projects/{{ $pic->path }}"
+                                    alt="">
+                                <div class="overlay">
+                                    <button wire:click="deletePhoto({{ $pic->id }})" class="btn btn-primary" title="Delete">
+                                        <i class="fa fa-trash-o"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-
-
 @push('scripts')
     <script>
         $('#description-text').summernote({

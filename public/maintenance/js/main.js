@@ -32,10 +32,11 @@
         e.preventDefault();
 
         $.ajax({
-            url: '/maintenance-sub',
+            url: '/api/maintenance-sub',
             type: "post",
             dataType: 'json',
             data: {
+                name: $('#maintenance-name').value(),
                 email: $('#maintenance-email').value()
             },
             success: function (response) {

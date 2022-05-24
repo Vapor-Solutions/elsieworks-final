@@ -16,7 +16,7 @@ class Project extends Model
 
     public function photos()
     {
-        return $this->hasOne(Photo::class);
+        return $this->hasMany(Photo::class);
     }
 
     public function project_cost()

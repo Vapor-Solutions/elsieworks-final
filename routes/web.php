@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\MaintenanceController;
 use App\Http\Livewire\Admin;
 use App\Http\Livewire\Admin\Clients;
 use App\Models\Booking;
@@ -22,10 +23,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('/maintenance-sub', [MaintenanceController::class, 'subscribe']);
+
 Route::get('/', function () {
     return env('MAINTENANCE_MODE')?view('errors.maintenance'):view('welcome');
 })->name('home');
-Route::post('/contact', [HomepageController::class, 'addContact'])->name('contacts.create');
 
 Route::redirect('dashboard', 'admin/dashboard');
 Route::redirect('admin', 'admin/dashboard');

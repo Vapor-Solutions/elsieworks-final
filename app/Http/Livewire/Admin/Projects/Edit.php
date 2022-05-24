@@ -7,12 +7,19 @@ use App\Models\Project;
 use App\Models\ProjectCost;
 use Illuminate\Support\Str;
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class Edit extends Component
 {
     public Project $project;
     public $photos;
     public ProjectCost $project_cost;
+
+    use WithFileUploads;
+
+    protected $listeners = [
+        'done'=>'render'
+    ];
 
     protected $rules = [
         'project.client_id' => 'required',
@@ -26,7 +33,7 @@ class Edit extends Component
     public function mount($id)
     {
         $this->project = Project::find($id);
-        $this->project_cost = ProjectCost::where('project_id', $this->project->id )->first();
+        $this->project_cost = ProjectCost::where('project_id', $this->project->id)->first();
     }
 
     public function submit()
@@ -34,13 +41,13 @@ class Edit extends Component
         $this->validate();
         $this->project->user_id = auth()->user()->id;
         $this->project->save();
-        if(isset($this->photos)){
+        if (isset($this->photos)) {
             for ($i = 0; $i < count($this->photos); $i++) {
-                $this->photos[$i]->storeAs("/public/projects", Str::slug($this->project->title) . "_" . $i . '.' . $this->photos[$i]->extension());
+                $this->photos[$i]->storeAs("/public/projects", Str::slug($this->project->title) . "_" . $i + count($this->project->photos) . '.' . $this->photos[$i]->extension());
 
                 $photo = new Photo();
                 $photo->project_id = $this->project->id;
-                $photo->path = Str::slug($this->project->title) . "_" . $i . '.' . $this->photos[$i]->extension();
+                $photo->path = Str::slug($this->project->title) . "_" . $i + count($this->project->photos) . '.' . $this->photos[$i]->extension();
                 $photo->save();
             }
         }
@@ -48,6 +55,14 @@ class Edit extends Component
         $this->project_cost->save();
 
         return redirect()->route('admin.projects.index');
+    }
+
+
+    public function deletePhoto($id)
+    {
+        Photo::find($id)->delete();
+
+        $this->emit('done');
     }
     public function render()
     {
