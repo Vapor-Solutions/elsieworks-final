@@ -42,6 +42,12 @@
             <span>Clients</span>
             </a>
         </li>
+        <li class="dropdown @if (Route::is('admin.trusted-clients.*')) active @endif ">
+                <a class=" nav-link" href="{{ route('admin.trusted-clients.index') }}">
+            <i data-feather="users"></i>
+            <span>Trusted Clients</span>
+            </a>
+        </li>
         <li class="dropdown @if (Route::is('admin.bookings.*')) active @endif ">
                 <a class=" nav-link" href="{{ route('admin.bookings.index') }}">
             <i data-feather="book"></i>

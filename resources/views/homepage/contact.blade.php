@@ -12,38 +12,22 @@
         <div class="row mt--50 mt_md--40 mt_sm--40 mt-contact-sm">
             <div class="col-lg-5">
                 <div class="contact-about-area">
-                    <div class="row">
-                        <div class="col-md-6 col-12">
-                            <div class="thumbnail">
-                                <img src="client/images/contact/contact1.jpg" alt="contact-img">
-                            </div>
-                            <div class="title-area">
-                                <h4 class="title">Shirley E.</h4>
-                                {{-- <span>Hybrid Shooter</span> --}}
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-12">
-                            <div class="thumbnail">
-                                <img src="client/images/contact/contact2.jpg" alt="contact-img">
-                            </div>
-                            <div class="title-area">
-                                <h4 class="title">Wambui P. </h4>
-                                {{-- <span>Hybrid Shooter</span> --}}
-                            </div>
-                        </div>
+                    <div class="thumbnail">
+                        <img src="client/images/contact/contact1.jpg" alt="contact-img">
                     </div>
+                    <div class="title-area">
+                        <h4 class="title">Shirley Elsie</h4>
+                        {{-- <span>Hybrid Shooter</span> --}}
+                    </div>
+
                     <div class="description">
-                        <p>We are available for freelance work.Connect with us via call or via email
+                        <p>We are available for freelance work. Connect with us via call or via email
                         </p>
-                        <div class="row mb-5">
-                            <div class="col-6"><span class="phone">
-                                    Phone: <a href="tel:+254715903918"><small>+254 715 903 918</small>
-                                    </a></span>
-                            </div>
-                            <div class="col-6"><span class="phone">
-                                    Phone: <a href="tel:+254718491650"><small>+254 718 491 650</small>
-                                    </a></span>
-                            </div>
+                        <div class="mb-5">
+                            <span class="phone">
+                                Phone: <a href="tel:+254715903918"><small>+254 715 903 918</small>
+                                </a>
+                            </span>
                         </div>
                         <span class="mail text-center">Email: <a
                                 href="mailto:info@elsieworks.com">info@elsieworks.com</a></span>
@@ -146,8 +130,8 @@
                 success: function(data) {
                     _self.closest('div').find('button[type="submit"]').removeAttr('disabled');
                     Toast.fire({
-                        icon:data.success?'success':'warning',
-                        text:data.success
+                        icon: data.success ? 'success' : 'warning',
+                        text: data.success
                     })
 
                     $('form.rnt-contact-form1').trigger("reset")

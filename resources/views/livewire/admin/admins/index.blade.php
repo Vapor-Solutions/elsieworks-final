@@ -65,7 +65,7 @@
                                                 </div>
                                                 @if (auth()->user()->id != $item->id)
                                                 <div class="col-md-6 col-12" >
-                                                    <button class="btn btn-danger" onclick="confirm('Are you sure you want to delete this Admin?')||event.stopImmediatePropagation()" wire:click="delete({{ $item->id }})">
+                                                    <button class="btn btn-danger" onclick="confirm('Are you sure you want to delete this Admin?')" wire:click="delete({{ $item->id }})">
                                                         <i class="fa fa-trash"></i>
                                                     </button>
                                                 </div>

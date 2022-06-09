@@ -11,19 +11,19 @@
                     </div>
                     <div>
                         <div class="client-card">
-                            @foreach (App\Models\Client::all() as $client)
+                            @foreach (App\Models\TrustedClient::all() as $trusted_client)
                                 <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100"
                                     data-aos-once="true" class="main-content">
                                     <div class="inner text-center">
                                         <div class="thumbnail">
                                             <img class="rounded-circle shadow"
-                                                src="{{$client->image_url }}" width="75px" alt="Client-image">
+                                                src="{{$trusted_client->client->image_url }}" width="75px" alt="Client-image">
                                         </div>
                                         <div class="seperator"></div>
-                                        <div class="client-name"><span>{{ $client->name }}</span>
+                                        <div class="client-name"><span>{{ $trusted_client->client->name }}</span>
                                         </div>
                                         <div class="client-name"><small><a
-                                                    href="mailto:{{ $client->email }}">{{ $client->email }}</a></small>
+                                                    href="mailto:{{ $trusted_client->client->email }}">{{ $trusted_client->client->email }}</a></small>
                                         </div>
                                     </div>
                                 </div>

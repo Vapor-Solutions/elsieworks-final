@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
             AdminsSeeder::class,
             StaffSeeder::class,
             ClientsSeeder::class,
+            TrustedClientsSeeder::class,
         ]);
     }
 }

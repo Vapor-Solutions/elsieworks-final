@@ -67,6 +67,14 @@ Route::prefix('admin')->middleware(['auth:sanctum', 'verified'])->group(function
     Route::get('/clients/create', Admin\Clients\Create::class)->name('admin.clients.create');
     Route::get('/clients/{id}/edit', Admin\Clients\Edit::class)->name('admin.clients.edit');
 
+
+    /**
+     * Clients Routes
+     */
+    Route::get('/trusted-clients', Admin\TrustedClients\Index::class)->name('admin.trusted-clients.index');
+    Route::get('/trusted-clients/create', Admin\TrustedClients\Create::class)->name('admin.trusted-clients.create');
+    Route::get('/trusted-clients/{id}/edit', Admin\TrustedClients\Edit::class)->name('admin.trusted-clients.edit');
+
     /**
      * Blogs Routes
      */
