@@ -14,6 +14,7 @@
 <script src="/client/js/vendor/lightbox.js"></script>
 <script src="/client/js/vendor/glightbox.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 <script>
     window.Toast = Swal.mixin({
         toast: true,
@@ -25,6 +26,8 @@
             toast.addEventListener('mouseenter', Swal.stopTimer)
             toast.addEventListener('mouseleave', Swal.resumeTimer)
         }
-    })
+    });
+
+    lazyload();
 </script>
 @stack('scripts')
